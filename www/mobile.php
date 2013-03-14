@@ -4,11 +4,11 @@ html_header('','');
 
 ?>
 <div id='main-content-container' class='page-container'>
-  <div id='main-content'>
+  <div id='main-full-content'>
 
   <h1 class='title'>I would like to...</h1>
 
-  <div id='home-button-container'>
+  <div id='home-button-container2'>
 
   <ul>
 
@@ -104,13 +104,13 @@ html_header('','');
   </div>
 
   </div>
-  <div id='side-content'>
+  <div id='bottom-content'>
 
  <div id='side-content-background-b' class='side-content-background'></div>
   <div id='side-content-background-p' class='side-content-background background-off'></div>
   <div id='side-content-background-y' class='side-content-background background-off'></div>
 <!-- <div id='side-content-background-y' class='side-content-background'></div>-->
-  <div id='side-content-foreground'>
+  <div id='side-content-foreground2'>
   <div id='mailing-list' class='side-content-box'>
   <h1>JOIN OUR MAILING LIST</h1>
   <p>Keep up to date with the latest trends, technology and gossip from across the net...</p>

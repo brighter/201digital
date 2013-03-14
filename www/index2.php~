@@ -31,10 +31,9 @@ html_header('','');
   </div>
   <div class='home-button home-button-hover dormant'></div>
   <div class='home-button home-button-content'>
-  <a href='mobile.php'>
   <img class='home-button-icon' src='img/icon-mobile.png' alt='mobile icon' />
   <h2>take my business</h2>
-  <h1>mobile</h1></a>
+  <h1>mobile</h1>
   </div>
   </div>
 
