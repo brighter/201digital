@@ -4,11 +4,51 @@ html_header('','');
 
 ?>
 <div id='main-content-container' class='page-container'>
-  <div id='main-content'>
+  <div id='power-message-container'>
 
-  <h1 class='title'>I would like to...</h1>
 
-  <div id='home-button-container'>
+  <div id='slide1' class='purple slide'>
+  <div class='power-message'>
+  <h1 class='power-title'>join us in a toast</h1>
+  <h2 class='power-subtitle'>to success</h2>
+  <p>201Digital launch themselves with over 20 years industry experience to bring a fresh enthusiastic breath of air to internet marketing blah blah blah</p>
+  </div>
+  <div class='power-image'>
+  <img src='img/toast.png' />
+  </div>
+  </div>
+
+
+  <div id='slide2' class='red slide hidden'>
+  <div class='power-message'>
+  <h1 class='power-title'>brand awareness</h1>
+  <h2 class='power-subtitle'>for a digital market</h2>
+  </div>
+  <div class='power-image'>
+  <img src='img/getnoticed.png' />
+  </div>
+  </div>
+
+  <div id='slide3' class='blue slide hidden'>
+  <div class='power-message'>
+  <h1 class='power-title'>we find new markets</h1>
+  <h2 class='power-subtitle'>so let your business reach out</h2>
+  <p>201Digital launch themselves with over 20 years industry experience to bring a fresh blah</p>
+  </div>
+  <div class='power-image'>
+  <img src='img/backbridge.jpg' />
+  </div>
+  </div>
+
+
+  </div>
+  <span class='power-message-shadow purple'></span>
+  <span class='power-message-shadow red hidden'></span>
+  <span class='power-message-shadow blue hidden'></span>
+  </div>
+  </div>
+
+  <div id='home-button-container' style='display:none'>
 
   <ul>
 
@@ -104,7 +144,7 @@ html_header('','');
   </div>
 
   </div>
-  <div id='side-content'>
+  <div id='side-content' style='display:none'>
 
  <div id='side-content-background-b' class='side-content-background'></div>
   <div id='side-content-background-p' class='side-content-background background-off'></div>
@@ -130,7 +170,7 @@ html_header('','');
 
   <div id='from-our-blog' class='side-content-box'>
   <h1>FROM OUR BLOG</h1>
-  <p>Well it's been an interesting week here at 201Digital. First of all we start a company called Brighter, then we decide to do something completely different and start a company with some poncy name 201Digital. There is a plan to all the madness however...</p><a href="item.php?1">read more</a>
+  <p>Well its been an interesting week here at 201Digital. First of all we start a company called Brighter, then we decide to do something completely different and start a company with some poncy name 201Digital. There is a plan to all the madness however...</p><a href="item.php?1">read more</a>
   </div>
 </div>
 
@@ -138,6 +178,44 @@ html_header('','');
 </div>
 <script language='javascript'>
   YUI().use("node",function(Y) {
+
+      var 
+	currentSlide = 1,
+	redItems = Y.all(".red"),
+	blueItems = Y.all(".blue"),
+	purpleItems = Y.all(".purple"),
+
+	changeSlide = function(e) {
+	
+	switch(currentSlide) {
+	  
+	case 1:
+	purpleItems.addClass("hidden");
+	redItems.removeClass("hidden");
+	blueItems.addClass("hidden");
+	currentSlide = 2;
+	break;
+
+	case 2:
+	purpleItems.addClass("hidden");
+	redItems.addClass("hidden");
+	blueItems.removeClass("hidden");
+	currentSlide = 3;
+	break;
+
+	case 3:
+	purpleItems.removeClass("hidden");
+	redItems.addClass("hidden");
+	blueItems.addClass("hidden");
+	currentSlide = 1;
+	break;
+	}
+
+	setTimeout(changeSlide,7000);
+      };
+      
+      setTimeout(changeSlide,7000);
+
 
       var	
 	hoverButton = function(e) {

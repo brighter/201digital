@@ -1,17 +1,226 @@
 $indexHeightBody:600px;
 $indexHeightSide:700px;
 
-@font-face {
-	font-family: 'icomoon';
-	src:url('../fonts/icomoon.eot');
-	src:url('../fonts/icomoon.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/icomoon.woff') format('woff'),
-		url('../fonts/icomoon.ttf') format('truetype'),
-		url('../fonts/icomoon.svg#icomoon') format('svg');
-	font-weight: normal;
-	font-style: normal;
+.power-title {
+    font-family: 'Lobster Two',"Trebuchet MS", Tahoma, cursive;
+    font-style:italic;
+    font-size:4em;
+    font-weight:bold;
+}
+.power-subtitle {
+    color:#f0f;
+    font-size:2.5em;
+    font-family: 'Lobster Two',"Trebuchet MS", Tahoma, cursive;
+    font-style:italic;
+
+}
+#power-message-container {
+    height:356px;
+    position:relative;
+    width:100%;
+    max-width:1100px;
+    margin:0 auto;
+    border-bottom:1px solid #222;
+}
+.power-message {
+    float:left;
+    padding:50px;
+    width:700px;
+    position:relative;
+    z-index:2;
+    p {
+	padding-top:30px;
+	line-height:1.2em;
+	font-family:"Trebuchet MS", Tahoma;
+	letter-spacing:0em;
+	}
+
+}
+.slide {
+    position:absolute;
+    
+    opacity:1;
+    @include transition(opacity 1.5s);
 }
 
+.power-message {
+    position:absolute;
+}
+#slide1 .power-message {
+    width:450px;
+    top:25px;
+}
+#slide2 .power-message {
+    left:530px;
+    top:15px;
+    text-align:right;
+    width:400px;
+}
+#slide3 .power-message {
+    top:5px;
+    left:-50px;
+    width:600px;
+    p {
+	width:300px;
+    }
+}
+.power-image {
+    position:absolute;
+    }
+#slide1 .power-image {
+    left:450px;
+}
+
+
+#slide2 .power-image {
+    left:0px;
+    top:-50px;
+}
+#slide3 .power-image {
+    top:-152px;
+    left:20px;
+}
+.logo.red.hidden,
+.logo.blue.hidden,
+.logo.purple.hidden,
+.logo-shadow.hidden,
+.power-message-shadow.hidden,
+.hidden {
+    opacity:0;
+    @include transition(opacity 1.5s);
+}
+.power-message-shadow {
+    position:absolute;
+    z-index:1;
+    opacity:.3;
+
+    @include transition (opacity 2.5s);
+
+    &.purple {
+	box-shadow:#fc0 0px 0px 300px 140px;
+	left:320px;
+	top:180px;
+    }
+    &.red {
+	box-shadow:#f00 0px 0px 350px 180px;
+	left:860px;
+	top:00px;
+    }
+    &.blue {
+
+    }
+}
+
+#logo-container {
+    z-index:2;
+    position:absolute;
+    margin-top:0px;
+    left:0px;
+    width:100%;
+    height:150px;
+}
+
+.logo-shadow {
+    &.purple {
+	box-shadow:#fc0 0px 0px 200px 120px;
+    }
+    &.red {
+	box-shadow:#f00 0px 0px 200px 120px;
+    }
+    &.blue {
+	box-shadow:#00f 0px 0px 200px 120px;
+    }
+    opacity:.4;
+    width:200px;
+    left:120px;
+    z-index:1;
+    position:absolute;
+    @include transition(opacity 1.5s);
+}
+
+#header-stripe {
+    position:absolute;
+    width:100%;
+    height:120px;
+    background:#000;
+    opacity:.4;
+    z-index:2;
+}
+
+.logo {
+    position:absolute;
+    left:50px;
+    top:25px;
+    font-family:"Trebuchet MS";
+    font-size:1.1em;
+    font-weight:bold;
+    color:#fff;
+    letter-spacing:0em;
+    z-index:3;
+    opacity:.9;
+    @include transition(opacity 1.5s);
+
+}
+.logo-201 {
+    font-size:1.9em;
+    position:relative;
+    top:-38px;
+    left:2px; 
+}
+.red {
+    .logo-co-uk,
+    .logo-201,
+    .logo-digital {
+	text-shadow:#f00 0px 0px 20px;
+    }
+    .logo-marketing {
+	color:#e00;
+    }
+}
+.blue {
+    .logo-co-uk,
+    .logo-201,
+    .logo-digital {
+	text-shadow:#00f 0px 0px 20px;
+    }
+    .logo-marketing {
+	color:#00d;
+    }
+}
+.purple {
+    .logo-co-uk,
+    .logo-201,
+    .logo-digital {
+	text-shadow:#fc0 0px 0px 20px;
+    }
+    .logo-marketing {
+	color:#fc0;
+    }
+}
+
+.logo-digital {
+    font-size:3.9em;
+    position:relative;
+    left:-10px;
+}
+.logo-co-uk {
+    font-size:1.2em;
+    position:relative;
+    left:-10px;
+}
+.logo-marketing {
+    color:#f0f;
+    font-size:1.1em;
+    position:relative;
+    left:-168px;
+    font-weight:normal;
+    letter-spacing:0em;
+    top:18px;
+    text-shadow:none;
+}
+
+    
+    
 .icon-envelop:before, .icon-phone:before, .icon-facebook:before, .icon-twitter:before {
 	font-family: 'icomoon';
 	speak: none;
@@ -72,7 +281,7 @@ body {
     background:#000;
     font-size:1em;
     letter-spacing:0.1em;
-    font-family:"Abadi MT Condensed Light",Helvetica,Sans-Serif;
+    font-family:"Trebuchet MS","Tahoma",Helvetica,Sans-Serif;
     font-weight:lighter;
     color:#fff;
 }
@@ -81,6 +290,7 @@ body {
     position:absolute;
     width:100%;
     height:100%;
+    z-index:1;
 }
 #background-position {
     width:100%;
@@ -132,17 +342,18 @@ body.background-bridge #background-p {
     @include transition(opacity 10s);
 }
 #foreground-container {
-    position:relative;
-    z-index:4;
+    position:absolute;
+    margin-top:160px;
+    z-index:1;
     width:100%;
     height:100%;
 }
 #foreground {
     position:relative;
-    width:100%;
     height:100%;
-    max-width:1100px;
     margin:0 auto;
+    padding-left:50px;
+    padding-right:50px;
 }
 
 #background-b.background-off,
@@ -160,27 +371,11 @@ body.background-bridge #background-p {
     margin:0 auto;
     width:100%;
 }    
-#header-stripe {
-    position:absolute;
-    width:100%;
-    height:130px;
-    background:#000;
-    opacity:.4;
-    z-index:4;
-}
 #header-container {
     position:relative;
     height:130px;
 }
-#logo-container {
-    position:absolute;
-    margin-top:22px;
-    left:-10px;
-    display:inline-block;
-    img {
-	width:280px;
-    }
-}
+
 #main-content-container {
     width:100%;
     height:100%;
@@ -237,6 +432,7 @@ body.background-bridge #background-p {
 }
 
 #footer-container {
+    display:none;
     position:relative;
     clear:both;
     text-align:center;
@@ -257,6 +453,7 @@ body.background-bridge #background-p {
 }
 
 #side-content {
+    display:none;
     font-size:.9em;
     width:30%;
     position:absolute;
@@ -500,13 +697,16 @@ a:hover {
 }
 
 #navigation-container {
-
-    top:86px;
-    font-size:1.1em;
-    position:absolute;
-    font-weight:lighter;
+    font-family: 'Lobster Two',"Trebuchet MS", Tahoma, cursive;
+    font-style:italic;
     width:100%;
-
+    max-width:1100px;
+    margin:0 auto;
+    z-index:2;
+    top:60px;
+    font-size:1.3em;
+    position:absolute;
+    text-align:right;
     a {
 	height:20px;
 	transition:color 1s;
@@ -524,10 +724,9 @@ a:hover {
 	text-decoration:none;
     }
 
-
     ul {
-	margin-right:10px;
-	float:right;
+	display:inline-block;
+	width:400px;
 	list-style:none;
 	text-align: justify;
 	-ms-text-justify: distribute-all-lines;

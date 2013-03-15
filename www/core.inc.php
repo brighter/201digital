@@ -48,20 +48,12 @@ function html_header($title='', $currentPage='about') {
 <!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
 <!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
 <!--[if gt IE 8]> <html class="no-js" lang="en">  <![endif]-->
-<head>
-<script src='javascript/cufon-yui.js'></script>
-<script src='javascript/adabi.js'></script>
-<script language='javascript'>
-<!--
-    Cufon.DOM.ready(function() {
-    Cufon.replace('h1,h2,p');
-      });
-  //-->
-</script>
-<script src="http://yui.yahooapis.com/3.8.1/build/yui/yui-min.js"></script>
-    <link href="stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
-<link href="stylesheets/print.css" media="print" rel="stylesheet" type="text/css" />
-    <!--[if IE]>
+   <head>
+   <link href='http://fonts.googleapis.com/css?family=Lobster+Two:700' rel='stylesheet' type='text/css'>
+   <script src="http://yui.yahooapis.com/3.8.1/build/yui/yui-min.js"></script>
+   <link href="stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+   <link href="stylesheets/print.css" media="print" rel="stylesheet" type="text/css" />
+   <!--[if IE]>
     <link href="stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
     <![endif]-->
     
@@ -72,48 +64,49 @@ function html_header($title='', $currentPage='about') {
     
 </head>
 
-<body class='background-bridge'>
-    <div id='header-stripe'></div>
-    <div id='background-container'>
-    <div id='background-position'>
-    <div id='background-b' class='background background-off'></div>
-    <div id='background-y' class='background background-off'></div>
-    <div id='background-p' class='background'></div>
-    </div>
-    </div>
-    <div id='foreground-container'>
-    <div id='foreground'>
-    
-   <header>
+<body>
 
-   <div id='header-container' class='page-container'>
-   <div id='logo-container'>
-   <a href='index.php'><img src='img/logo.png' alt='201Digital.co.uk Internet Marketing' /></a>
+   
+   <div id='background-container'>
+   <div id='background-position'>
+   <div id='background-b' class='background background-off'></div>
+   <div id='background-y' class='background background-off'></div>
+   <div id='background-p' class='background'></div>
    </div>
-    
-   <div id='contact-container'>
-    <ul>
-    <li class='icon-envelop'><a href='mailto:info@201digital.co.uk'>info@201digital.co.uk</a></li>
-    <li class='icon-phone'><a href='mailto:info@201digital.co.uk'>01582 424499</a></li>
-    </ul>
-    <ul>
-    <li class='icon-facebook'><a href='mailto:info@201digital.co.uk'>#201Digital</a></li>
-    <li class='icon-twitter'><a href='mailto:info@201digital.co.uk'>201Digital</a></li>
-    </ul>
-</div>
-<nav>
+   </div>
 
+
+   <header>   
+
+   <div id='logo-container'>
+   <div class='logo-shadow purple'></div>
+   <div class='logo-shadow red hidden'></div>
+   <div class='logo-shadow blue hidden'></div>
+   <div id='header-stripe'></div>
+   <h1 class='logo purple'><span class='logo-201'>201</span><span class='logo-digital'>digital</span><span class='logo-co-uk'>.co.uk</span><span class='logo-marketing'>internet marketing</span></h1>
+   <h1 class='logo red hidden'><span class='logo-201'>201</span><span class='logo-digital'>digital</span><span class='logo-co-uk'>.co.uk</span><span class='logo-marketing'>internet marketing</span></h1>
+   <h1 class='logo blue hidden'><span class='logo-201'>201</span><span class='logo-digital'>digital</span><span class='logo-co-uk'>.co.uk</span><span class='logo-marketing'>internet marketing</span></h1>
+   </div>
+
+   <nav>
+   
    <div id='navigation-container'>
    <ul id='navigation-items'>
-   <li class='<?php echo $class['about']?>'><a class='<?php echo $class['about']?>' href='about.php'>about us</a></li>
-   <li class='<?php echo $class['what']?>'><a class='<?php echo $class['what']?>' href='what.php'>what we do</a></li>
-   <li class='<?php echo $class['clients']?>'><a class='<?php echo $class['clients']?>' href='clients.php'>our clients</a></li>
-   <li class='<?php echo $class['blog']?>'><a class='<?php echo $class['blog']?>' href='blog.php'>our blog</a></li>
-   <li class='<?php echo $class['contact']?>'><a class='<?php echo $class['contact']?>' href='contact.php'>contact us</a></li>
+   <li class='<?php echo $class['about']?>'><a class='<?php echo $class['about']?>' href='about.php'>about</a></li>
+   <li class='<?php echo $class['what']?>'><a class='<?php echo $class['what']?>' href='what.php'>services</a></li>
+   <li class='<?php echo $class['clients']?>'><a class='<?php echo $class['clients']?>' href='clients.php'>blog</a></li>
+   <li class='<?php echo $class['contact']?>'><a class='<?php echo $class['contact']?>' href='contact.php'>contact</a></li>
 </ul>
 </div>
-
+														
 </nav>
+   
+   </header>
+   
+
+   <div id='foreground-container'>
+   <div id='foreground'>
+														
 
 </header>
 <?php
@@ -136,7 +129,6 @@ function html_footer() {
 </footer>
 </div>
 </div>
-<script type="text/javascript"> Cufon.now(); </script>
 <script language='javascript'>
 
 						 YUI().use("node",function(Y) {
@@ -192,7 +184,7 @@ function html_footer() {
 						       setTimeout(swapBack,10000);
 						     };
 						       
-						     swapBack();
+						     //						     swapBack();
 						     
 
 						   });
