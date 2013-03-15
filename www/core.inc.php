@@ -66,27 +66,19 @@ function html_header($title='', $currentPage='about') {
 
 <body>
 
-   
-   <div id='background-container'>
-   <div id='background-position'>
-   <div id='background-b' class='background background-off'></div>
-   <div id='background-y' class='background background-off'></div>
-   <div id='background-p' class='background'></div>
-   </div>
-   </div>
-
-
    <header>   
    
    <div id='header-container'>
    <div id='logo-container'>
-   <div class='logo-shadow purple'></div>
+   <div class='logo-shadow yellow'></div>
    <div class='logo-shadow red hidden'></div>
    <div class='logo-shadow blue hidden'></div>
+  <div class='logo-shadow purple hidden'></div>
    <div id='header-stripe'></div>
-   <h1 class='logo purple'><span class='logo-201'>201</span><span class='logo-digital'>digital</span><span class='logo-co-uk'>.co.uk</span><span class='logo-marketing'>internet marketing</span></h1>
+   <h1 class='logo yellow'><span class='logo-201'>201</span><span class='logo-digital'>digital</span><span class='logo-co-uk'>.co.uk</span><span class='logo-marketing'>internet marketing</span></h1>
    <h1 class='logo red hidden'><span class='logo-201'>201</span><span class='logo-digital'>digital</span><span class='logo-co-uk'>.co.uk</span><span class='logo-marketing'>internet marketing</span></h1>
    <h1 class='logo blue hidden'><span class='logo-201'>201</span><span class='logo-digital'>digital</span><span class='logo-co-uk'>.co.uk</span><span class='logo-marketing'>internet marketing</span></h1>
+   <h1 class='logo purple hidden'><span class='logo-201'>201</span><span class='logo-digital'>digital</span><span class='logo-co-uk'>.co.uk</span><span class='logo-marketing'>internet marketing</span></h1>
    </div>
 
    <nav>
@@ -114,9 +106,10 @@ function html_header($title='', $currentPage='about') {
     }
 
 function html_footer() { 
+  return true;
 ?>
 <footer>
-<div id='footer-container' class='page-container'>
+<div id='footer-container'>
     <div class='rule'></div>
   <div id='copyright'>
     Copyright © 2013 201 Digital Ltd. All rights reserved.<br  />
