@@ -77,7 +77,8 @@ function html_header($title='', $currentPage='about') {
 
 
    <header>   
-
+   
+   <div id='header-container'>
    <div id='logo-container'>
    <div class='logo-shadow purple'></div>
    <div class='logo-shadow red hidden'></div>
@@ -100,7 +101,7 @@ function html_header($title='', $currentPage='about') {
 </div>
 														
 </nav>
-   
+   </div>   
    </header>
    
 
