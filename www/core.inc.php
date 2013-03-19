@@ -69,16 +69,17 @@ function html_header($title='', $currentPage='about') {
    <header>   
    
    <div id='header-container'>
-   <div id='logo-container'>
-   <div class='logo-shadow yellow'></div>
+   <div class='logo-shadow yellow hidden'></div>
    <div class='logo-shadow red hidden'></div>
    <div class='logo-shadow blue hidden'></div>
-  <div class='logo-shadow purple hidden'></div>
+  <div class='logo-shadow purple'></div>
    <div id='header-stripe'></div>
-   <h1 class='logo yellow'><span class='logo-201'>201</span><span class='logo-digital'>digital</span><span class='logo-co-uk'>.co.uk</span><span class='logo-marketing'>internet marketing</span></h1>
+   <div id='logo-container'><a href='index.php'>
+   <h1 class='logo yellow hidden'><span class='logo-201'>201</span><span class='logo-digital'>digital</span><span class='logo-co-uk'>.co.uk</span><span class='logo-marketing'>internet marketing</span></h1>
    <h1 class='logo red hidden'><span class='logo-201'>201</span><span class='logo-digital'>digital</span><span class='logo-co-uk'>.co.uk</span><span class='logo-marketing'>internet marketing</span></h1>
    <h1 class='logo blue hidden'><span class='logo-201'>201</span><span class='logo-digital'>digital</span><span class='logo-co-uk'>.co.uk</span><span class='logo-marketing'>internet marketing</span></h1>
-   <h1 class='logo purple hidden'><span class='logo-201'>201</span><span class='logo-digital'>digital</span><span class='logo-co-uk'>.co.uk</span><span class='logo-marketing'>internet marketing</span></h1>
+   <h1 class='logo purple'><span class='logo-201'>201</span><span class='logo-digital'>digital</span><span class='logo-co-uk'>.co.uk</span><span class='logo-marketing'>internet marketing</span></h1>
+</a>
    </div>
 
    <nav>
@@ -106,89 +107,29 @@ function html_header($title='', $currentPage='about') {
     }
 
 function html_footer() { 
-  return true;
 ?>
-<footer>
-<div id='footer-container'>
+  <footer>
+    <div id='footer-container'>
     <div class='rule'></div>
-  <div id='copyright'>
+    <div id='copyright'>
     Copyright © 2013 201 Digital Ltd. All rights reserved.<br  />
     Last Updated On: <?php echo Date("jS F Y");?><br />
+						    
+						    <!--    <a href='privacy.html'>Privacy Policy</a> ¦ 
+						    <a href='terms.html'>Terms of Use</a>-->
+						    
+						    </div>
+						    </div>
+						    </footer>
+						  
 
-<!--    <a href='privacy.html'>Privacy Policy</a> ¦ 
-    <a href='terms.html'>Terms of Use</a>-->
-    
-  </div>
-  </div>
-</footer>
-</div>
-</div>
-<script language='javascript'>
-
-						 YUI().use("node",function(Y) {
-						     
-						     var
-						       backB = Y.one("#background-b"),
-						       backY = Y.one("#background-y"),
-						       backP = Y.one("#background-p"),
-
-						       sideContentB = Y.one("#side-content-background-b"),
-						       sideContentY = Y.one("#side-content-background-y"),
-						       sideContentP = Y.one("#side-content-background-p"),
-						       swap = 1,
-
-						       swapBack = function() {
-						       
-						       switch(swap) {
-							 
-						       case 1:
-						       backB.removeClass("background-off");
-						       backY.addClass("background-off");
-						       backP.addClass("background-off");
-						       sideContentB.addClass("background-off");
-						       sideContentY.removeClass("background-off");
-						       sideContentP.addClass("background-off");
-
-						       swap=2;
-						       break;
-						       
-						       case 2:
-						       backB.addClass("background-off");
-						       backY.removeClass("background-off");
-						       backP.addClass("background-off");
-						       sideContentB.addClass("background-off");
-						       sideContentY.addClass("background-off");
-						       sideContentP.removeClass("background-off");
-
-						       swap=3;
-						       break;
-
-						       case 3:
-						       backB.addClass("background-off");
-						       backY.addClass("background-off");
-						       backP.removeClass("background-off");
-						       sideContentB.removeClass("background-off");
-						       sideContentY.addClass("background-off");
-						       sideContentP.addClass("background-off");
-
-						       swap=1;
-						       break;
-						       }
-						       
-						       setTimeout(swapBack,10000);
-						     };
-						       
-						     //						     swapBack();
-						     
-
-						   });
-  
-  </script>						 
-</div>
-
-</body>
-</html>
-
+  </div> <!-- foreground -->
+						    
+						    </div>  <!-- foreground container -->
+						    
+						    </body>
+						    </html>
+						    
 <?php
     }
 ?>

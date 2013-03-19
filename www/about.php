@@ -5,75 +5,26 @@ html_header('','');
 ?>
 <div id='main-content-container' class='page-container'>
 
-  <div id='power-message-container'>
-  
-  <div id='slide-buttons'>
-  <div id='button1' class='slide-button active'></div>
-  <div id='button2' class='slide-button'></div>
-  <div id='button3' class='slide-button'></div>
-  <div id='button4' class='slide-button'></div>
-  </div>
-  
-  <div id='slide1' class='yellow slide'>
+  <div id='aboutus'>
   <div class='power-message'>
-  <h1 class='power-title'>join us in a toast</h1>
-  <h2 class='power-subtitle'>...to success!</h2>
-  <p>201Digital launch themselves with over 20 years industry experience to bring a fresh enthusiastic breath of air to internet marketing blah blah blah</p><p><button class='more-info'>Read More</button></p>
+  <h1 class='power-title'>where ideas<br />&nbsp;turn into reality</h1>
+  <h2 class='power-subtitle'>&nbsp;&nbsp;&nbsp;and dreams come to life!</h2>
+  <p>That's how it felt to when I decided to setup 201Digital. As always it started with an idea, what if I could combine my 20 years experience programming for the Internet, an understanding and experience of the driving forces behind Internet Marketing and the creative skills of a good design team? By combining these skills and formulating a "framework for success" - a cohesive, multi-platform approach to on-line marketing I was sure we could deliver positives results to businesses who wanted to make a success of their on-line ventures.</p>
+<p>Being successul on-line requires that you explore and address the many channels that are available right now. This can be a daunting task which is why we are here to help.</p>
+ <p>We build quality web sites, we advise and promote through social media channels. We manage search engine ranking and key word optimistation and we provide a platform for maintaining mailing lists. We also build and target for mobile platforms.</p>
+<p>So that's about us, we are hungry for success and your success is our success.<br/><a href='contact.phhp'>Get in touch</a> so we can hear about you.</p>
+<p>Richard O'flynn<br />Managing Director.</p>
   </div>
   <div class='power-image'>
-  <img src='img/toast.png' />
+  <img src='img/aboutus.png' />
   </div>
-  </div>
-
-
-  <div id='slide2' class='red slide hidden'>
-  <div class='power-message'>
-  <h1 class='power-title'>is your brand<br/>awareness</h1>
-  <h2 class='power-subtitle'>what it should be?</h2>
-  <p><button class='more-info'>Find out more</button></p>
-  </div>
-  <div class='power-image'>
-  <img src='img/getnoticed.jpg' />
-  </div>
-  </div>
-
-  <div id='slide3' class='blue slide hidden'>
-  <div class='power-message'>
-  <h1 class='power-title'>maximise market<br />penetration</h1>
-  <h2 class='power-subtitle'>we help grow on-line businesses</h2>
-  <p><button class='more-info'>Find out more</button></p>
-  </div>
-  <div class='power-image'>
-  <img src='img/backbridge.jpg' />
-  </div>
-  </div>
-
-  <div id='slide4' class='purple slide hidden'>
-  <div class='power-message'>
-  <h1 class='power-title'>we develop<br />mobile strategies</h1>
-  <h2 class='power-subtitle'>to succeed...</h2>
-  <p><button class='more-info'>Find out more</button></p>
-  </div>
-  <div class='power-image'>
-  <img src='img/mobile.png' />
-  </div>
-  </div>
-  
-  <div id='power-message-shadow-container'>
-  <span class='power-message-shadow yellow'></span>
-  <span class='power-message-shadow red hidden'></span>
-  <span class='power-message-shadow blue hidden'></span>
-  <span class='power-message-shadow purple hidden'></span>
+  <div class='shadow-container'>
+  <span class='power-message-shadow purple'></span>
   </div>
   
   </div> <!-- power message container -->
   
   <div class='media-rule-top'></div>
-
-
-
-
-
 
   <ul id='media-content-container'>
 
@@ -216,5 +167,4 @@ html_header('','');
   </div> <!-- home button container -->
   </div> <!-- main content container -->
   <script language='javascript' src='js/slideshow.js'></script>
-  <script language='javascript' src='js/button-hover.js'></script>
   <?php html_footer() ?>
