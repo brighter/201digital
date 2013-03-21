@@ -3,6 +3,15 @@
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
+$experimental-support-for-svg:true;
+$text: tahoma,"Trebuchet MS", verdana,arial;
+$button:$text;
+$heading:'Lobster Two',"Trebuchet MS", Tahoma, cursive;
+$heading:"Wendy One";
+$heading:"Tauri";
+$heading:"Rufina";
+$slideTransitionSpeed:1.5s;
+
 @import "compass/reset";
 @import "compass/css3/images";
 @import "compass/css3/transition";

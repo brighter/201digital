@@ -44,7 +44,7 @@ html_header('','');
   <p><button class='more-info'>Find out more</button></p>
   </div>
   <div class='power-image'>
-  <img src='img/backbridge.jpg' />
+  <img src='img/targetted.png' />
   </div>
   </div>
 
@@ -92,7 +92,7 @@ html_header('','');
   <li id='latest-news' class='media-content-box'>
   <div class='media-content'>
   <h1>news</h1>
-  <p>201 Digital wins contract with Microsoft to secure 1.5 million revenue over the next 2 weeks.</p><a href="item.php?1">read more</a>
+  <p>201 Digital wins contract with Microsoft to secure 1.5 million revenue over the next 2 weeks.<i><a href="item.php?1">read more</a></i></p>
   </div>
   </li>
 
@@ -102,7 +102,7 @@ html_header('','');
   <h1>blog</h1>
   <p>Well its been an interesting week here at 201Digital. First of all we start a company called Brighter, 
   then we decide to do something completely different and start a company with some poncy name 201Digital.
-			 There is a plan to all the madness however...</p><a href="item.php?1">read more</a>
+			 There is a plan to all the madness however...<i><a href="item.php?1">read more</a></i></p>
 			 </div>	
 			 </li>
 			 </ul>	
