@@ -9,38 +9,12 @@ function html_header($title='', $currentPage='about') {
   }
   
   $class['about'] = '';
-  $class['approach'] = '';
-  $class['products'] = '';
-  $class['cloud'] = '';
-  $class['applications'] = '';
-  $class['data'] = '';
+  $class['services'] = '';
+  $class['blog'] = '';
   $class['contact'] = '';
   
-  switch($currentPage) {
-  case 'about':
-    $class['about']='navon';
-    break;
-  case 'approach':
-    $class['approach']='navon';
-    break;
-  case 'products':
-    $class['products']='navon';
-    break;
-  case 'cloud':
-    $class['cloud']='navon';
-    break;
-  case 'applications':
-    $class['applications']='navon';
-    break;
-  case 'data':
-    $class['data']='navon';
-    break;
-  case 'contact':
-    $class['contact']='navon';
-    break;
-
-  }
-
+  $class[$currentPage]='navon';
+  
 
 ?>
 <!doctype html>
@@ -50,11 +24,6 @@ function html_header($title='', $currentPage='about') {
 <!--[if gt IE 8]> <html class="no-js" lang="en">  <![endif]-->
    <head>
    <link href='http://fonts.googleapis.com/css?family=Lobster+Two:700' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Libre+Baskerville:400italic' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Cantora+One' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:400,800' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Wendy+One' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Tauri' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Rufina:400,700' rel='stylesheet' type='text/css'>
    <script src="http://yui.yahooapis.com/3.8.1/build/yui/yui-min.js"></script>
    <link href="stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
@@ -86,18 +55,71 @@ function html_header($title='', $currentPage='about') {
    <h1 class='logo blue hidden'><span class='logo-201'>201</span><span class='logo-digital'>digital</span><span class='logo-co-uk'>.co.uk</span><span class='logo-marketing'>internet marketing</span></h1>
    <h1 class='logo purple'><span class='logo-201'>201</span><span class='logo-digital'>digital</span><span class='logo-co-uk'>.co.uk</span><span class='logo-marketing'>internet marketing</span></h1>
 </a>
+
    </div>
 
    <nav>
    
    <div id='navigation-container'>
-   <ul id='navigation-items'>
+   <ul class='main-navigation'>
    <li class='<?php echo $class['about']?>'><a class='<?php echo $class['about']?>' href='about.php'>about</a></li>
-   <li class='<?php echo $class['what']?>'><a class='<?php echo $class['what']?>' href='what.php'>services</a></li>
-   <li class='<?php echo $class['clients']?>'><a class='<?php echo $class['clients']?>' href='clients.php'>blog</a></li>
+   <li class='<?php echo $class['services']?>'><a id='services-link' class='<?php echo $class['services']?>' href='services.php'>services</a></li>
+   <li class='<?php echo $class['blog']?>'><a class='<?php echo $class['blog']?>' href='blog.php'>blog</a></li>
    <li class='<?php echo $class['contact']?>'><a class='<?php echo $class['contact']?>' href='contact.php'>contact</a></li>
-</ul>
-</div>
+   </ul>
+
+
+   <div id='services-navigation-container' class='hidden'>
+   <p>how can we help you?</p>
+   <ul id='services-navigation'>
+   
+   <li>
+
+   <a href='website.php'><img class='home-button-icon' src='img/icon-website.png' alt='web site icon' />
+   <h1>I want to launch a kick-ass web site</h1></a>
+
+   </li>
+			 
+   <li>
+
+   <a href='mobile.php'>
+   <img class='home-button-icon' src='img/icon-mobile.png' alt='mobile icon' />
+    <h1>I want a mobile marketing strategy</h1></a>
+
+   </li>
+
+   <li>
+
+   <a href='mailing.php'>
+   <img class='home-button-icon' src='img/icon-mailing.png' alt='mailing list icon' />
+   <h1>I want to use email marketing</h1></a>
+   </li>
+
+   <li>
+
+   <a href='social.php'>
+   <img class='home-button-icon' src='img/icon-social.png' alt='social media icon' />
+   <h1>I want to advertise through social media</h1></a>
+
+   </li>
+
+   <li>
+
+   <a href='tracking.php'>
+   <img class='home-button-icon' src='img/icon-tracking.png' alt='user tracking icon' />
+   <h1>I want to track my customers behaviour</h1></a>
+
+   </li>
+
+   <li>
+
+   <a href='searchengines.php'>
+   <img class='home-button-icon' src='img/icon-search.png' alt='search icon' />
+   <h1>I want better search engine rankings</h1></a>
+     
+  </li>
+
+   </div>
 														
 </nav>
    </div>   
@@ -111,9 +133,58 @@ function html_header($title='', $currentPage='about') {
 </header>
 <?php
     }
+function include_media_channels() {
+?>
+  <span class='media-glow'></span>
+  <ul id='media-content-container'>
 
+  <li id='mailing-list' class='media-content-box'>
+
+  <div class='media-content'>
+    <div class='media-top'>
+  <h1>email</h1>
+    <label for "mc-EMAIL"><p>Get our bi-weekly catch up of the latest marketing trends and campaigns from across the Net.</p></label>
+    <form action='http://twitter.us5.list-manage.com/subscribe/post?u=aec9a01e16e8dbedf96c72ea9&id=3235809f24'  id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+	<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+
+    </div>
+    <div class='media-bottom'>
+<button name="subscribe" id="mc-embedded-subscribe" class="signup-button">subscribe</button>
+    </div>
+    </div>
+    </li>
+
+
+    <li id='latest-news' class='media-content-box'>
+    <div class='media-content'>
+    <div class='media-top'>
+    <h1>news</h1>
+    <p>201 Digital wins contract with Microsoft to secure 1.5 million revenue over the next 2 weeks.</p>
+    </div>
+    <div class='media-bottom'><button href="item.php?1" class='signup-button'>read more</button>
+    </div>
+    </div>
+    </li>
+    
+    <li id='from-our-blog' class='media-content-box'>
+    <div class='media-content'>
+    <div class='media-top'>
+    <h1>blog</h1>
+    <p>Well its been an interesting week here at 201Digital. First of all we start a company called Brighter, 
+    then we decide to do something completely different and start a company with some poncy name 201Digital.
+			   There is a plan to all the madness however...</p>
+			   </div>
+			   <div class='media-bottom'>
+			   <button href="item.php?1" class='signup-button'>read more</button>
+			   </div>
+			   </div>	
+			 </li>
+			 </ul>	
+<?php
+			 }
 function html_footer() { 
 ?>
+     <script language='javascript' src='js/help.js'></script>
   <footer>
     <div id='footer-container'>
     <div class='rule'></div>
@@ -138,4 +209,106 @@ function html_footer() {
 						    
 <?php
     }
+function home_buttons() {
+?>
+			 <div id='home-button-container'>
+			 
+
+			 <span id='home-button-shadow'></span>														
+	                <h1 class='power-title padme50 center'>I would like to...</h1>
+			<ul>
+			 
+			 <li>
+			 <div id='home-button-website' class='home-button home-button-container'>
+			 <div class='home-button home-button-border'>
+			 </div>
+			 <div class='home-button home-button-hover dormant'></div>
+			 <div class='home-button home-button-content'>
+			 <a href='website.php'><img class='home-button-icon' src='img/icon-website.png' alt='web site icon' />
+			 <h2>launch a kick-ass</h2>
+			 <h1>web site</h1></a>
+			 </div>
+			 </div>
+			 </li>
+			 
+			 <li>
+			 <div id='home-button-mobile' class='home-button home-button-container'>
+			 <div class='home-button home-button-border'>
+			 </div>
+			 <div class='home-button home-button-hover dormant'></div>
+			 <div class='home-button home-button-content'>
+			 <a href='mobile.php'>
+			 <img class='home-button-icon' src='img/icon-mobile.png' alt='mobile icon' />
+			 <h2>take my business</h2>
+			 <h1>mobile</h1></a>
+			 </div>
+			 </div>
+
+			 </li>
+
+			 <li>
+
+			 <div id='home-button-mailing' class='home-button home-button-container'>
+			 <div class='home-button home-button-border'>
+			 </div>
+			 <div class='home-button home-button-hover dormant'></div>
+			 <div class='home-button home-button-content'>
+			 <img class='home-button-icon' src='img/icon-mailing.png' alt='mailing list icon' />
+			 <h2>grow my business with  a</h2>
+			 <h1>mailing list</h1>
+			 </div>
+			 </div>
+
+			 </li>
+
+			 <li>
+
+			 <div id='home-button-social' class='home-button home-button-container'>
+			 <div class='home-button home-button-border'>
+			 </div>
+			 <div class='home-button home-button-hover dormant'></div>
+			 <div class='home-button home-button-content'>
+			 <img class='home-button-icon' src='img/icon-social.png' alt='social media icon' />
+			 <h2>market my business using</h2>
+			 <h1>social media</h1>
+			 </div>
+			 </div>
+
+			 </li>
+
+			 <li>
+
+			 <div id='home-button-tracking' class='home-button home-button-container'>
+			 <div class='home-button home-button-border'>
+			 </div>
+			 <div class='home-button home-button-hoverButton dormant'></div>
+			 <div class='home-button home-button-content'>
+			 <img class='home-button-icon' src='img/icon-tracking.png' alt='user tracking icon' />
+			 <h2>see the bigger picture with</h2>
+			 <h1>user tracking</h1>
+			 </div>
+			 </div>
+
+			 </li>
+
+			 <li>
+
+			 <div id='home-button-search' class='home-button home-button-container'>
+			 <div class='home-button home-button-border'>
+			 </div>
+			 <div class='home-button home-button-hover dormant'></div>
+			 <div class='home-button home-button-content'>
+			 <img class='home-button-icon' src='img/icon-search.png' alt='search icon' />
+			 <h2>optimise my web site for</h2>
+  <h1>search engines</h1>
+  </div>
+  </div>
+  
+  </li>
+  </ul>
+
+  </div> <!-- home button container -->
+
+<?php
+     }
 ?>

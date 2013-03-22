@@ -7,7 +7,7 @@ html_header('201Digital Internet Marketing Search Engine Optimisation','services
 
   <div id='mobile'>
   <div class='power-image'>
-  <img src='img/mobile.jpg' style='width:600px'/>
+  <img src='img/seo.jpg' style='width:600px'/>
   </div>
   <div class='power-message' style='top:200px'>
   <h1 class='power-title'>the hottest</h1>

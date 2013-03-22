@@ -6,15 +6,16 @@
 .power-message-shadow.hidden,
 .hidden {
     opacity:0;
-    @include transition(opacity $slideTransitionSpeed);
+    @include transition(opacity 
+$slideTransitionSpeed);
 }
 
 #logo-container {
-    z-index:2;
+    z-index:10;
     position:absolute;
     margin-top:0px;
     left:0px;
-    width:100%;
+    width:550px;
     height:150px;
 }
 

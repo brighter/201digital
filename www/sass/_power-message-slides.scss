@@ -4,13 +4,41 @@
     font-weight:bold;
     letter-spacing:0em;
     font-weight:700;
+    padding-bottom:5px;
+    &.small {
+	    font-size:1.6em;
+    }
+    &.medium {
+	font-size:3em;
+    }
+    &.large {
+	font-size:4em;
+    }
+    &.massive {
+	font-size:5em;
+    }
+    
 }
 .power-subtitle {
     color:#f0f;
     font-size:2.5em;
+    padding-bottom:5px;
     font-family: $heading;
     letter-spacing:0em;
     font-weight:700;
+    &.small {
+	    font-size:1.6em;
+    }
+    &.medium {
+	font-size:3em;
+    }
+    &.large {
+	font-size:4em;
+    }
+    &.massive {
+	font-size:5em;
+    }
+
 }
 
 #power-message-container {
@@ -72,7 +100,7 @@
     padding-left:50px;
     padding-right:50px;
     p {
-	padding-top:30px;
+	padding-top:20px;
 	line-height:1.2em;
 	font-family:"Trebuchet MS", Tahoma;
     }
@@ -81,11 +109,11 @@
 #slide1 {
 
     .power-message {
-	top:-10px;
+	top:10px;
 	left:10px;
 
 	p {
-	    padding-top:30px;
+	    padding-top:20px;
 	    width:450px;
 	}
     }
@@ -98,10 +126,9 @@
 #slide2 {
     
     .power-message {
-	top:20px;
-	left:-90px;
+	top:-50px;
+	left:-70px;
 	text-align:right;
-
 
     }
     
@@ -115,9 +142,8 @@
 
     .power-message {
 	
-	top:-20px;
+	top:40px;
 	left:10px;
-	
 	p {
 	    width:300px;
 	}
@@ -138,12 +164,12 @@
 	text-align:right;
 	margin-right:50px;
 	top:-10px;
-	left:-30px;
+	left:0px;
     }
     
     .power-message {
 	left:10px;
-	top:10px;
+	top:0px;
     }
 }
 

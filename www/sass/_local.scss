@@ -1,4 +1,59 @@
 
+    
+#services-navigation-container {
+    position:relative;
+    z-index:1;
+    top:-80px;
+    @include border-radius(10px);
+    background-color:#303;
+    clear:both;
+    float:right;
+    width:450px;
+    left:-10px;
+    height:360px;
+    padding:20px;
+    padding-top:80px;
+    border:1px dotted #c0c;
+    opacity:1;
+    @include transition(opacity .6s);
+
+    p {
+	text-align:center;
+	margin-bottom:20px;
+	font-size:1.2em;
+	color:#d0d;
+    }
+    ul {
+	margin:0 auto;
+	width:450px;
+	height:300px;
+    }
+    li {
+	font-size:.8em;
+	float:left;
+	text-align:left;
+	height:50px;
+	width:450px;
+	img {
+	    float:left;
+	    width:40px;
+	    margin-top:5px;
+	}
+	h1 {
+	    margin-left:60px;
+	    margin-top:20px;
+	}
+	border-bottom:1px dotted #959;
+    }
+    
+    &.hidden {
+	opacity:0;
+	top:-600px;
+	@include transition(opacity .6s);
+    }
+}
+
+
 .padme50 {
     padding:50px;
 }
@@ -22,16 +77,15 @@
     opacity:.3;
     z-index:2;
 }
-
 #navigation-container {
     font-family: $heading;
-    text-transform:lowercase;
     width:100%;
+    height:41px;
     max-width:1100px;
     margin:0 auto;
     z-index:2;
-    top:80px;
-    font-size:1.1em;
+    top:75px;
+    font-size:1.5em;
     position:absolute;
     text-align:right;
 
@@ -44,15 +98,19 @@
     a:visited {
 	color:#fff;	     
     }
+    a.navon,
     a:hover {
 	color:#f0f;
 	text-decoration:none;
     }
 
-    ul {
+    .main-navigation {
+	position:relative;
+	z-index:2;
 	padding-right:60px;
+	float:right;
 	display:inline-block;
-	width:300px;
+	width:400px;
 	list-style:none;
 	text-align: justify;
 	-ms-text-justify: distribute-all-lines;
@@ -169,7 +227,7 @@ body {
 #media-content-container {
 
     list-style:none;
-    height:250px;
+    height:300px;
     margin:0 auto;
     text-align: justify;
     -ms-text-justify: distribute-all-lines;
@@ -191,37 +249,47 @@ body {
 	zoom: 1;
 	min-width:290px;
 	width:30%;
-	@include border-radius(10px);
 
 	.media-content {
 	    position:absolute;
 	    opacity:1;
-	    background-color:#101;
-	    @include background-image(linear-gradient(top,#101 80%,#000 100%)); 
-	    height:230px;
-	    @include border-top-radius(8px);
+	    background-color:#303;
+	    height:270px;
+	    @include border-radius(3px);
+	    border:1px dotted #f0f;
 	    h1 {
+		@include border-radius(3px);
 		padding:8px;
-		@include border-top-radius(8px);
-		background-color:#202;
+		background-color:#505;
 		text-align:center;
 		font-family:$heading;
 		color:#f6f;
 		font-size:2.5em;
 		margin-bottom:10px;
 	    }
+
 	    p {
 		padding:15px;
-		text-align:left;
+		text-align:center;
 		font-weight:normal;
 		font-family:$text;
 		font-size:.8em;
 		line-height:1.2em;
 		letter-spacing:.1em;
 	    }
-	    form {
-		padding:15px;
+ 	    .media-top {
+		height:180px;
 	    }
+	    .media-bottom {
+		position:absolute;
+		width:100%;
+		bottom:0px;
+		padding-top:10px;
+		height:50px;
+		background-color:#404;
+		text-align:center;
+		}
+	    
 	}
     }
 	&:after {
@@ -234,12 +302,19 @@ body {
 	}
 
 
-}    
+}   
+.media-glow {
+    position:absolute;
+    z-index:2;
+    @include box-shadow(#eb0 300px 50px 200px 150px);
+    opacity:.2;
+    width:800px;
+}
 .media-rule-top {
     clear:both;
-	width:100%;
-	height:2px;
-	@include background-image(linear-gradient(left,#000 0%,#a0a 15%, #a0a 85%, #000 100%,#000)); 
+    width:100%;
+    height:2px;
+    @include background-image(linear-gradient(left,#000 0%,#a0a 15%, #a0a 85%, #000 100%,#000)); 
 }
 .media-rule-bottom {
     clear:both;
@@ -267,6 +342,7 @@ body {
     }
 }
 
+.displaynone,
 .display-off {
     display:none;
 }
@@ -384,7 +460,12 @@ body {
 }
 
 #mailing-list {
-
+    form {
+	margin:0px;
+	padding:0px;
+	width:100%;
+	text-align:center;
+    }
     input {
 	padding:8px;
 	background-color:#fcf;
@@ -395,13 +476,14 @@ body {
 	@include border-radius(5px);
     }
     
-    button {
+}
+.signup-button {
 	@include sassy-button("shiny", 8px, 15px, #f0f, #a0a);
-	font-size:.9em;
+	font-size:1em;
 	font-family:$button;
 	padding:6px;
     }
-}
+
 #from-our-blog,
 #latest-news {
     p {
@@ -427,14 +509,41 @@ a:hover {
     .power-image {
 	text-align:right;
 	width:100%;
-	top:20px;
+	top:80px;
     }
     p {
 	padding-left:50px;
 	width:600px;
     }
 }		
+/**************** WEB DESIGN **************/
+#mobile,
+#webdesign {
+    width:100%;
+    height:800px;
+    .power-image {
+	text-align:center;
+	
+	img {
+	    width:600px;
+	    }
+    }
+    .power-message {
+	text-align:center;
+	width:100%;
+	font-size:1.5em;
+	top:200px;
+	padding:0px;
+    }
+    p {
+	padding-left:150px;
+	padding-right:150px;
+	text-align:left;
+	font-size:.7em;
 
+    }
+}
+    
 #invitation {
     text-align:center;
     width:840px;
@@ -457,8 +566,12 @@ a:hover {
 	    padding-bottom:10px;
 	    border-bottom:1px solid #fff;
 	    text-align:left;
+	    font-family:"Lobster Two";
+	    font-style:italic;
 	}
 	h2.power-title {
+	    font-family:"Lobster Two";
+	    font-style:italic;
 	    padding-top:20px;
 	    text-align:center;
 	    color:#808;

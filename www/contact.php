@@ -1,6 +1,6 @@
 <?php include "core.inc.php";
 
-html_header('','');
+html_header('','contact');
 
 ?>
 <div id='main-content-container' class='page-container'>
