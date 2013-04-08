@@ -49,7 +49,7 @@ YUI().use("node",function(Y) {
 	currentSlide = toSlide;
 	Y.one("#button"+currentSlide).addClass("active");
 	
-	currentTimer = setTimeout(function() {changeSlide(currentSlide+1)},7000);
+	currentTimer = setTimeout(function() {changeSlide(currentSlide+1)},4000);
     },
     
     switchSlide = function(e) {
@@ -59,7 +59,7 @@ YUI().use("node",function(Y) {
     };
     
     // start the slide show
-    changeSlide(1);
+    changeSlide(4);
 
     Y.one("#slide-buttons").delegate("click",switchSlide,".slide-button");
     

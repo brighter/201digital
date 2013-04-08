@@ -17,13 +17,14 @@ $headerHeight:130px;
 }
 
 #power-content {
+    overflow:hidden;
     position:relative;
     margin:0 auto;
     max-width:900px;
     height:300px;
     font-style:italic;
     text-align:center;
-    font-family:'Libre Baskerville';
+    font-family:serif;
     .title {
 	font-size:6em;
 	}
@@ -38,6 +39,8 @@ $headerHeight:130px;
     margin-top:30px;
     max-width:1200px;
     height:100%;
+    border-top:1px dotted #555;
+	    
 }
 #main-content-background {
     position:absolute;
@@ -283,6 +286,44 @@ body {
     margin:0 auto;
 }
 
+#media-channels {
+    width:900px;
+    margin:0px;
+    padding:0px;
+    line-height:1.3em;
+    -ms-text-justify: distribute-all-lines;
+    text-justify: distribute-all-lines;
+
+    li {
+	width:255px;
+	display:inline-block;
+	zoom:1;
+	vertical-align:top;
+	text-align:center;
+	margin:20px;
+	margin-top:0px;
+	h1 {
+	    font-size:2em;
+	    height:30px;
+	}
+	p {
+	    padding-top:20px;
+	    text-align:justify;
+	    font-weight:lighter;
+	    letter-spacing:.1em;
+	    font-size:.8em;
+	    color:#ddd;
+	    }
+	
+    }
+	&:after {   
+	    content: '';
+	    width: 100%;
+	    display: inline-block;
+	    font-size: 0;
+	}
+
+}
 	
 #media-content-container {
 

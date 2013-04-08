@@ -18,7 +18,7 @@ html_header('','');
   <h1 class='title'>welcome</h1>
   </div>
   
-  <div id='slide1' class='purple slide hidden'>
+  <div id='slide1' class='purple slide'>
   <br /><br /><br />
   <h1 class='subtitle'>digital</h1>
   <h1 class='title'>brand building</h1>
@@ -43,10 +43,25 @@ html_header('','');
 <div id='main-content'>
   <div id='main-content-background'></div>
   <div id='main-content-foreground'>
-  <h1 class='title'>Welcome to the jungle...</h1>
-  <p>You are about to witness, the strength of street knowledge</p>
+  <ul id='media-channels'>
+  <li>
+  <h1>201 Blog</h1>
+      <p>Well its been an interesting week here at 201Digital. First of all we start a company called Brighter, 
+    then we decide to do something completely different and start a company with some poncy name 201Digital.
+			   There is a plan to all the madness however...</p>
+			   </li>
+			   <li>
+			   <h1>201 News</h1>
+    <p>201 Digital wins contract with Microsoft to secure 1.5 million revenue over the next 2 weeks.</p>
+</li>
+<li>
+<h1>201 Update</h1>
+<p>Get our bi-weekly catch up of the latest marketing trends and campaigns from across the Net.</p></label>
+    <form action='http://twitter.us5.list-manage.com/subscribe/post?u=aec9a01e16e8dbedf96c72ea9&id=3235809f24'  id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+	<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+</form>			   
   </div>
-  </div>
+</div>
   <script language='javascript' src='js/slideshow.js'></script>
 <?php
 
