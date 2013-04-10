@@ -39,7 +39,7 @@ html_header('','');
   </div>
 
 </div>
-  
+
   <div id='slide-buttons'>
   <div id='button1' class='switch slide-button active'></div>
   <div id='button2' class='switch slide-button'></div>

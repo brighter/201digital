@@ -1,7 +1,7 @@
 3.2.1 (Media Mark)
-c8b221bb9a9f0b0ff255c75a48e340bffeb79153
+fbba86f39feefaf08dd33f02e24f38560a86df60
 o:Sass::Tree::RootNode
-:@template"ª/
+:@template"«/
 $headerHeight:130px;
 
 #breadcrumb {
@@ -23,7 +23,7 @@ $headerHeight:130px;
     overflow:hidden;
     position:relative;
     margin:0 auto;
-    max-width:900px;
+    max-width:1000px;
     height:300px;
     font-style:italic;
     text-align:center;
@@ -781,8 +781,7 @@ color;'i ;'i o;;["#power-content;@;o;;" ;i;[o;;[o;
 [o;!;@;o;";@;"hidden;#;$;i;
 [ ;%;&;'i ;["overflowo;!;@;o;";@;"relative;#;$;i;
 [ ;%;&;'i ;["positiono;!;@;o;";@;"0 auto;#;$;i;
-[ ;%;&;'i ;["margino;!;@;o;";@;"
-900px;#;$;i;
+[ ;%;&;'i ;["margino;!;@;o;";@;"1000px;#;$;i;
 [ ;%;&;'i ;["max-widtho;!;@;o;";@;"
 300px;#;$;i;
 [ ;%;&;'i ;["heighto;!;@;o;";@;"italic;#;$;i;
