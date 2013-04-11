@@ -49,7 +49,6 @@ body {
 
 #main-content {
     position:relative;
-    margin-top:30px;
     width:100%;
     height:100%;
 }
@@ -257,12 +256,11 @@ body {
 #power-content {
     overflow:hidden;
     position:relative;
-    margin:0 auto;
+    margin-top:30px;
     width:100%;
     min-height:$powerSlideHeight;
-    font-style:italic;
-    text-align:center;
     font-family:serif;
+    
     .title {
 	font-size:6em;
 	}
@@ -278,7 +276,14 @@ body {
     opacity:.9;
     width:100%;
     min-height:$powerSlideHeight;
+    font-style:italic;
+
     @include transition(top 1s);
+
+    &.centerslide {
+	text-align:center;
+	top:80px;
+    }
 }
 
 .slide-background {
@@ -301,12 +306,10 @@ body {
 }
 
 #slide-buttons {
-    position:absolute;
-    top:340px;
-    text-align:right;
-    width:100%;
+    text-align:center;
+    padding:20px;
     z-index:10;
-
+    opacity:.3;
 }
 .slide-button {
     cursor:pointer;

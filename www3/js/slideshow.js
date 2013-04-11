@@ -7,8 +7,10 @@ YUI().use("node","transition",function(Y) {
     changeSlide = function(toSlide) {
 	
 	if(!document.getElementById("slide"+toSlide)) {
-	    toSlide=1;
-	} 
+	    // pause and then restart slide show...
+	    currentTimer = setTimeout(function() {changeSlide(1)},4000);
+	    return;
+	}
 	Y.one("#slide"+currentSlide).transition({
 	    duration:1,
 	    opacity:0,
@@ -21,8 +23,8 @@ YUI().use("node","transition",function(Y) {
 	    }
 	});
 	
-	    currentSlide = toSlide;
-	    currentTimer = setTimeout(function() {changeSlide(currentSlide+1)},4000);
+	currentSlide = toSlide;
+	currentTimer = setTimeout(function() {changeSlide(currentSlide+1)},4000);
 	
     }
     

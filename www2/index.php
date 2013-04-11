@@ -5,26 +5,23 @@ html_header('','');
 <br /><br />
 <div id='power-content'>
 
-  <div id='slide1' class='yellow slide hidden'>
-  <br /><br /><br />
+  <div id='slide1' class='slide centerslide hidden'>
   <h1 class='subtitle'>creative</h1>
   <h1 class='title'>web development</h1>
   </div>
 
   
-  <div id='slide2' class='red slide hidden'>
-  <br /><br /><br />
+  <div id='slide2' class='slide centerslide hidden'>
   <h1 class='subtitle'>on-line</h1>
   <h1 class='title'>marketing strategies</h1>
   </div>
 
-  <div id='slide3'  class='blue slide hidden'>
-  <br /><br /><br />
+  <div id='slide3'  class='slide centerslide hidden'>
   <h1 class='subtitle'>digital</h1>
   <h1 class='title'>brand building</h1>
   </div>
 
-  <div id='slide4' class='hidden purple slide'>
+  <div id='slide4' class='slide hidden'>
   <div class='slide-background'></div>
   <div class='slide-foreground'>
   <div style='float:left'>
