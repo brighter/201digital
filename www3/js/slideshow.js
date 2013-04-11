@@ -9,18 +9,18 @@ YUI().use("node","transition",function(Y) {
 	if(!document.getElementById("slide"+toSlide)) {
 	    toSlide=1;
 	} 
-	    Y.one("#slide"+currentSlide).transition({
+	Y.one("#slide"+currentSlide).transition({
 	    duration:1,
-		opacity:0,
-		on : {
-		    end : function() {
-			this.addClass("hidden");
-			Y.one("#slide"+toSlide).removeClass("hidden");
-			Y.one("#slide"+toSlide).setStyle("opacity",1);
-		    },
-		}
-	    });
-	    
+	    opacity:0,
+	    on : {
+		end : function() {
+		    this.addClass("hidden");
+		    Y.one("#slide"+toSlide).removeClass("hidden");
+		    Y.one("#slide"+toSlide).setStyle("opacity",'.9');
+		},
+	    }
+	});
+	
 	    currentSlide = toSlide;
 	    currentTimer = setTimeout(function() {changeSlide(currentSlide+1)},4000);
 	

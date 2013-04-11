@@ -22,6 +22,7 @@ function html_header($title='', $currentPage='about') {
 <!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
 <!--[if gt IE 8]> <html class="no-js" lang="en">  <![endif]-->
   <head>
+<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
    <script src="http://yui.yahooapis.com/3.8.1/build/yui/yui-min.js"></script>
    <link href="stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
    <link href="stylesheets/print.css" media="print" rel="stylesheet" type="text/css" />
@@ -42,8 +43,6 @@ function html_header($title='', $currentPage='about') {
    <div id='header-stripe'></div>
 
    <div id='header-container'>
-
-   <div class='logo-shadow purple'></div>
 
    <div id='logo-container'><a href='index.php'>
    <h1 class='logo purple'><span class='logo-201'>201</span><span class='logo-digital'>digital</span><span class='logo-co-uk'>.co.uk</span><span class='logo-marketing'>internet marketing</span></h1></a>
