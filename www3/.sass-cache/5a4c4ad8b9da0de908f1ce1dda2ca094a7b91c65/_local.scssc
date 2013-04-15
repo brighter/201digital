@@ -1,7 +1,7 @@
 3.2.1 (Media Mark)
-54b5cc0568ba39bb5e085134a0859b6ff55ffe21
+2b36fe62c825b4730de9130343abe9ca575501c7
 o:Sass::Tree::RootNode
-:@template"$headerHeight:130px;
+:@template"$headerHeight:130px;
 $powerSlideHeight:300px;
 
 /* core structure */
@@ -467,7 +467,7 @@ h12 {
 	padding-left:110px;
 	
 	&.line2 {
-	    padding-left:0px;
+	    padding-left:160px;
 	}
 	
     }
@@ -1143,7 +1143,8 @@ line2;iÆ;	T;
 [ ;(;);*i ;["padding-lefto;;["&.line2;@;o;;" ;iÒ;[o;;[o;
 ;0;@; o;!;"{ ;iÒ;[o;1;@;iÒo;0;@;iÒ;["
 line2;iÒ;	T;
-[o;%;@;o;&;@;"0px;;';iÓ;
+[o;%;@;o;&;@;"
+160px;;';iÓ;
 [ ;(;);*i ;["padding-left;*i ;*i o;;[".slide-img;@;o;;" ;i×;[o;;[o;
 ;0;@6; o;!;"{ ;i×;[o;0;@6;i×;["slide-img;i×;	T;
 [o;%;@;o;&;@;"
