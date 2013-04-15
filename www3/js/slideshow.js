@@ -18,7 +18,7 @@ YUI().use("node","transition",function(Y) {
 	    },
 	    on : {
 		start : function() {
-		    this.setStyle("opacity",".3");
+		    this.setStyle("opacity","");
 		}
 	    }
 	})
@@ -37,7 +37,7 @@ YUI().use("node","transition",function(Y) {
 	    },
 	    on : {
 		end : function() {
-		    this.setStyle("top","-400px");
+		    this.setAttribute("style","");
 		}
 	    }
 	});
@@ -57,10 +57,7 @@ YUI().use("node","transition",function(Y) {
 	on : {
 	    start : function() {
 		hideSlideBackground();
-	    },
-	    end : function() {
-		this.setStyle("top","-400px");
-		this.setStyle("opacity",".9");
+		this.setAttribute("style","");
 	    }
 	}
     },
@@ -69,7 +66,7 @@ YUI().use("node","transition",function(Y) {
 	
 	top : {
 	    duration: 1.5 ,
-	    value: "1px" 
+	    value: 0 
 	},
 	left : {
 	    delay:5,
@@ -78,6 +75,7 @@ YUI().use("node","transition",function(Y) {
 	},
 	on : {
 	    start : function() {
+		this.setAttribute("style","");
 		showSlideBackground();
 	    }
 	    
@@ -97,11 +95,10 @@ YUI().use("node","transition",function(Y) {
 	},
 	on : {
 	    start : function() {
-		this.setStyle("top","0px");
+		this.setAttribute("style","");
+		this.setStyle("left","0");
+		this.setStyle("top","0");
 		showSlideBackground();
-	    },
-	    end : function() {
-		this.setStyle("top","0px");
 	    }
 	}
     },
@@ -118,20 +115,60 @@ YUI().use("node","transition",function(Y) {
 	},
 	on : {
 	    start : function() {
+		this.setAttribute("style","");
+		this.setStyle("left","-100%");
+		this.setStyle("top","0");
 		showSlideBackground();
-		this.setStyle("top","0px");
-	    },
-	    end : function() {
-		this.setStyle("top","0px");
 	    }
 	}
     },
-
     slideTransitionType5 = {
 	left : {
 	    duration: 1,
 	    easing:'ease-out',
 	    value: "-300%" 
+	},
+	top : {
+	    delay:6,
+	    duration:0,
+	    value:"1px"
+	},
+	on : {
+	    start : function() {
+		this.setAttribute("style","");
+		this.setStyle("left","-200%");
+		this.setStyle("top","0");
+		showSlideBackground();
+	    }
+	}
+    },
+
+   slideTransitionType6 = {
+	left : {
+	    duration: 1,
+	    easing:'ease-out',
+	    value: "-400%" 
+	},
+	top : {
+	    delay:6,
+	    duration:0,
+	    value:"1px"
+	},
+	on : {
+	    start : function() {
+		this.setAttribute("style","");
+		this.setStyle("left","-300%");
+		this.setStyle("top","0");
+		showSlideBackground();
+	    }
+	}
+    },
+
+    slideTransitionType7 = {
+	left : {
+	    duration: 1,
+	    easing:'ease-out',
+	    value: "-500%" 
 	},
 	opacity: {
 	    delay:10,
@@ -146,13 +183,11 @@ YUI().use("node","transition",function(Y) {
 	
 	on : {
 	    start : function() {
+		this.setAttribute("style","");
+		this.setStyle("left","-400%");
+		this.setStyle("top","0");
 		showSlideBackground();
-		this.setStyle("top","0px");
-		hideSlideBackground(10);
-	    },
-	    end : function() {
-		this.setStyle("top","-400px");
-		this.setStyle("opacity",".9");
+		hideSlideBackground(11);
 	    }
 	}
     },
@@ -169,6 +204,8 @@ YUI().use("node","transition",function(Y) {
 	    Y.one("#slide4"),
 	    Y.one("#slide4"),
 	    Y.one("#slide4"),
+	    Y.one("#slide4"),
+	    Y.one("#slide4"),
 	    Y.one("#slide4")
 	],
 	
@@ -179,7 +216,9 @@ YUI().use("node","transition",function(Y) {
 	    slideTransitionType2,
 	    slideTransitionType3,
 	    slideTransitionType4,
-	    slideTransitionType5
+	    slideTransitionType5,
+	    slideTransitionType6,
+	    slideTransitionType7
 	],
     	
 	
@@ -193,7 +232,8 @@ YUI().use("node","transition",function(Y) {
 		currentSlide.setStyle("visibility","visible");
 		node.setHTML("II&nbsp;");
 		this.paused = false;
-		
+		this.resetSlides();
+		setTimeout("1000",this.nextSlide);
 		pausedSlide.transition({
 		    opacity : {
 			duration:1,
@@ -205,7 +245,7 @@ YUI().use("node","transition",function(Y) {
 			    this.setStyle("opacity",".9");
 			}
 		    }
-		}, Y.bind(this.nextSlide,this));
+		});
 		
 	    } else {
 		// need to make sure the current slide goes into 'shown' state
@@ -221,18 +261,21 @@ YUI().use("node","transition",function(Y) {
 	    }
 	},
 	
-	switchSlide : function(e) {
+	resetSlides : function() {
 	    for(var i = 0; i< this.slide.length; i++) {
-		if(this.slide[i].transition.destroy) {
-		    this.slide[i].transition.destroy();
-		}
-		this.slide[i].setStyle("top","-400px");
-		this.slide[i].setStyle("left","0px");
-		this.slide[i].setStyle("opacity",".9");
+		this.slide[i].setAttribute("style","");
+		this.slide[i].transition({});
 	    }
-	    Y.one(".slide-background").setStyle("top","-400px");
-	    Y.one(".slide-background").setStyle("opacity",".3");
+	    Y.one(".slide-background").setAttribute("style","");
+	},
+	    
+	switchSlide : function(e) {
 
+	    if(this.paused) {
+		return;
+	    }
+	    this.resetSlides();
+	    
 	    switchTo = e.currentTarget.one("input").get("value");
 	    this.currentSlide = switchTo - 2;
 	    this.nextSlide();

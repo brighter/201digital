@@ -29,39 +29,51 @@ html_header('','');
       <div id='slide4' class='slide'>
         <div class='subslide subslide1'>
           <div class='slide-content'>
-            <h1 class='subtitle'>Welcome to 201 Digital.</h1>
-            <p>We help you to build your business by building your customers.</p>
-            <p>If you want more web traffic, better customer relations, engaging marketing campaigns then talk to us today.</p>
-            <p>We develop for web, mobile, facebook, apps, strategies etc...</p>
+            <h1 class='title'>201 Digital</h1>
+            <h1 class='subtitle'>The request has been fulfilled<h1>
+              <h1 class='subtitle line2'>a new resource has been created</h1>
           </div>
           <img class='slide-img' src='img/201d-large.png' style='border:1px solid #fff'/>
         </div>
         <div class='subslide subslide2'>
           <div class='slide-content'>
-            <h1 class='subtitle'>Mobile Apps.</h1>
-            <p>We help you to build your business by building your customers.</p>
-            <p>If you want more web traffic, better customer relations, engaging marketing campaigns then talk to us today.</p>
-            <p>We develop for web, mobile, facebook, apps, strategies etc...</p>
+            <h1 class='title'>Multiplatform</h1>
+            <h1 class='subtitle'>cohesive approach to brand building</h1>
+            <h1 class='subtitle line2'>and customer acquisition</h1>
           </div>
-          <img class='slide-img' src='img/android_platform.png'/>
+          <img class='slide-img' src='img/checklist.gif'/>
         </div>
         <div class='subslide subslide3'>
           <div class='slide-content'>
-            <h1 class='subtitle'>Slide3.</h1>
-            <p>We help you to build your business by building your customers.</p>
-            <p>If you want more web traffic, better customer relations, engaging marketing campaigns then talk to us today.</p>
-            <p>We develop for web, mobile, facebook, apps, strategies etc...</p>
+            <h1 class='title'>Search Engine</h1>
+            <h1 class='subtitle'>rank building, AdWord campaigns</h1>
+            <h1 class='subtitle line2'>ROI analysis and adjustment</h1>
           </div>
-          <img class='slide-img' src='img/201d-large.png'/>
+          <img class='slide-img' src='img/search.png'/>
         </div>
         <div class='subslide subslide4'>
           <div class='slide-content'>
-            <h1 class='subtitle'>slide4.</h1>
-            <p>We help you to build your business by building your customers.</p>
-            <p>If you want more web traffic, better customer relations, engaging marketing campaigns then talk to us today.</p>
-            <p>We develop for web, mobile, facebook, apps, strategies etc...</p>
+            <h1 class='title'>Social Media</h1>
+            <h1 class='subtitle'>viral marketing campaigns,</h1>
+            <h1 class='subtitle line2'>custom application development</h1>
           </div>
-          <img class='slide-img' src='img/android_platform.png'/>
+          <img class='slide-img' src='img/social.png'/>
+        </div>
+        <div class='subslide subslide5'>
+          <div class='slide-content'>
+            <h1 class='title'>Email Marketing</h1>
+            <h1 class='subtitle'>list management, content development</h1>
+            <h1 class='subtitle line2'>brand and product placement</h1>
+          </div>
+          <img class='slide-img' src='img/email.png'/>
+        </div>
+        <div class='subslide subslide6'>
+          <div class='slide-content'>
+            <h1 class='title'>Mobile Marketing</h1>
+            <h1 class='subtitle'>web site adaptation
+            <h1 class='subtitle line2'>and brand building apps</h1>
+          </div>
+          <img class='slide-img' src='img/mobile.png'/>
         </div>
       </div>
     </div>
@@ -73,6 +85,8 @@ html_header('','');
       <div id='button5' class='switch slide-button'><input type='hidden' value='5'>&nbsp;</div>
       <div id='button6' class='switch slide-button'><input type='hidden' value='6'>&nbsp;</div>
       <div id='button7' class='switch slide-button'><input type='hidden' value='7'>&nbsp;</div>
+      <div id='button8' class='switch slide-button'><input type='hidden' value='8'>&nbsp;</div>
+      <div id='button9' class='switch slide-button'><input type='hidden' value='9'>&nbsp;</div>
       <div id='button-pause' class='slide-button pause-button'>II&nbsp;</div>
     </div>
 
@@ -86,9 +100,13 @@ html_header('','');
               <div class='media-feed-title'>
 	        <img src='img/tweets-icon.png' class='media-feed-icon'/><h1 class='i201-tweets'>@ 201 Twitter</h1>
               </div>
-	      <p>Well its been an interesting week here at 201Digital.
-	  First of all we start a company called Brighter, 
-	  then we decide to do something completely different and start a company with some poncy name 201Digital. There is a plan to all the madness however</p>
+	      <p><img class='icon-logo' src="img/201d-large.png" />Well its been an interesting week here at <a href='#sdfdsafsdfsdfd'>201Digital</a>
+	  First of all we start a company called <a href='adsfdsfasdfdsafgds'>#Brighter</a></p>
+              <div class='tweet-divider'></div>
+              <p><img class='icon-logo' src='img/201d-large.png' />then we decide to do something completely different <a href='#gdsadf43t4'>#different</a></p>
+              <div class='tweet-divider'></div>
+              <p><img class='icon-logo' src='img/201d-large.png' />and start a company with some poncy name 201Digital. There is a plan to all the madness however <a href='34slgksdlg45'>#madness</a></p>
+              <div class='tweet-divider'></div>
 	    </div>
           </div>
         </div>
@@ -102,7 +120,7 @@ html_header('','');
 	      <div class='media-feed-title'>
 	        <img src='img/blog-icon.png' / class='media-feed-icon'><h1 class='i201-blog'>@ 201 Blog</h1>
               </div>
-	      <p>201 Digital wins contract with Microsoft to secure 1.5 million revenue over the next 2 weeks.</p>
+	      <p>201 Digital wins contract with Microsoft to secure 1.5 million revenue over the next 2 weeks.201 Digital wins contract with Microsoft to secure 1.5 million revenue over the next 2 weeks.</p>	      <p>201 Digital wins contract with Microsoft to secure 1.5 million revenue over the next 2 weeks.</p>	      <p>201 Digital wins contract with Microsoft to secure 1.5 million revenue over the next 2 weeks.201 Digital wins contract with Microsoft to secure 1.5 million revenue over the next 2 weeks.</p>
 	    </div>
           </div>
         </div>

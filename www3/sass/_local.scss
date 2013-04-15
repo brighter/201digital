@@ -89,7 +89,26 @@ body {
 
 /* MEDIA FEED */
 
+.media-feed-box {
+    .tweet-divider {
+	border-bottom:1px dotted #555;
+	margin-bottom:20px;
+	margin-top:20px;
+    }
 
+    p {
+	min-height:70px;
+	clear:both;
+    }
+    .icon-logo {
+	width:50px;
+	margin:20px;
+	margin-left:0px;
+	margin-top:0px;
+	float:left;
+	border:1px solid #fff;
+    }
+}
 .media-feed-title {
 
     position:relative;
@@ -322,14 +341,7 @@ h12 {
     margin-top:30px;
     width:100%;
     min-height:$powerSlideHeight;
-    font-family:serif;
-    
-    .title {
-	font-size:6em;
-	}
-    .subtitle {
-	font-size:3em;
-    }
+    font-family:serif;     
     
 }
 
@@ -341,6 +353,14 @@ h12 {
     width:100%;
     min-height:$powerSlideHeight;
     font-style:italic;
+
+    .title {
+	font-size:6em;
+    }
+    
+    .subtitle {
+	font-size:3em;
+    }
 
     &.centerslide {
 	
@@ -398,10 +418,99 @@ h12 {
     right:40px;
 
 }
-#slide4.slide {
+.subslide {
+    position:relative;
+    z-index:2;
 
+    .title {
+	font-size:6em;
+	padding-left:20px;
+	padding-top:10px;
+    }
+    .subtitle {
+	padding-top:10px;
+	padding-left:100px;
+	font-size:2em;
+	color:#555;
+
+	&.line2 {
+	    padding-top:0px;
+	    padding-left:120px;
+	}
+	   
+    }
+}
+.subslide.subslide2 {
+    .slide-img {
+	z-index:1;
+	position:absolute;
+	right:0px;
+	top:30px;
+	width:470px;
+    }
+    .subtitle {
+	padding-left:70px;
+
+	&.line2 {
+	    padding-left:180px;
+	}
+
+    }
+}
+.subslide.subslide3 {
+
+    .subtitle {
+	
+	padding-left:110px;
+	
+	&.line2 {
+	    padding-left:0px;
+	}
+	
+    }
+    .slide-img {
+	width:230px;
+    }
 }
 
+
+.subslide.subslide4 {
+    .subtitle {
+	padding-left:90px;
+	&.line2 {
+	    padding-left:120px;
+	}
+    }	
+
+    .slide-img {
+	width:250px;
+	right:60px;
+    }
+}
+.subslide.subslide5 {
+    .subtitle {
+	&.line2 {
+	    padding-left:180px;
+	}
+    }
+    .slide-img {
+	width:360px;
+    }
+}
+.subslide.subslide6 {
+    .subtitle {
+	padding-left:80px;
+	
+	&.line2 {
+	    padding-left:160px;
+	}
+    }
+    
+    .slide-img {
+	top:50px;
+	width:301px;
+    }
+}
 .subslide {
     position:absolute;
     top:0px;
@@ -418,6 +527,12 @@ h12 {
     }
     &.subslide4 {
 	left:300%;
+    }
+    &.subslide5 {
+	left:400%;
+    }
+    &.subslide6 {
+	left:500%;
     }
 	    
 }
