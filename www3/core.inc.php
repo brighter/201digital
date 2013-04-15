@@ -69,10 +69,7 @@ function html_header($title='', $currentPage='about') {
    </div>   <!-- end header-container -->
 
    </header>
-   
-   <div id='foreground-container'>
-   <div id='foreground'>
-<?php
+   <?php
    }
 
 function html_footer() { 
@@ -91,10 +88,6 @@ function html_footer() {
 						    </div>
 						    </footer>
 						  
-
-  </div> <!-- foreground -->
-						    
-						    </div>  <!-- foreground container -->
 						    
 						    </body>
 						    </html>

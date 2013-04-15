@@ -81,17 +81,52 @@ body {
 }
 
 /* line 16, ../sass/_local.scss */
-#foreground-container {
-  position: absolute;
+.foreground-container {
   z-index: 1;
   width: 90%;
   padding-left: 5%;
   padding-right: 5%;
   height: 100%;
 }
+/* line 24, ../sass/_local.scss */
+.foreground-container.grey {
+  background-color: #aaa;
+  padding-top: 100px;
+  height: 500px;
+}
+/* line 28, ../sass/_local.scss */
+.foreground-container.grey h1 {
+  color: #000;
+  font-size: 4em;
+  text-align: center;
+}
+/* line 35, ../sass/_local.scss */
+.foreground-container.white {
+  background-color: #fff;
+  padding-top: 100px;
+  height: 500px;
+}
+/* line 39, ../sass/_local.scss */
+.foreground-container.white h1 {
+  color: #000;
+  font-size: 4em;
+  text-align: center;
+}
+/* line 46, ../sass/_local.scss */
+.foreground-container.pink {
+  background-color: #f0f;
+  padding-top: 100px;
+  height: 500px;
+}
+/* line 50, ../sass/_local.scss */
+.foreground-container.pink h1 {
+  color: #000;
+  font-size: 4em;
+  text-align: center;
+}
 
-/* line 25, ../sass/_local.scss */
-#foreground {
+/* line 58, ../sass/_local.scss */
+.foreground {
   position: relative;
   height: 100%;
   width: 100%;
@@ -99,7 +134,7 @@ body {
   margin: 0 auto;
 }
 
-/* line 33, ../sass/_local.scss */
+/* line 66, ../sass/_local.scss */
 #header-container {
   position: relative;
   height: 130px;
@@ -108,7 +143,7 @@ body {
   margin: 0 auto;
 }
 
-/* line 41, ../sass/_local.scss */
+/* line 74, ../sass/_local.scss */
 #header-stripe {
   position: absolute;
   width: 100%;
@@ -118,68 +153,103 @@ body {
   z-index: 2;
 }
 
-/* line 50, ../sass/_local.scss */
+/* line 83, ../sass/_local.scss */
 #main-content {
+  margin-top: 30px;
   position: relative;
   width: 100%;
   height: 100%;
 }
 
-/* line 58, ../sass/_local.scss */
-#media-channels ul {
-  width: 100%;
+/* MEDIA FEED */
+/* line 93, ../sass/_local.scss */
+.media-feed-title {
+  position: relative;
+  height: 40px;
+  top: -40px;
+  vertical-align: bottom;
 }
-/* line 62, ../sass/_local.scss */
-#media-channels li {
-  display: inline-block;
-  float: left;
-  width: 300px;
+/* line 100, ../sass/_local.scss */
+.media-feed-title .media-feed-icon {
+  margin-left: 10px;
+}
+/* line 103, ../sass/_local.scss */
+.media-feed-title h1 {
+  position: relative;
+  top: -24px;
+  font-size: 1.4em;
+  font-style: italic;
+  text-align: right;
+  color: #555;
 }
 
-/* line 68, ../sass/_local.scss */
+/* line 114, ../sass/_local.scss */
+h12 {
+  font-size: 2em;
+  position: relative;
+  top: -40px;
+  left: -10px;
+  height: 40px;
+  padding-top: 6px;
+  background-repeat: no-repeat;
+  background-position: center top;
+  padding-left: 100px;
+}
+
+/* line 127, ../sass/_local.scss */
+.media-feed-box p {
+  font-size: 1em;
+  line-height: 1.3em;
+  font-family: "helvetica";
+}
+
+/* line 134, ../sass/_local.scss */
 .content-container {
   width: 90%;
   position: relative;
   padding-left: 5%;
   padding-right: 5%;
 }
-/* line 73, ../sass/_local.scss */
+/* line 139, ../sass/_local.scss */
 .content-container.first {
   padding-left: 0%;
   padding-right: 10%;
 }
-/* line 77, ../sass/_local.scss */
+/* line 143, ../sass/_local.scss */
 .content-container.last {
   padding-left: 10%;
   padding-right: 0%;
 }
 
-/* line 82, ../sass/_local.scss */
+/* line 148, ../sass/_local.scss */
 .content-box-background {
   position: absolute;
+  opacity: .4;
   z-index: 1;
-  height: 400px;
   width: 90%;
   background: #000;
-  opacity: .4;
-  border-top: 2px dotted #888;
+  border-top: 2px dotted #ccc;
 }
 
-/* line 92, ../sass/_local.scss */
+/* line 157, ../sass/_local.scss */
 .content-box-foreground {
-  position: absolute;
-  width: 80%;
+  position: relative;
   margin: 5%;
   z-index: 2;
   color: #fff;
+  padding-bottom: 100px;
 }
-/* line 99, ../sass/_local.scss */
+/* line 163, ../sass/_local.scss */
 .content-box-foreground .title {
   font-size: 3em;
 }
+/* line 166, ../sass/_local.scss */
+.content-box-foreground p {
+  opacity: .6;
+}
 
 /* NAVIGATION  & NEWSLETTER SIGNUP */
-/* line 107, ../sass/_local.scss */
+/* line 174, ../sass/_local.scss */
 #newsletter-signup-container {
   position: absolute;
   font-family: 'Helvetica Neue',Helvetica,Arial,Sans-Serif;
@@ -189,13 +259,7 @@ body {
   top: 10px;
   left: -10px;
 }
-/* line 115, ../sass/_local.scss */
-#newsletter-signup-container .msg {
-  font-size: .6em;
-  color: #777;
-  margin-bottom: 5px;
-}
-/* line 121, ../sass/_local.scss */
+/* line 183, ../sass/_local.scss */
 #newsletter-signup-container input {
   font-size: .7em;
   width: 260px;
@@ -204,9 +268,13 @@ body {
   color: #888;
   padding: 5px;
   height: 18px;
+  position: relative;
+  top: 10px;
 }
-/* line 131, ../sass/_local.scss */
+/* line 195, ../sass/_local.scss */
 #newsletter-signup-container button {
+  position: relative;
+  top: 10px;
   font-size: .7em;
   background: #444;
   border: 1px solid #888;
@@ -215,20 +283,16 @@ body {
   color: #aaa;
 }
 
-/* line 141, ../sass/_local.scss */
+/* line 207, ../sass/_local.scss */
 #newsletter-signup {
-  background: #1a1a1a;
-  border-bottom: 2px dotted #444;
+  border: 2px dotted #444;
   float: right;
-  padding-top: 20px;
-  height: 40px;
+  height: 50px;
   width: 380px;
   text-align: center;
-  position: relative;
-  top: -20px;
 }
 
-/* line 153, ../sass/_local.scss */
+/* line 215, ../sass/_local.scss */
 #navigation-container {
   width: 100%;
   height: 41px;
@@ -239,7 +303,7 @@ body {
   font-weight: lighter;
   letter-spacing: 1px;
 }
-/* line 163, ../sass/_local.scss */
+/* line 225, ../sass/_local.scss */
 #navigation-container a {
   height: 20px;
   -webkit-transition: color 1s;
@@ -248,33 +312,33 @@ body {
   transition: color 1s;
   text-decoration: none;
 }
-/* line 170, ../sass/_local.scss */
+/* line 232, ../sass/_local.scss */
 #navigation-container a,
 #navigation-container a:link,
 #navigation-container a:visited {
   color: #fff;
 }
-/* line 174, ../sass/_local.scss */
+/* line 236, ../sass/_local.scss */
 #navigation-container a.navon,
 #navigation-container a:hover {
   color: #f0f;
   text-decoration: none;
 }
-/* line 179, ../sass/_local.scss */
+/* line 241, ../sass/_local.scss */
 #navigation-container .main-navigation {
   position: absolute;
   top: 84px;
   width: 100%;
   list-style: none;
 }
-/* line 186, ../sass/_local.scss */
+/* line 248, ../sass/_local.scss */
 #navigation-container li {
   display: inline-block;
   padding-right: 40px;
 }
 
 /* LOGO */
-/* line 193, ../sass/_local.scss */
+/* line 256, ../sass/_local.scss */
 #logo-container {
   z-index: 10;
   position: absolute;
@@ -284,7 +348,7 @@ body {
   height: 150px;
 }
 
-/* line 202, ../sass/_local.scss */
+/* line 265, ../sass/_local.scss */
 .logo {
   position: absolute;
   left: 10px;
@@ -298,7 +362,7 @@ body {
   opacity: 1;
 }
 
-/* line 215, ../sass/_local.scss */
+/* line 278, ../sass/_local.scss */
 .logo-201 {
   font-size: 1.9em;
   position: relative;
@@ -306,21 +370,21 @@ body {
   left: 2px;
 }
 
-/* line 221, ../sass/_local.scss */
+/* line 284, ../sass/_local.scss */
 .logo-digital {
   font-size: 3.9em;
   position: relative;
   left: -10px;
 }
 
-/* line 226, ../sass/_local.scss */
+/* line 289, ../sass/_local.scss */
 .logo-co-uk {
   font-size: 1.2em;
   position: relative;
   left: -10px;
 }
 
-/* line 231, ../sass/_local.scss */
+/* line 294, ../sass/_local.scss */
 .logo-marketing {
   color: #f0f;
   font-size: 1.1em;
@@ -332,20 +396,20 @@ body {
   text-shadow: none;
 }
 
-/* line 244, ../sass/_local.scss */
+/* line 307, ../sass/_local.scss */
 .logo-co-uk,
 .logo-201,
 .logo-digital {
   text-shadow: 0px 0px 20px magenta;
 }
 
-/* line 248, ../sass/_local.scss */
+/* line 311, ../sass/_local.scss */
 .logo-marketing {
   color: #f0f;
 }
 
 /* POWER SLIDES */
-/* line 256, ../sass/_local.scss */
+/* line 319, ../sass/_local.scss */
 #power-content {
   overflow: hidden;
   position: relative;
@@ -354,37 +418,48 @@ body {
   min-height: 300px;
   font-family: serif;
 }
-/* line 264, ../sass/_local.scss */
+/* line 327, ../sass/_local.scss */
 #power-content .title {
   font-size: 6em;
 }
-/* line 267, ../sass/_local.scss */
+/* line 330, ../sass/_local.scss */
 #power-content .subtitle {
   font-size: 3em;
 }
 
-/* line 273, ../sass/_local.scss */
+/* line 336, ../sass/_local.scss */
 .slide {
+  z-index: 2;
   position: absolute;
-  top: 0px;
+  top: -400px;
   opacity: .9;
   width: 100%;
   min-height: 300px;
   font-style: italic;
-  -webkit-transition: top 1s;
-  -moz-transition: top 1s;
-  -o-transition: top 1s;
-  transition: top 1s;
 }
-/* line 283, ../sass/_local.scss */
+/* line 345, ../sass/_local.scss */
 .slide.centerslide {
   text-align: center;
-  top: 80px;
+  padding-top: 80px;
+}
+/* line 351, ../sass/_local.scss */
+.slide.fromright {
+  top: 0px;
+  left: 100%;
 }
 
-/* line 289, ../sass/_local.scss */
+/* line 356, ../sass/_local.scss */
+#paused-slide-container {
+  z-index: 10;
+  position: absolute;
+  width: 100%;
+  min-height: 300px;
+}
+
+/* line 362, ../sass/_local.scss */
 .slide-background {
   position: absolute;
+  top: -400px;
   height: 300px;
   width: 100%;
   background: #000;
@@ -392,47 +467,96 @@ body {
   z-index: 1;
 }
 
-/* line 297, ../sass/_local.scss */
+/* line 371, ../sass/_local.scss */
 .slide-foreground {
   width: 100%;
   height: 300px;
   position: absolute;
   padding: 20px;
   z-index: 2;
+  top: -300px;
 }
 
-/* line 304, ../sass/_local.scss */
-.slide.hidden {
-  top: -400px;
+/* line 379, ../sass/_local.scss */
+.slide-content {
+  padding: 50px;
+}
+/* line 383, ../sass/_local.scss */
+.slide-content p {
+  font-family: "trebuchet MS";
+  color: #ccc;
+  padding-right: 250px;
+  padding-top: 20px;
+  letter-spacing: .1em;
+  font-size: 1.2em;
+  padding-left: 20px;
 }
 
-/* line 308, ../sass/_local.scss */
+/* line 394, ../sass/_local.scss */
+.slide-img {
+  position: absolute;
+  width: 200px;
+  top: 40px;
+  right: 40px;
+}
+
+/* line 405, ../sass/_local.scss */
+.subslide {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  float: right;
+}
+/* line 410, ../sass/_local.scss */
+.subslide.subslide1 {
+  left: 0;
+}
+/* line 413, ../sass/_local.scss */
+.subslide.subslide2 {
+  left: 100%;
+}
+/* line 416, ../sass/_local.scss */
+.subslide.subslide3 {
+  left: 200%;
+}
+/* line 419, ../sass/_local.scss */
+.subslide.subslide4 {
+  left: 300%;
+}
+
+/* line 424, ../sass/_local.scss */
 #slide-buttons {
-  text-align: center;
+  width: 100%;
+  text-align: right;
+  right: 70px;
   padding: 20px;
   z-index: 10;
-  opacity: .3;
+  opacity: .5;
+  font-family: sans-serif;
+  font-size: .7em;
+  position: relative;
+  top: -10px;
 }
-
-/* line 314, ../sass/_local.scss */
-.slide-button {
+/* line 435, ../sass/_local.scss */
+#slide-buttons .slide-button {
   cursor: pointer;
   display: inline-block;
-  height: 12px;
-  width: 12px;
-  border: 2px solid #fff;
-  -webkit-border-radius: 7px;
-  -moz-border-radius: 7px;
-  -ms-border-radius: 7px;
-  -o-border-radius: 7px;
-  border-radius: 7px;
+  height: 8px;
+  width: 8px;
+  padding-left: 2px;
+  padding-bottom: 2px;
+  border: 2px solid #999;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
 }
-/* line 321, ../sass/_local.scss */
-.slide-button.active {
-  background-color: #000;
+/* line 447, ../sass/_local.scss */
+#slide-buttons .slide-button.active, #slide-buttons .slide-button:hover {
+  background-color: #fff;
 }
-
-/* line 325, ../sass/_local.scss */
-.slide-button:hover {
-  background-color: #c5c;
+/* line 452, ../sass/_local.scss */
+#slide-buttons .pause-button {
+  text-align: center;
 }
