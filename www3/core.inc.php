@@ -57,8 +57,8 @@ function html_header($title='', $currentPage='about') {
    </div>
    </div>
    <ul class='main-navigation'>
-   <li class='<?php echo $class['about']?>'><a class='<?php echo $class['about']?>' href='about.php'>about</a></li>
-   <li class='<?php echo $class['services']?>'><a id='services-link' class='<?php echo $class['services']?>' href='services.php'>services</a></li>
+   <li class='<?php echo $class['about']?>'><a class='<?php echo $class['about']?>' href='origins.php'>about</a></li>
+   <li class='<?php echo $class['services']?>'><a id='services-link' class='<?php echo $class['services']?>' href='creative.php'>services</a></li>
    <li class='<?php echo $class['blog']?>'><a class='<?php echo $class['blog']?>' href='blog.php'>blog</a></li>
    </ul>
 
@@ -71,6 +71,70 @@ function html_header($title='', $currentPage='about') {
    </header>
    <?php
    }
+function about_navigation($section) {
+   
+   $links['origins']='origins';
+   $links['leadership']='leadership';
+   $links['mission']='mission';
+   $links['approach']='approach';
+
+   $total = sizeof($links);
+   $i=0;
+   $nav = '';
+   foreach($links as $k=>$v) {
+     $i++;
+     $class='';
+     if($i == $total) {
+       $class='last';
+     }
+     if($v==$section) {
+       $class.=" active";
+       $nav .= "<li class='".$class."'>".$v."</li>";
+     } else {
+       $nav .= "<li class='".$class."'><a href='".$k.".php'>".$v."</a></li>";
+     }
+   }
+   ?>
+   <ul class='content-navigation'>
+     <li class='first'><a href='index.php'>home</a></li>
+     <?php echo $nav ?>
+   </ul>
+   <?php 
+ }
+
+
+function services_navigation($section) {
+   
+   $links['creative']='creative marketing';
+   $links['advertising']='paid for advertising';
+   $links['search']='search position';
+   $links['email']='email';
+   $links['mobile']='mobile';
+   $links['social']='social';
+
+   $total = sizeof($links);
+   $i=0;
+   $nav = '';
+   foreach($links as $k=>$v) {
+     $i++;
+     $class='';
+     if($i == $total) {
+       $class='last';
+     }
+     if($v==$section) {
+       $class.=" active";
+       $nav .= "<li class='".$class."'>".$v."</li>";
+     } else {
+       $nav .= "<li class='".$class."'><a href='".$k.".php'>".$v."</a></li>";
+     }
+   }
+   ?>
+   <ul class='content-navigation'>
+     <li class='first'><a href='index.php'>home</a></li>
+     <?php echo $nav ?>
+   </ul>
+   <?php 
+ }
 
 function html_footer() { 
 ?>
