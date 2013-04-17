@@ -2,9 +2,9 @@ YUI().use("node","transition",function(Y) {
 
     var 
     slideContainer = Y.one("#power-content"),
-    pausedSlide = slideContainer.one("#paused-slide-container"),
+    pausedSlide = Y.one("#paused-slide-container"),
     slideButtons = Y.one("#slide-buttons"),
-    pauseButton = slideButtons.one(".pause-button"),
+    pauseButton = Y.one(".pause-button"),
     newsletterSignup = Y.one("#newsletter-signup");
 
     slideBackground = Y.one("#power-content .slide-background"),
@@ -46,7 +46,7 @@ YUI().use("node","transition",function(Y) {
     slideTransitionType1 = {
 	
 	top : {
-	    duration: 1,
+	    duration: 1.5,
 	    value: 0 
 	},
 	opacity: {
@@ -299,9 +299,11 @@ YUI().use("node","transition",function(Y) {
 	}
     };
 
-    slideShow.nextSlide();
-    pauseButton.on("click",slideShow.pause,slideShow,pauseButton);
-    Y.one("#slide-buttons").delegate("click",slideShow.switchSlide,".switch",slideShow);
+    if(slideContainer) {
+	slideShow.nextSlide();
+	pauseButton.on("click",slideShow.pause,slideShow,pauseButton);
+	Y.one("#slide-buttons").delegate("click",slideShow.switchSlide,".switch",slideShow);
+    }
 
 
     var newsLetterTextDefault = 'GET INDUSTRY NEWS AND REPORTS VIA EMAIL';

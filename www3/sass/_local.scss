@@ -26,7 +26,8 @@ a:hover {
 
 #footer-container {
     position:relative;
-    border-top:1px solid #555;
+    border-top:1px solid #fff;
+    opacity:.3;
     padding:50px;
     width:100%;
     max-width:1200px;
@@ -42,8 +43,6 @@ a:hover {
     width:90%;
     padding-left:5%;
     padding-right:5%;
-    height:100%;
-    
     
     &.grey {
 	background-color:#aaa;
@@ -81,15 +80,15 @@ a:hover {
 
 .foreground {
     position:relative;
-    height:100%;
     width:100%;
     max-width:1200px;
     margin:0 auto;
+    padding-bottom:30px;
 
     &.origins {
 	background-image: url("../img/origins.png");
 	background-repeat:no-repeat;
-	background-position:right bottom;
+	background-position:right center;
     }
 
     &.mission {
@@ -98,10 +97,9 @@ a:hover {
 	background-position:right bottom;
     }
     &.approach {
-	background-image: url("../img/checklist.png");
+	background-image: url("../img/approach.png");
 	background-repeat:no-repeat;
 	background-position:right bottom;
-	background-size: 491px 522px;
     }
 
 }
@@ -443,7 +441,8 @@ h12 {
 .slide-content {
 
     padding:50px;
-    
+    position:relative;
+    z-index:2;
     p {
 
 	font-family:"trebuchet MS";
@@ -457,6 +456,7 @@ h12 {
 }
 .slide-img {
     position:absolute;
+    z-index:1;
     width:200px;
     top:40px;
     right:40px;
@@ -470,6 +470,7 @@ h12 {
 	font-size:6em;
 	padding-left:20px;
 	padding-top:10px;
+	@include text-shadow(2px 2px 4px #000);
     }
     .subtitle {
 	padding-top:10px;
@@ -615,6 +616,7 @@ h12 {
 /* CONTENT */
 .leadership-item {
     display:inline-block;
+    text-align:center;
 }
 .leadership-photo {
     width:150px;
@@ -645,27 +647,69 @@ h12 {
 .content-page-content {
     min-height:400px;
     width:100%;
-    height:100%;
     clear:both;
     padding:20px;
     position:relative;
     z-index:2;
+    color:#ccc;
+    line-height:1.2em;
+    font-weight:normal;
+    font-family:"Trebuchet MS",helvetica,tahoma;
 
     .title {
+	padding-top:30px;
+	color:#fff;
+	font-family:serif;
 	font-size:4em;
 	font-style:italic;
-	margin-bottom:20px;
-    }
+	padding-bottom:60px;
 
-    p {
-	width:60%;
+	
+    }
+    .subtitle {
+	padding:10px;
+	padding-top:20px;
+	padding-bottom:10px;
+	font-family:serif;
+	font-size:2em;
+	color:#fff;
+	font-style:italic;
+
+	&.grey {
+	    color:#777;
+	}
+    }
+    .emphasised {
+	color:#fff;
+	font-size:1.2em;
+    }
+    .content-left {
+	width:90%;
 	font-size:.9em;
 	color:#ccc;
 	line-height:1.2em;
 	font-weight:normal;
 	font-family:"Trebuchet MS",helvetica,tahoma;
-	padding:10px;
+	p {
+	    padding:10px;
+	}
+	&.origins {
+	    width:60%;
+	}
+	&.mission {
+	    width:60%;
+	}
+	&.approach {
+	    width:50%;
+	}
+	
     }
+}
+
+.slightbox {
+    margin:20px;
+    border:1px solid #555;
+    display:inline-block;
 }
 .content-navigation {
     margin:15px;

@@ -58,7 +58,7 @@ function html_header($title='', $currentPage='about') {
    </div>
    <ul class='main-navigation'>
    <li class='<?php echo $class['about']?>'><a class='<?php echo $class['about']?>' href='origins.php'>about</a></li>
-   <li class='<?php echo $class['services']?>'><a id='services-link' class='<?php echo $class['services']?>' href='creative.php'>services</a></li>
+   <li class='<?php echo $class['services']?>'><a id='services-link' class='<?php echo $class['services']?>' href='strategy.php'>services</a></li>
    <li class='<?php echo $class['blog']?>'><a class='<?php echo $class['blog']?>' href='blog.php'>blog</a></li>
    </ul>
 
@@ -105,9 +105,12 @@ function about_navigation($section) {
 
 function services_navigation($section) {
    
-   $links['creative']='creative marketing';
-   $links['advertising']='paid for advertising';
-   $links['search']='search position';
+   $links['strategy']='strategy';
+   $links['creative']='creative';
+   $links['build']='build';
+   $links['content']='content';
+   $links['campaign']='campaign';
+   $links['search']='search';
    $links['email']='email';
    $links['mobile']='mobile';
    $links['social']='social';
