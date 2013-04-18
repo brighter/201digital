@@ -233,7 +233,7 @@ YUI().use("node","transition",function(Y) {
 		node.setHTML("II&nbsp;");
 		this.paused = false;
 		this.resetSlides();
-		setTimeout("1000",this.nextSlide);
+		setTimeout(Y.bind(this.nextSlide,this),"1000");
 		pausedSlide.transition({
 		    opacity : {
 			duration:1,
@@ -304,6 +304,52 @@ YUI().use("node","transition",function(Y) {
 	pauseButton.on("click",slideShow.pause,slideShow,pauseButton);
 	Y.one("#slide-buttons").delegate("click",slideShow.switchSlide,".switch",slideShow);
     }
+
+    var navigationContainer = Y.one("#navigation-container");
+    var navigation =  navigationContainer.one(".main-navigation");
+    var aboutSub = navigationContainer.one("#about-subnavigation");
+    var servicesSub = navigationContainer.one("#services-subnavigation");
+    var hideSubTimeout = null;
+    
+    aboutSub.on("mouseover",function() {
+	clearTimeout(hideSubTimeout);
+	hideSubTimeout = null;
+    });
+    servicesSub.on("mouseover",function() {
+	clearTimeout(hideSubTimeout);
+	hideSubTimeout = null;
+    });
+	
+    var showSubNavigation = function(e) {
+	
+	clearTimeout(hideSubTimeout);
+	hideSubTimeout = null;
+	
+	aboutSub.setStyle("display","none");
+	servicesSub.setStyle("display","none");
+
+	if(e.currentTarget.hasClass("about-navigation")) {
+	    aboutSub.setStyle("display","");
+	} else if (e.currentTarget.hasClass("services-navigation")) {
+	    servicesSub.setStyle("display","");
+	} 
+    }
+
+
+    var hideSubNavigation = function(e) {
+	hideSubTimeout = setTimeout(function() {
+	    aboutSub.setStyle("display","none");
+	    servicesSub.setStyle("display","none");
+	},"200");
+    }
+
+    aboutSub.on("mouseout",hideSubNavigation);
+    servicesSub.on("mouseout",hideSubNavigation);
+    
+    
+    navigation.delegate("mouseover",showSubNavigation,"li");
+    navigation.delegate("mouseout",hideSubNavigation,"li");
+
 
 
     var newsLetterTextDefault = 'GET INDUSTRY NEWS AND REPORTS VIA EMAIL';

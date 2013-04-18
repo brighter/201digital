@@ -51,19 +51,41 @@ function html_header($title='', $currentPage='about') {
    <nav>
    
    <div id='navigation-container'>
-   <div id='newsletter-signup-container'>
-   <div id='newsletter-signup'>
-   <input type='email' value='GET INDUSTRY NEWS AND REPORTS VIA EMAIL...' /><button class='newsletter-signup-button'>SIGN  UP</button>
-   </div>
-   </div>
-   <ul class='main-navigation'>
-   <li class='<?php echo $class['about']?>'><a class='<?php echo $class['about']?>' href='origins.php'>about</a></li>
-   <li class='<?php echo $class['services']?>'><a id='services-link' class='<?php echo $class['services']?>' href='strategy.php'>services</a></li>
-   <li class='<?php echo $class['blog']?>'><a class='<?php echo $class['blog']?>' href='blog.php'>blog</a></li>
-   </ul>
 
+     <div id='newsletter-signup-container'>
+       <div id='newsletter-signup'>
+         <input type='email' value='GET INDUSTRY NEWS AND REPORTS VIA EMAIL...' /><button class='newsletter-signup-button'>SIGN  UP</button>
+       </div>
+     </div>
+     <ul class='main-navigation'>
+       <li class='<?php echo $class['about']?> about-navigation'><a class='<?php echo $class['about']?>' href='origins.php'>about</a></li>
+       <li class='<?php echo $class['services']?> services-navigation'><a id='services-link' class='<?php echo $class['services']?>' href='strategy.php'>services</a></li>
+       <li class='<?php echo $class['blog']?>'><a class='<?php echo $class['blog']?>' href='blog.php'>blog</a></li>
+     </ul>
+     <div id='about-subnavigation' style='display:none'>
+       <ul>
+         <li><a href='origins.php'>origins</a></li>
+         <li><a href='leadership.php'>leadership</a></li>
+         <li><a href='mission.php'>mission</a></li>
+         <li><a href='approach.php'>approach</a></li>
+         <li><a href='news.php'>news</a></li>
+         <li><a href='contact.php'>contact</a></li>
+       </ul>
+     </div>
+     <div id='services-subnavigation' style='display:none'>
+       <ul>
+         <li><a href='strategy.php'>strategy</a></li>
+         <li><a href='creative.php'>creative</a></li>
+         <li><a href='build.php'>build</a></li>
+         <li><a href='content.php'>content</a></li>
+         <li><a href='campaign.php'>campaign</a></li>
+         <li><a href='search.php'>search</a></li>
+         <li><a href='email.php'>email</a></li>
+         <li><a href='mobile.php'>mobile</a></li>
+         <li><a href='social.php'>social</a></li>
+       </ul>
+     </div>
    </div>
-														
    </nav>
 
    </div>   <!-- end header-container -->

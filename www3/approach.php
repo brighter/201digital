@@ -9,9 +9,9 @@ html_header('','about');
       <div class='content-page'>
         <div class='content-page-background'></div>
         <div class='content-page-content'>
-          <h1 class='title'>the right approach</h1>
-          <h2 class='subtitle grey'>. . . for the right results</h2>
+          <h1 class='title'>we build strategies</h1>
           <div class='content-left approach'>
+          <p>Blah blah blah</p>
           <p>That's right!</p>
           </div>
         </div>
