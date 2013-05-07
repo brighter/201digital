@@ -2,6 +2,34 @@
 include "core.inc.php";
 html_header('','');
 ?>
+<div id='signupFormContainer' style='display:none'>
+<div id='signupForm'>
+<div id='newsletter-pending' class='waiting-message' style='display:none'><img src='img/spinner.gif' alt='waiting-image' class='waiting-spinner'/><h1>One Moment Please.</h1><p>We are just processing your request.</p></div>
+<div id='newsletter-accepted' class='waiting-message' style='display:none'><img src='img/success.png' alt='waiting-image' class='waiting-spinner'/><h1>Thank you.</h1><p>We hope you enjoy our newsleter.</p></div>
+<div id='newsletter-error' class='waiting-message' style='display:none'><img src='img/failure.png' alt='waiting-image' class='waiting-spinner'/><h1>Oops!</h1><p>We seem to have encountered an error.</p></div>
+  <form action="" id='newsletter-form'>
+    <fieldset>
+      <legend>personalise your newsletter</legend>
+      <div class='control-group'>
+      <label>First name</label>
+      <input type='text' name='firstname' />
+      </div>
+      <div class='control-group'>
+      <label>Last name</label>
+      <input type='text' name='lastname' />
+      </div>
+      <div class='control-group'>
+      <label>Company</label>
+      <input type='text' name='company' />
+      </div>
+      <div class='control-group-buttons'>
+      <button type='reset' name='cancel' class='cancel-button'>Cancel</button>
+      <button type='submit' name='Submit' class='submit-button'>Submit</button>
+      </div>
+    </fieldset>
+    </form>
+</div>
+</div>
 <div class='foreground-container'>
   <div class='foreground'>
 
@@ -143,8 +171,9 @@ html_header('','');
     </div><!-- end main content -->
   </div> <!-- foreground -->
 </div>  <!-- foreground container -->
-
+  <script language='javascript' src='js/verimail.min.js'></script>
   <script language='javascript' src='js/slideshow.js'></script>
+
   <?php
 
   html_footer() ?>

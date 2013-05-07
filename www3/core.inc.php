@@ -37,7 +37,7 @@ function html_header($title='', $currentPage='about') {
    
    </head>
    
-   <body>
+   <body class='yui3-skin-sam'>
    <header>   
 
    <div id='header-stripe'></div>
@@ -60,7 +60,7 @@ function html_header($title='', $currentPage='about') {
      <ul class='main-navigation'>
        <li class='<?php echo $class['about']?> about-navigation'><a class='<?php echo $class['about']?>' href='origins.php'>about</a></li>
        <li class='<?php echo $class['services']?> services-navigation'><a id='services-link' class='<?php echo $class['services']?>' href='strategy.php'>services</a></li>
-       <li class='<?php echo $class['blog']?>'><a class='<?php echo $class['blog']?>' href='blog.php'>blog</a></li>
+       <li class='<?php echo $class['blog']?>'><a class='<?php echo $class['blog']?>' href='http://internet-marketing-advice-tips-solutions.co.uk/'>blog</a></li>
      </ul>
      <div id='about-subnavigation' style='display:none'>
        <ul>
@@ -78,11 +78,10 @@ function html_header($title='', $currentPage='about') {
          <li><a href='creative.php'>creative</a></li>
          <li><a href='build.php'>build</a></li>
          <li><a href='content.php'>content</a></li>
-         <li><a href='campaign.php'>campaign</a></li>
+         <li><a href='social.php'>social</a></li>
          <li><a href='search.php'>search</a></li>
          <li><a href='email.php'>email</a></li>
          <li><a href='mobile.php'>mobile</a></li>
-         <li><a href='social.php'>social</a></li>
        </ul>
      </div>
    </div>
@@ -97,8 +96,9 @@ function about_navigation($section) {
    
    $links['origins']='origins';
    $links['leadership']='leadership';
-   $links['mission']='mission';
-   $links['approach']='approach';
+  $links['approach']='approach';
+  $links['clients']='clients';
+  $links['news']='news';
 
    $total = sizeof($links);
    $i=0;
@@ -130,12 +130,13 @@ function services_navigation($section) {
    $links['strategy']='strategy';
    $links['creative']='creative';
    $links['build']='build';
-   $links['content']='content';
-   $links['campaign']='campaign';
-   $links['search']='search';
+   $links['social']='social';
    $links['email']='email';
    $links['mobile']='mobile';
-   $links['social']='social';
+   $links['content']='content';
+   $links['search']='search';
+
+
 
    $total = sizeof($links);
    $i=0;

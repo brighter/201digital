@@ -2,7 +2,8 @@ $headerHeight:130px;
 $powerSlideHeight:300px;
 $hoverOn:#0a0;
 $subHoverOn:#ff0;
-
+$fontFamilyHeadings:serif;
+$fontFamilyText:"Trebuchet MS",tahoma,helvetica;
 /* core structure */
 body {
     background:#000;
@@ -10,7 +11,7 @@ body {
     background-repeat:repeat-x;
     font-size:1em;
     letter-spacing:0em;
-    font-family:serif;
+    font-family:$fontFamilyHeadings;
     font-weight:lighter;
     color:#fff;
 }
@@ -35,7 +36,7 @@ a:hover {
     margin-top:100%;
     text-align:center;
     margin:0 auto;
-    font-family:"MS Trebuchet",tahoma,helvetica;
+    font-family:$fontFamilyText;
     font-size:.9em;
 }
 .foreground-container {
@@ -95,7 +96,17 @@ a:hover {
 	background-position:right bottom;
     }
     &.approach {
-	background-image: url("../img/approach.png");
+	background-image: url("../img/mission.png");
+	background-repeat:no-repeat;
+	background-position:right bottom;
+    }
+    &.clients {
+	background-image: url("../img/clients.png");
+	background-repeat:no-repeat;
+	background-position:right top;
+    }
+    &.news {
+	background-image: url("../img/news.png");
 	background-repeat:no-repeat;
 	background-position:right bottom;
     }
@@ -364,7 +375,7 @@ h12 {
     position:absolute;
     left:10px;
     top:25px;
-    font-family:"Trebuchet MS";
+    font-family:$fontFamilyText;
     font-size:1.1em;
     font-weight:bold;
     color:#fff;
@@ -420,7 +431,7 @@ h12 {
     margin-top:30px;
     width:100%;
     min-height:$powerSlideHeight;
-    font-family:serif;     
+    font-family:$fontFamilyHeadings;     
     
 }
 
@@ -482,7 +493,7 @@ h12 {
     z-index:2;
     p {
 
-	font-family:"trebuchet MS";
+	font-family:$fontFamilyText;
 	color:#ccc;
 	padding-right:250px;
 	padding-top:20px;
@@ -624,7 +635,7 @@ h12 {
     padding:20px;
     z-index:10;
     opacity:.5;
-    font-family:sans-serif;
+    font-family:$fontFamilyHeadings;     
     font-size:.7em;
     position:relative;
     top:-10px;
@@ -687,6 +698,20 @@ h12 {
     overflow:hidden;
     min-height:400px;
 }
+.content-bullets {
+    margin:20px;
+    margin-left:50px;
+    font-size:1em;
+    list-style-type:square;
+    li {	
+	color:#f5f;
+	padding:6px;
+
+    }
+}
+.underline {
+    text-decoration:underline;
+}
 .content-page-content {
     min-height:400px;
     clear:both;
@@ -694,25 +719,44 @@ h12 {
     position:relative;
     z-index:2;
     color:#ccc;
-    line-height:1.2em;
     font-weight:normal;
-    font-family:"Trebuchet MS",helvetica,tahoma;
+    font-family:$fontFamilyText;
 
+    img {
+	position:relative;
+	z-index:2;
+    }
+    p {
+	line-height:1.2em;
+	padding-top:20px;
+	font-size:.9em;
+    }
     .title {
-	padding-top:30px;
+	position:relative;
+/*	@include background-image(linear-gradient(left,rgba(255,255,255,.1) 70%,rgba(0,0,0,0) 100%)); 
+	width:100%;
+	display:inline-block; */
+	background-color:rgba(255,255,255,.1);
+	left:-20px;
+	z-index:1;
+	padding:20px;
+	padding-bottom:40px;
 	color:#fff;
-	font-family:serif;
-	font-size:4em;
+	font-family:$fontFamilyHeadings;     
+	font-size:3em;
 	font-style:italic;
-	padding-bottom:60px;
+	padding-bottom:20px;
+	padding-left:40px;
+	padding-right:50px;
+	margin-bottom:20px;
+	color:#fff;
 
-	
     }
     .subtitle {
 	padding:10px;
 	padding-top:20px;
 	padding-bottom:10px;
-	font-family:serif;
+	font-family:$fontFamilyHeadings;     
 	font-size:2em;
 	color:#fff;
 	font-style:italic;
@@ -721,17 +765,19 @@ h12 {
 	    color:#777;
 	}
     }
+    .emphasise,
     .emphasised {
 	color:#fff;
 	font-size:1.2em;
     }
     .content-left {
 	width:90%;
+	padding-left:10px;
 	font-size:.9em;
 	color:#ccc;
 	line-height:1.2em;
 	font-weight:normal;
-	font-family:"Trebuchet MS",helvetica,tahoma;
+	font-family:$fontFamilyText;
 	p {
 	    padding:10px;
 	}
@@ -752,6 +798,54 @@ h12 {
     margin:20px;
     border:1px solid #555;
     display:inline-block;
+/*    background:rgba(255,255,255,.1); */
+    background:#333;
+      
+}
+#leadership-photos {
+    text-align:center;
+    img {
+	cursor:pointer;
+
+	&.fade {
+	    opacity:.3;
+	    @include transition(.6s);
+	}
+    }
+}
+.bio-container {
+    margin:20px;
+    padding:20px;
+
+    min-height:300px;
+
+    .instructions,
+    .leader-name {
+
+	padding:20px;
+	background:rgba(255,255,255,.1);
+	font-size:2em;
+	color:#fff;
+    }
+    .instructions {
+	font-size:1.5em;
+	text-align:center;
+    }
+
+    .leader-quote {
+	padding:20px;
+	font-size:1.3em;
+	font-style:italic;
+	color:#f5f;
+    }
+
+    .leader-text {
+	padding:20px;
+    }
+
+}
+.hidden {
+    display:none;
 }
 .content-navigation {
     margin:15px;
@@ -760,7 +854,7 @@ h12 {
     z-index:2;
     font-size:1em;
     color:$hoverOn;
-    font-family:"Trebuchet MS",helvetica,tahoma;
+    font-family:$fontFamilyText;
     vertical-align:baseline;
     border-bottom:2px dotted #444;
     
@@ -788,7 +882,7 @@ h12 {
 	&.active {
 	    color:#fff;
 	    font-size:2.1em;
-	    font-family:serif;
+	    font-family:$fontFamilyHeadings;     
 	}
 	&.last {
 	}
@@ -800,4 +894,93 @@ h12 {
     float:right;
     margin:50px;
     margin-top:0px;
+}
+
+.yui3-panel-focused:focus {
+    outline:none;
+}
+#signupFormContainer {
+
+    .yui3-widget-hd,
+    .yui3-widget-ft {
+	display:none;
+    }
+
+    &.yui3-panel-content {
+	border:0px;
+	background:none;
+    }
+}
+
+
+#signupForm {
+    z-index:1000;
+    background:#ddd;
+    padding:30px;
+    border:7px solid #fff;
+    @include border-radius(20px);
+    font-family:$fontFamilyText;
+
+    .waiting-message {
+	
+	text-align:center;
+	color:#555;
+
+	h1 {
+	    font-size:2.5em;
+	    padding:20px;
+	}
+	p {
+	    font-size:1em;
+	}
+    }
+    .waiting-spinner {
+	margin:30px;
+	width:60px;
+    }
+    
+    .control-group {
+	padding:10px;
+    }
+    .control-group-buttons {
+	text-align:center;
+	padding-top:40px;
+
+	.cancel-button {
+	    @include sassy-button("glass",5px,17px,#aaa,#888);
+	}
+	.submit-button {
+	    @include sassy-button("glass",5px,17px,#f5f,#e8e);
+	}
+
+    }
+    label {
+	width:140px;
+	font-size:1.3em;
+	display:inline-block;
+	color:#f5f;
+    }
+    input {
+	padding:10px;
+	border:0px;
+	@include border-radius(4px);
+	width:200px;
+	font-family:$fontFamilyText;
+	color:#666;
+	font-size:1.2em;
+    }
+
+    legend {
+	text-align:center;
+	padding-bottom:40px;
+	color:#555;
+	font-size:2.2em;
+	font-style:italic;
+	font-family:$fontFamilyHeadings;     
+	
+    }
+    
+    input {
+	font-family:$fontFamilyHeadings;     
+    }
 }

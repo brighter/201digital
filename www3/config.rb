@@ -1,6 +1,9 @@
+additional_import_paths = ["/Library/Ruby/Gems/1.8/gems/sassy-buttons-0.1.4"]
+
+require 'sassy-buttons'
 # Require any additional compass plugins here.
 
-# Set this to the root of your project when deployed:
+
 http_path = "/"
 css_dir = "stylesheets"
 sass_dir = "sass"
