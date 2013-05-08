@@ -2,7 +2,6 @@
 
 include "MCAPI.class.php";
 
-
 $apikey = "b3e4e44d6570dde4047d64df68196569-us5";
 $listId = "3235809f24";
 

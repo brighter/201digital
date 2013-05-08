@@ -915,16 +915,19 @@ h12 {
 
 #signupForm {
     z-index:1000;
-    background:#ddd;
+    background:#bbb;
     padding:30px;
     border:7px solid #fff;
     @include border-radius(20px);
     font-family:$fontFamilyText;
 
+    p {
+	padding:10px;
+    }
     .waiting-message {
 	
 	text-align:center;
-	color:#555;
+	color:#444;
 
 	h1 {
 	    font-size:2.5em;
@@ -947,10 +950,10 @@ h12 {
 	padding-top:40px;
 
 	.cancel-button {
-	    @include sassy-button("glass",5px,17px,#aaa,#888);
+	    @include sassy-button("glass",5px,17px,#888,#555);
 	}
 	.submit-button {
-	    @include sassy-button("glass",5px,17px,#f5f,#e8e);
+	    @include sassy-button("glass",5px,17px,#f0f,#d8d);
 	}
 
     }

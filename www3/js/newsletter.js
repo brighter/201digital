@@ -3,7 +3,7 @@ YUI.add(
     'newsletter',
 
     function(Y) {
-
+	
 
 	
 	var newsletter = function(cfg) {
@@ -16,12 +16,6 @@ YUI.add(
 	
 	newsletter.ATTRS = {
 	    
-	    email : {
-		value     : ''
-	    },
-	    validEmail : {
-		value : false
-	    },
 	    status : {
 		value     : ''
 	    }
@@ -31,23 +25,27 @@ YUI.add(
 	    newsletter,
 	    Y.Base,
 	    {
+		
+		_INACTIVE   : "INACTIVE",
+		_PENDING    : "PENDING",
+		_ACCEPTED  : "ACCEPTED",
+		_ERROR       : "ERROR",
 
-		_BEGIN    : "BEGIN",
-		_PENDING  : "PENDING",
-		_ACCEPTED : "ACCEPTED",
-		_ERROR    : "ERROR",
-
+		email : '',
+		suggestion : '',
+		emailValid : '',
+		
 		dom : {},
 
 		// default options...
 		config : {
 
-		    defaultText : 'GET INDUSTRY NEWS AND REPORTS VIA EMAIL...',
-		    hint        : 'CLICK TO ENTER YOUR EMAIL ADDRESS',
-		    display     : this.defaultText,
-		    panelNode   : "#signupFormContainer",
-		    signupBox   : "#newsletter-signup",
-		    signupScript: "signup.php"
+		    defaultText  : 'GET INDUSTRY NEWS AND REPORTS VIA EMAIL...',
+		    hint             : 'CLICK TO ENTER YOUR EMAIL ADDRESS',
+		    display         : this.defaultText,
+		    panelNode    : "#signupFormContainer",
+		    signupBox    : "#newsletter-signup",
+		    signupScript : "signup.php"
 		    
 		},
 		
@@ -78,10 +76,13 @@ YUI.add(
 
 		    // register the dom elements for use later...
 		    this.dom.panelBox = this.signupPanel.get("contentBox");
-		    this.dom.signup = this.dom.panelBox.one("#newsletter-form");
+		    this.dom.signupForm = this.dom.panelBox.one("#newsletter-form");
 		    this.dom.pending = this.dom.panelBox.one("#newsletter-pending");
 		    this.dom.accepted = this.dom.panelBox.one("#newsletter-accepted");
 		    this.dom.errormsg = this.dom.panelBox.one("#newsletter-error");
+		    this.dom.suggestionValid = this.dom.panelBox.one("#newsletter-suggestion-valid");
+		    this.dom.suggestionInvalid = this.dom.panelBox.one("#newsletter-suggestion-invalid");
+		    this.dom.emailInvalid = this.dom.panelBox.one("#newsletter-email-invalid");
 		    this.dom.newsletter = Y.one(this.config.signupBox);
 		    this.dom.emailField = this.dom.newsletter.one("input");
 
@@ -90,12 +91,9 @@ YUI.add(
 		    this.dom.newsletter.on("mouseover",this.highLightNewsletter, this);
 		    this.dom.newsletter.on("mouseout",this.unHighLightNewsletter, this);
 		    this.dom.newsletter.delegate("click",this.beginSignup,"input,button",this);		    
-		    this.dom.panelBox.one(".control-group-buttons").delegate("click",this.completeSignup,"button",this);
+		    this.dom.panelBox.delegate("click",this.processSignup,".click-handler",this);
 
-		    this.on("statusChange",this.updateStatus);
-		    this.on("validEmailChange",this.processEmail);
-		    this.on("emailChange",this.updateEmail);
-
+		    this.on("statusChange",this.updateSignupStatus);
 		},
 
 		updateEmail : function(e) {
@@ -118,7 +116,7 @@ YUI.add(
 		beginSignup : function(e) {
 		    
 		    var  target = e.currentTarget.get("type");
-
+		    
 		    // want to enter email addresss...
 		    if(target=='email') {
 			
@@ -130,57 +128,60 @@ YUI.add(
 		    } else if (target == 'submit') {
 
 			// want to submit email address
-
-			var 
-			emailText = this.dom.emailField.get("value"),
-			myself = this,
-			checkEmail = function(status,message,suggestion) {
-			    
-			    if(status < 0){
-			
-				// Incorrect syntax!
-			
-				if(suggestion){
-				    
-				    // But we might have a solution to this!
-				    if(confirm("Did you mean " + suggestion + "?")) {
-					
-					myself.set("email", suggestion);
-					myself.set("validEmail",true);
-					
-				    } else {
-					
-					alert("That is not a valid email address!");
-					myself.set("validEmail",false);
-					
-				    }
-				} else {
-				    
-				    myself.set("validEmail",false);
-				}
-				
-			    } else {
-				
-				// Syntax looks great!
-				
-				if(suggestion){
-				    
-				    // But we're guessing that you misspelled something
-				    if(confirm("Did you mean " + suggestion + "?")) {
-					
-					myself.set("email", suggestion);
-					
-				    }
-				}    
-				myself.set("validEmail",true);
-			    }
-			};
-
-			this.veriMail.verify(emailText, checkEmail);
-
+			// start the signup process
+			this.completeSignup();
 		    }
 		},
 
+		completeSignup : function() {
+		    
+		    var  myself = this;
+		    
+		    // reset the process...
+		    this.resetSignup();
+
+		    // verify email
+		    this.veriMail.verify(this.dom.emailField.get("value"), function(status,message,suggestion) {
+			
+			if(suggestion){
+			    
+			    myself.suggestion=suggestion;
+			    
+			}
+
+			if(status < 0) {
+			    
+			    // Incorrect syntax!	
+			    myself.validEmail=false;
+			    
+			} else {
+			    
+			    // Syntax looks great!
+			    myself.validEmail=true;
+			}
+		    });
+		    
+		    // decide on the panel content
+		    this.setPanel();
+
+		    // show the panel
+		    this.signupPanel.show();
+		    
+		},
+
+		resetSignup : function(e) {
+		    
+		    this.suggestion="";
+		    this.email="";
+		    this.validEmail=false;
+		    this.errorMsg = '';
+		    this.dom.signupForm.reset();
+		    this.set("status", this._INACTIVE);
+		    this.dom.suggestionValid.all(".email-suggestion").setContent("");
+		    this.dom.suggestionInvalid.all(".email-suggestion").setContent("");
+		    this.dom.errormsg.one(".error-message").setContent("");
+		},
+		    
 		highLightNewsletter : function(e) {
     
 		    var input = e.currentTarget.one("input");
@@ -259,110 +260,149 @@ YUI.add(
 			    value:'#444'}
 		    })
 		},
-
-		// when the signup status changes, update the interactive signup panel...
-		updateStatus : function(e) {
+		
+		// set the panel content depending on the stage of the process
+		setPanel : function() {
 		    
-		    if(e.newVal != e.prevVal) {
+		    // turn all (sub) panels 'off'
+		    this.dom.panelBox.all(".interactive-panel").setStyle("display","none");
+
+		    // depending on the email and any suggestion...
+		    if(this.validEmail) {
 			
-			if(e.newVal == this._BEGIN) {
+			if(this.suggestion) {
 			    
-			    this.signupPanel.show();
-			    this.dom.pending.setStyle("display","none");
-			    this.dom.accepted.setStyle("display","none");
-			    this.dom.errormsg.setStyle("display","none");
-			    this.dom.signup.setStyle("display","");
-			    
-			} else if(e.newVal == this._ACCEPTED) {
-			    
-			    this.dom.signup.setStyle("display","none");
-			    this.dom.pending.setStyle("display","none");
-			    this.dom.errormsg.setStyle("display","none");
-			    this.dom.accepted.setStyle("display","");
+			    // valid email but may be misspelt...
+			    this.dom.suggestionValid.one(".original").setContent(this.dom.emailField.get("value"));
+			    this.dom.suggestionValid.one(".suggestion").setContent(this.suggestion);
 
-			} else if (e.newVal == this._PENDING) {
-
-			    this.dom.signup.setStyle("display","none");
-			    this.dom.accepted.setStyle("display","none");
-			    this.dom.errormsg.setStyle("display","none");
-			    this.dom.pending.setStyle("display","");
+			    this.dom.suggestionValid.setStyle("display","");
 			    
-			} else if (e.newVal == this._ERROR) {
+			} else {
 			    
-			    this.dom.pending.setStyle("display","none");
-			    this.dom.accepted.setStyle("display","none");
-			    this.dom.signup.setStyle("display","none");
-			    this.dom.errormsg.setStyle("display","");
+			    // collect some other user data...
+			    this.dom.signupForm.setStyle("display","");
+			}
+		    } else {
+			
+			if(this.suggestion) {
+			    
+			    // invalid email but may have a suggestion
+			    this.dom.suggestionInvalid.setStyle("display","");
 
+			} else {
+			    
+			    // invalid email and no suggestions...
+			    this.dom.emailInvalid.setStyle("display","");
 			}
 		    }
 		},
-				
-		completeSignup : function(e) {
-		    
+
+		processSignup : function(e) {
+
 		    e.halt();
-		    
-		    if(e.currentTarget.get("type")=='reset') {
 
-			this.dom.signup.reset();
-			this.set("status",null);
-			this.signupPanel.hide();
-
-		    } else {
+		    if(e.currentTarget.hasClass("close-panel")) {
+			    
+			    this.signupPanel.hide();
 			
-			// set up the io cfg obj
+		    } else if (e.currentTarget.hasClass("dont-correct-email")) {
+			
+			this.suggestion='';
+			this.setPanel();
 
-			var ioCfg = {
+		    } else if (e.currentTarget.hasClass("correct-email")) {
+			
+			this.email=this.suggestion;
+			this.dom.emailField.set("value",this.email);
+			this.suggestion='';
+			this.setPanel();
+
+		    } else if (e.currentTarget.hasClass("complete-registration")) {
+
+			this.contactServer();
+		    }
+		},
+
+		updateSignupStatus : function(e) {
+		    
+		    if(e.newVal != this._INACTIVE) {
+			
+			this.dom.panelBox.all(".interactive-panel").setStyle("display","none");
+			
+			if(e.newVal == this._PENDING) {
+
+			    this.dom.pending.setStyle("display","");
+
+			} else if (e.newVal == this._ACCEPTED) {
 			    
-			    sync : true,
-			    form : {
-				id : this.dom.signup
-			    },
-			    data : { 
-				email : this.dom.emailField.get("value")
-			    },
-			    context : this,
-			    method : "POST",
+			    this.dom.accepted.setStyle("display","");
+
+			} else if (e.newVal == this._ERROR) {
 			    
-			    on : {
-				start : function() {
-				    this.set("status",this._PENDING);
-				},
-
-				failure : function() {
-				    this.set("status", this._ERROR);
-				},
-
-				success: function(id,e) {
+			    this.dom.errormsg.one(".error-message").set("innerHTML",this.errorMsg);
+			    this.dom.errormsg.setStyle("display","");
+			}
+		    }
+		},
+		    
+		contactServer : function() {
+		    
+		    // set up the io cfg obj
+		    
+		    var ioCfg = {
+			
+			form : {
+			    id : this.dom.signupForm
+			},
+			data : { 
+			    email : this.dom.emailField.get("value")
+			},
+			context : this,
+			method : "POST",
+			
+			on : {
+			    start : function() {
+				this.set("status",this._PENDING);
+			    },
+			    
+			    failure : function() {
+				this.set("status", this._ERROR);
+				this.errorMsg = "Could not contact Mail Server";
+			    },
+			    
+			    complete: function(id,e) {
+				
+				var response;
+				
+				this.dom.panelBox.delegate("click",this.signupPanel.hide,".");
+				
+				try {
 				    
-				    var response;
-
-				    this.dom.panelBox.delegate("click",this.signupPanel.hide,".");
+				    response = JSON.parse(e.responseText);
 				    
-				    try {
+				    if(response.status == "OK") {
+					
+					this.set("status", this._ACCEPTED);
+					
+				    } else {
 
-					response = JSON.parse(e.responseText);
+					this.errorMsg = response.message;
+					this.set("status", this._ERROR);
 
-					if(response.status == "OK") {
-					    
-					    this.set("status", this._ACCEPTED);
-
-					} else {
-					    
-					    this.set("status", this._ERROR);
-					}
-
-				    } catch (x) {
-					console.log(x);
 				    }
+				    
+				} catch (x) {
+				    console.log(x);
 				}
 			    }
 			}
-			
-			Y.io(this.config.signupScript, ioCfg );
-			
 		    }
-		},
+		    
+		    Y.io(this.config.signupScript, ioCfg );
+		    
+		}
+		
 	    });
 
 	Y.newsletter = newsletter;

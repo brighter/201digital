@@ -4,10 +4,30 @@ html_header('','');
 ?>
 <div id='signupFormContainer' style='display:none'>
 <div id='signupForm'>
-<div id='newsletter-pending' class='waiting-message' style='display:none'><img src='img/spinner.gif' alt='waiting-image' class='waiting-spinner'/><h1>One Moment Please.</h1><p>We are just processing your request.</p></div>
-<div id='newsletter-accepted' class='waiting-message' style='display:none'><img src='img/success.png' alt='waiting-image' class='waiting-spinner'/><h1>Thank you.</h1><p>We hope you enjoy our newsleter.</p></div>
-<div id='newsletter-error' class='waiting-message' style='display:none'><img src='img/failure.png' alt='waiting-image' class='waiting-spinner'/><h1>Oops!</h1><p>We seem to have encountered an error.</p></div>
-  <form action="" id='newsletter-form'>
+
+
+<div id='newsletter-pending' class='interactive-panel waiting-message' style='display:none'><img src='img/spinner.gif' alt='waiting-image' class='waiting-spinner'/><h1>One Moment Please.</h1><p>We are just processing your request.</p></div>
+
+<div id='newsletter-accepted' class='interactive-panel waiting-message click-handler close-panel' style='display:none'><img src='img/success.png' alt='waiting-image' class='waiting-spinner'/><h1>Thank you.</h1><p>We hope you enjoy our newsleter.</p></div>
+
+  <div id='newsletter-suggestion-valid' class='interactive-panel waiting-message' style='display:none'><h1>Oops!</h1><p>We think you may have misspelt your email.</p><p>You typed: <span class='email-suggestion original'></span></p><p>We think it should be: <span class='email-suggestion suggestion'></span>
+<p>Please confirm if you would like us to correct it for you?</p>
+<img src='img/failure.png' alt='waiting-image' class='waiting-spinner click-handler dont-correct-email'/> <img src='img/success.png' alt='waiting-image' class='waiting-spinner click-handler correct-email' />
+</div>
+
+  <div id='newsletter-suggestion-invalid' class='interactive-panel waiting-message' style='display:none'><h1>Oops!</h1><p>You have not entered a valid email address.</p><p>You typed: <span class='email-suggestion original'></span></p><p>We think it should be: <span class='email-suggestion suggestion'></span>
+<p>Please confirm if you would like us to correct it for you?</p>
+<img src='img/failure.png' alt='waiting-image' class='waiting-spinner click-handler dont-correct-email'/> <img src='img/success.png' alt='waiting-image' class='waiting-spinner click-handler correct-email'/>			    
+</div>
+
+  <div id='newsletter-email-invalid' class='interactive-panel waiting-message' style='display:none'><h1>Oops!</h1><p>You have not entered a valid email address.</p><img src='img/failure.png' alt='waiting-image' class='waiting-spinner click-handler close-panel'/>
+</div>
+
+  <div id='newsletter-error' class='interactive-panel waiting-message click-handler close-panel' style='display:none'><img src='img/failure.png' alt='waiting-image' class='waiting-spinner'/><h1>Oops!</h1><p>We seem to have encountered an error:</p>
+<p class='error-message'></p>
+</div>
+
+  <form action="" id='newsletter-form' class='interactive-panel'>
     <fieldset>
       <legend>personalise your newsletter</legend>
       <div class='control-group'>
@@ -23,8 +43,8 @@ html_header('','');
       <input type='text' name='company' />
       </div>
       <div class='control-group-buttons'>
-      <button type='reset' name='cancel' class='cancel-button'>Cancel</button>
-      <button type='submit' name='Submit' class='submit-button'>Submit</button>
+      <button type='reset' name='cancel' class='cancel-button click-handler close-panel'>Cancel</button>
+      <button type='submit' name='Submit' class='submit-button click-handler complete-registration'>Submit</button>
       </div>
     </fieldset>
     </form>
