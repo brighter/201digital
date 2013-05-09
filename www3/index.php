@@ -2,54 +2,6 @@
 include "core.inc.php";
 html_header('','');
 ?>
-<div id='signupFormContainer' style='display:none'>
-<div id='signupForm'>
-
-
-<div id='newsletter-pending' class='interactive-panel waiting-message' style='display:none'><img src='img/spinner.gif' alt='waiting-image' class='waiting-spinner'/><h1>One Moment Please.</h1><p>We are just processing your request.</p></div>
-
-<div id='newsletter-accepted' class='interactive-panel waiting-message click-handler close-panel' style='display:none'><img src='img/success.png' alt='waiting-image' class='waiting-spinner'/><h1>Thank you.</h1><p>We hope you enjoy our newsleter.</p></div>
-
-  <div id='newsletter-suggestion-valid' class='interactive-panel waiting-message' style='display:none'><h1>Oops!</h1><p>We think you may have misspelt your email.</p><p>You typed: <span class='email-suggestion original'></span></p><p>We think it should be: <span class='email-suggestion suggestion'></span>
-<p>Please confirm if you would like us to correct it for you?</p>
-<img src='img/failure.png' alt='waiting-image' class='waiting-spinner click-handler dont-correct-email'/> <img src='img/success.png' alt='waiting-image' class='waiting-spinner click-handler correct-email' />
-</div>
-
-  <div id='newsletter-suggestion-invalid' class='interactive-panel waiting-message' style='display:none'><h1>Oops!</h1><p>You have not entered a valid email address.</p><p>You typed: <span class='email-suggestion original'></span></p><p>We think it should be: <span class='email-suggestion suggestion'></span>
-<p>Please confirm if you would like us to correct it for you?</p>
-<img src='img/failure.png' alt='waiting-image' class='waiting-spinner click-handler dont-correct-email'/> <img src='img/success.png' alt='waiting-image' class='waiting-spinner click-handler correct-email'/>			    
-</div>
-
-  <div id='newsletter-email-invalid' class='interactive-panel waiting-message' style='display:none'><h1>Oops!</h1><p>You have not entered a valid email address.</p><img src='img/failure.png' alt='waiting-image' class='waiting-spinner click-handler close-panel'/>
-</div>
-
-  <div id='newsletter-error' class='interactive-panel waiting-message click-handler close-panel' style='display:none'><img src='img/failure.png' alt='waiting-image' class='waiting-spinner'/><h1>Oops!</h1><p>We seem to have encountered an error:</p>
-<p class='error-message'></p>
-</div>
-
-  <form action="" id='newsletter-form' class='interactive-panel'>
-    <fieldset>
-      <legend>personalise your newsletter</legend>
-      <div class='control-group'>
-      <label>First name</label>
-      <input type='text' name='firstname' />
-      </div>
-      <div class='control-group'>
-      <label>Last name</label>
-      <input type='text' name='lastname' />
-      </div>
-      <div class='control-group'>
-      <label>Company</label>
-      <input type='text' name='company' />
-      </div>
-      <div class='control-group-buttons'>
-      <button type='reset' name='cancel' class='cancel-button click-handler close-panel'>Cancel</button>
-      <button type='submit' name='Submit' class='submit-button click-handler complete-registration'>Submit</button>
-      </div>
-    </fieldset>
-    </form>
-</div>
-</div>
 <div class='foreground-container'>
   <div class='foreground'>
 
@@ -94,31 +46,30 @@ html_header('','');
         <div class='subslide subslide3'>
           <div class='slide-content'>
             <h1 class='title'>Search Engine</h1>
-            <h1 class='subtitle'>rank building, AdWord campaigns</h1>
-            <h1 class='subtitle line2'>ROI analysis and adjustment</h1>
+            <h1 class='subtitle'>rank building & AdWord campaigns</h1>
           </div>
-          <img class='slide-img' src='img/search.png'/>
+          <img class='slide-img' src='img/search.gif'/>
         </div>
         <div class='subslide subslide4'>
           <div class='slide-content'>
             <h1 class='title'>Social Media</h1>
-            <h1 class='subtitle'>viral marketing campaigns,</h1>
-            <h1 class='subtitle line2'>custom application development</h1>
+            <h1 class='subtitle'>viral marketing, brand building</h1>
+            <h1 class='subtitle line2'>and customer acquisition</h1>
           </div>
           <img class='slide-img' src='img/social.png'/>
         </div>
         <div class='subslide subslide5'>
           <div class='slide-content'>
-            <h1 class='title'>Email Marketing</h1>
-            <h1 class='subtitle'>list management, content development</h1>
-            <h1 class='subtitle line2'>brand and product placement</h1>
+            <h1 class='title'>Branded Email</h1>
+            <h1 class='subtitle'>brand and product placement</h1>
+            <h1 class='subtitle line2'>and relationship building</h1>
           </div>
           <img class='slide-img' src='img/email.png'/>
         </div>
         <div class='subslide subslide6'>
           <div class='slide-content'>
-            <h1 class='title'>Mobile Marketing</h1>
-            <h1 class='subtitle'>web site adaptation
+            <h1 class='title'>Mobile Development</h1>
+            <h1 class='subtitle'>web site adaptation, landing pages
             <h1 class='subtitle line2'>and brand building apps</h1>
           </div>
           <img class='slide-img' src='img/mobile.png'/>
@@ -148,13 +99,9 @@ html_header('','');
               <div class='media-feed-title'>
 	        <img src='img/tweets-icon.png' class='media-feed-icon'/><h1 class='i201-tweets'>@ 201 Twitter</h1>
               </div>
-	      <p><img class='icon-logo' src="img/201d-large.png" />Well its been an interesting week here at <a href='#sdfdsafsdfsdfd'>201Digital</a>
-	  First of all we start a company called <a href='adsfdsfasdfdsafgds'>#Brighter</a></p>
-              <div class='tweet-divider'></div>
-              <p><img class='icon-logo' src='img/201d-large.png' />then we decide to do something completely different <a href='#gdsadf43t4'>#different</a></p>
-              <div class='tweet-divider'></div>
-              <p><img class='icon-logo' src='img/201d-large.png' />and start a company with some poncy name 201Digital. There is a plan to all the madness however <a href='34slgksdlg45'>#madness</a></p>
-              <div class='tweet-divider'></div>
+<a class="twitter-timeline" href="https://twitter.com/201Digital" data-widget-id="332245026941837314">Loading Latest Tweets @201Digital</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+	  
 	    </div>
           </div>
         </div>
@@ -168,7 +115,18 @@ html_header('','');
 	      <div class='media-feed-title'>
 	        <img src='img/blog-icon.png' / class='media-feed-icon'><h1 class='i201-blog'>@ 201 Blog</h1>
               </div>
-	      <p>201 Digital wins contract with Microsoft to secure 1.5 million revenue over the next 2 weeks.201 Digital wins contract with Microsoft to secure 1.5 million revenue over the next 2 weeks.</p>	      <p>201 Digital wins contract with Microsoft to secure 1.5 million revenue over the next 2 weeks.</p>	      <p>201 Digital wins contract with Microsoft to secure 1.5 million revenue over the next 2 weeks.201 Digital wins contract with Microsoft to secure 1.5 million revenue over the next 2 weeks.</p>
+              <div class='media-content-box'>
+                <h1 class='title'>Internet Marketing Tips and Advice</h1>
+                <p>Ideas, advice and discussion on how to promote your business on-line using the internet. <a href='http://www.internet-marketing-advice-tips-solutions.co.uk/internet-marketing-tips-and-advice-201-digital'>read full article</a>
+                  </p>
+              </div>
+
+              <div class='media-content-box'>
+                <h1 class='title'>Why Email Marketing Cannot Be Ignored</h1>
+                <p>This is a great article blah de blah and it can explain this and that, you should read more by you know! <a href='http://www.internet-marketing-advice-tips-solutions.co.uk/internet-marketing-tips-and-advice-201-digital'>read full article</a>
+                  </p>
+              </div>
+
 	    </div>
           </div>
         </div>
@@ -182,8 +140,17 @@ html_header('','');
 	      <div class='media-feed-title'>
 	        <img src='img/latest-icon.png' class='media-feed-icon'/><h1 class='i201-latest'>@ 201 News</h1>
               </div>
-	      <p>Get our bi-weekly catch up of the latest marketing trends and campaigns from across the Net.</p>
-	      
+              <div class='media-content-box'>
+                <h1 class='title news-date'>01 January 2013</h1>
+	      <p>201Digital is born and will be delivering the very best in Internet Marketing Solutions!</p>
+              <p><a href='fullstory.php?sdfsdfsdf'>Full story</a></p>
+	      </div>
+
+              <div class='media-content-box'>
+                <h1 class='title news-date'>05 February 2013</h1>
+	      <p>Delivered <a href='http://www.brighter-software.co.uk' />www.brighter-software.co.uk</a> to a very satisfied client...</p>
+              <p><a href='fullstory.php?sdfsdfsdf'>Full story</a></p>
+	      </div>
 	    </div>
           </div>
         </div>
@@ -191,9 +158,6 @@ html_header('','');
     </div><!-- end main content -->
   </div> <!-- foreground -->
 </div>  <!-- foreground container -->
-  <script language='javascript' src='js/verimail.min.js'></script>
-  <script language='javascript' src='js/slideshow.js'></script>
-
   <?php
 
   html_footer() ?>

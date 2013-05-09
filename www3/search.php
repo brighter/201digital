@@ -7,9 +7,8 @@ html_header('','services');
     <div class='content-page-container'>
       <?php services_navigation('search'); ?>
       <div class='content-page'>
-        <div class='content-page-background'></div>
         <div class='content-page-content'>
-            <img src='img/services-search.jpg' class='services-img-box' />
+          <img src='img/services-search.jpg' class='services-img-box' />
           <h1 class='title'>the science of search</h1>
           <div class='content-left'>
             <p class='emphasise'>can direct quality customers in your direction.</p>

@@ -30,8 +30,6 @@ html_header('','');
     </div>
   </div> <!-- foreground -->
 </div>  <!-- foreground container -->
-
-  <script language='javascript' src='js/slideshow.js'></script>
   <?php
 
   html_footer() ?>

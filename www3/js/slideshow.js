@@ -6,7 +6,7 @@ YUI(
 		fullpath : "js/newsletter.js"
 	    }
 	}
-    }).use("node","transition","newsletter",function(Y) {
+    }).use("node","transition","newsletter","event-mouseenter",function(Y) {
 
 	var 
 
@@ -331,6 +331,34 @@ YUI(
 	    
 	}
 
+	var expandContact = function(e) {
+
+	    e.currentTarget.set("src",e.currentTarget.get("src").replace("_off","_on"));
+	    e.currentTarget.get("parentNode").get("parentNode").one(".contact-details").removeClass("collapsed");
+	    
+	}
+	var contractContact = function(e) {
+	    
+	    if(e.currentTarget.get("src")) {
+		
+		e.currentTarget.set("src",e.currentTarget.get("src").replace("_on","_off"));
+		e.currentTarget.get("parentNode").get("parentNode").one(".contact-details").addClass("collapsed");
+
+	    } else {
+
+		e.currentTarget.next().one("img").set("src",e.currentTarget.next().one("img").get("src").replace("_on","_off"));
+		e.currentTarget.addClass("collapsed");
+	    }
+	}
+	
+	var contactIcons = Y.one("#contact-icons");
+	
+	contactIcons.delegate("mouseenter",expandContact,"img");
+
+	contactIcons.delegate("mouseleave",contractContact,".contact-details");
+
+	
+
 	
 	var navigationContainer = Y.one("#navigation-container");
 	var navigation =  navigationContainer.one(".main-navigation");
@@ -402,6 +430,9 @@ YUI(
 	
 	//  navigation.delegate("mouseover",showSubNavigation,"li");
 	//  navigation.delegate("mouseout",hideSubNavigation,"li");
+
+
+	
 	
     });
 

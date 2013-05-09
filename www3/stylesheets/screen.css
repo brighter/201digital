@@ -2,7 +2,7 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-/* line 17, C:/Program Files (x86)/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 17, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -24,51 +24,51 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, C:/Program Files (x86)/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, C:/Program Files (x86)/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, C:/Program Files (x86)/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, C:/Program Files (x86)/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, C:/Program Files (x86)/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, C:/Program Files (x86)/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 103, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, C:/Program Files (x86)/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 32, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, C:/Program Files (x86)/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 116, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block;
 }
 
 /* core structure */
-/* line 8, D:/201Digital/www3/sass/_local.scss */
+/* line 11, ../sass/_local.scss */
 body {
   background: #000;
   background-image: url("../img/texture.jpg");
@@ -80,21 +80,21 @@ body {
   color: #fff;
 }
 
-/* line 20, D:/201Digital/www3/sass/_local.scss */
+/* line 23, ../sass/_local.scss */
 a,
 a:link,
 a:visited {
-  color: #fff;
+  color: #00aa00;
 }
 
-/* line 24, D:/201Digital/www3/sass/_local.scss */
+/* line 27, ../sass/_local.scss */
 a.navon,
 a:hover {
-  color: #00aa00;
+  color: yellow;
   text-decoration: none;
 }
 
-/* line 29, D:/201Digital/www3/sass/_local.scss */
+/* line 32, ../sass/_local.scss */
 #footer-container {
   position: relative;
   border-top: 1px solid #fff;
@@ -109,49 +109,82 @@ a:hover {
   font-size: .9em;
 }
 
-/* line 42, D:/201Digital/www3/sass/_local.scss */
+/* line 45, ../sass/_local.scss */
 .foreground-container {
   z-index: 1;
   width: 100%;
 }
-/* line 45, D:/201Digital/www3/sass/_local.scss */
+/* line 48, ../sass/_local.scss */
 .foreground-container.grey {
   background-color: #aaa;
   padding-top: 100px;
   height: 500px;
 }
-/* line 49, D:/201Digital/www3/sass/_local.scss */
+/* line 52, ../sass/_local.scss */
 .foreground-container.grey h1 {
   color: #000;
   font-size: 4em;
   text-align: center;
 }
-/* line 56, D:/201Digital/www3/sass/_local.scss */
+/* line 59, ../sass/_local.scss */
 .foreground-container.white {
   background-color: #fff;
   padding-top: 100px;
   height: 500px;
 }
-/* line 60, D:/201Digital/www3/sass/_local.scss */
+/* line 63, ../sass/_local.scss */
 .foreground-container.white h1 {
   color: #000;
   font-size: 4em;
   text-align: center;
 }
-/* line 67, D:/201Digital/www3/sass/_local.scss */
+/* line 70, ../sass/_local.scss */
 .foreground-container.pink {
   background-color: #f0f;
   padding-top: 100px;
   height: 500px;
 }
-/* line 71, D:/201Digital/www3/sass/_local.scss */
+/* line 74, ../sass/_local.scss */
 .foreground-container.pink h1 {
   color: #000;
   font-size: 4em;
   text-align: center;
 }
 
-/* line 79, D:/201Digital/www3/sass/_local.scss */
+/* line 81, ../sass/_local.scss */
+.secondry-background-container {
+  width: 100%;
+  height: 800px;
+  position: absolute;
+  top: 0px;
+}
+
+/* line 87, ../sass/_local.scss */
+.secondry-background {
+  max-width: 1200px;
+  width: 100%;
+  height: 800px;
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  background-position: right top;
+}
+
+/* line 96, ../sass/_local.scss */
+#origins {
+  background-image: url("../img/origins.jpg");
+}
+
+/* line 99, ../sass/_local.scss */
+#approach {
+  background-image: url("../img/mission.jpg");
+}
+
+/* line 102, ../sass/_local.scss */
+#news {
+  background-image: url("../img/news.jpg");
+}
+
+/* line 105, ../sass/_local.scss */
 .foreground {
   position: relative;
   width: 100%;
@@ -160,38 +193,8 @@ a:hover {
   margin: 0 auto;
   padding-bottom: 30px;
 }
-/* line 87, D:/201Digital/www3/sass/_local.scss */
-.foreground.origins {
-  background-image: url("../img/origins.png");
-  background-repeat: no-repeat;
-  background-position: right center;
-}
-/* line 93, D:/201Digital/www3/sass/_local.scss */
-.foreground.mission {
-  background-image: url("../img/mission.png");
-  background-repeat: no-repeat;
-  background-position: right bottom;
-}
-/* line 98, D:/201Digital/www3/sass/_local.scss */
-.foreground.approach {
-  background-image: url("../img/mission.png");
-  background-repeat: no-repeat;
-  background-position: right bottom;
-}
-/* line 103, D:/201Digital/www3/sass/_local.scss */
-.foreground.clients {
-  background-image: url("../img/clients.png");
-  background-repeat: no-repeat;
-  background-position: right top;
-}
-/* line 108, D:/201Digital/www3/sass/_local.scss */
-.foreground.news {
-  background-image: url("../img/news.png");
-  background-repeat: no-repeat;
-  background-position: right bottom;
-}
 
-/* line 116, D:/201Digital/www3/sass/_local.scss */
+/* line 114, ../sass/_local.scss */
 #header-container {
   position: relative;
   height: 130px;
@@ -202,7 +205,7 @@ a:hover {
   z-index: 1000;
 }
 
-/* line 126, D:/201Digital/www3/sass/_local.scss */
+/* line 124, ../sass/_local.scss */
 #header-stripe {
   position: absolute;
   width: 100%;
@@ -212,7 +215,7 @@ a:hover {
   z-index: 2;
 }
 
-/* line 135, D:/201Digital/www3/sass/_local.scss */
+/* line 133, ../sass/_local.scss */
 #main-content {
   margin-top: 30px;
   position: relative;
@@ -221,18 +224,18 @@ a:hover {
 }
 
 /* MEDIA FEED */
-/* line 145, D:/201Digital/www3/sass/_local.scss */
+/* line 143, ../sass/_local.scss */
 .media-feed-box .tweet-divider {
   border-bottom: 1px dotted #555;
   margin-bottom: 20px;
   margin-top: 20px;
 }
-/* line 151, D:/201Digital/www3/sass/_local.scss */
+/* line 149, ../sass/_local.scss */
 .media-feed-box p {
   min-height: 70px;
   clear: both;
 }
-/* line 155, D:/201Digital/www3/sass/_local.scss */
+/* line 153, ../sass/_local.scss */
 .media-feed-box .icon-logo {
   width: 50px;
   margin: 20px;
@@ -242,18 +245,18 @@ a:hover {
   border: 1px solid #fff;
 }
 
-/* line 164, D:/201Digital/www3/sass/_local.scss */
+/* line 162, ../sass/_local.scss */
 .media-feed-title {
   position: relative;
   height: 40px;
   top: -40px;
   vertical-align: bottom;
 }
-/* line 171, D:/201Digital/www3/sass/_local.scss */
+/* line 169, ../sass/_local.scss */
 .media-feed-title .media-feed-icon {
   margin-left: 10px;
 }
-/* line 174, D:/201Digital/www3/sass/_local.scss */
+/* line 172, ../sass/_local.scss */
 .media-feed-title h1 {
   position: relative;
   top: -24px;
@@ -263,7 +266,7 @@ a:hover {
   color: #555;
 }
 
-/* line 185, D:/201Digital/www3/sass/_local.scss */
+/* line 183, ../sass/_local.scss */
 h12 {
   font-size: 2em;
   position: relative;
@@ -276,61 +279,61 @@ h12 {
   padding-left: 100px;
 }
 
-/* line 198, D:/201Digital/www3/sass/_local.scss */
+/* line 196, ../sass/_local.scss */
 .media-feed-box p {
   font-size: 1em;
   line-height: 1.3em;
   font-family: "helvetica";
 }
 
-/* line 205, D:/201Digital/www3/sass/_local.scss */
+/* line 203, ../sass/_local.scss */
 .content-container {
   width: 90%;
   position: relative;
   padding-left: 5%;
   padding-right: 5%;
 }
-/* line 210, D:/201Digital/www3/sass/_local.scss */
+/* line 208, ../sass/_local.scss */
 .content-container.first {
   padding-left: 0%;
   padding-right: 10%;
 }
-/* line 214, D:/201Digital/www3/sass/_local.scss */
+/* line 212, ../sass/_local.scss */
 .content-container.last {
   padding-left: 10%;
   padding-right: 0%;
 }
 
-/* line 219, D:/201Digital/www3/sass/_local.scss */
+/* line 217, ../sass/_local.scss */
 .content-box-background {
   position: absolute;
   opacity: .6;
   z-index: 1;
   width: 90%;
   height: 100%;
-  background: #000;
+  /*    background:#000; */
   border-top: 2px dotted #ccc;
 }
 
-/* line 229, D:/201Digital/www3/sass/_local.scss */
+/* line 227, ../sass/_local.scss */
 .content-box-foreground {
   position: relative;
-  margin: 5%;
+  margin: 4%;
   z-index: 2;
   color: #fff;
   padding-bottom: 100px;
 }
-/* line 235, D:/201Digital/www3/sass/_local.scss */
+/* line 233, ../sass/_local.scss */
 .content-box-foreground .title {
   font-size: 3em;
 }
-/* line 238, D:/201Digital/www3/sass/_local.scss */
+/* line 236, ../sass/_local.scss */
 .content-box-foreground p {
   color: #aaa;
 }
 
 /* NAVIGATION  & NEWSLETTER SIGNUP */
-/* line 246, D:/201Digital/www3/sass/_local.scss */
+/* line 244, ../sass/_local.scss */
 #newsletter-signup-container {
   position: absolute;
   font-family: 'Helvetica Neue',Helvetica,Arial,Sans-Serif;
@@ -340,7 +343,7 @@ h12 {
   top: 10px;
   left: -10px;
 }
-/* line 255, D:/201Digital/www3/sass/_local.scss */
+/* line 253, ../sass/_local.scss */
 #newsletter-signup-container input {
   font-size: .7em;
   width: 260px;
@@ -352,7 +355,7 @@ h12 {
   position: relative;
   top: 10px;
 }
-/* line 267, D:/201Digital/www3/sass/_local.scss */
+/* line 265, ../sass/_local.scss */
 #newsletter-signup-container button {
   position: relative;
   top: 10px;
@@ -364,7 +367,7 @@ h12 {
   color: #aaa;
 }
 
-/* line 279, D:/201Digital/www3/sass/_local.scss */
+/* line 277, ../sass/_local.scss */
 #newsletter-signup {
   border: 2px dotted #444;
   float: right;
@@ -373,7 +376,7 @@ h12 {
   text-align: center;
 }
 
-/* line 288, D:/201Digital/www3/sass/_local.scss */
+/* line 286, ../sass/_local.scss */
 #services-subnavigation,
 #about-subnavigation {
   position: absolute;
@@ -382,19 +385,19 @@ h12 {
   width: 150px;
   z-index: 100000;
 }
-/* line 294, D:/201Digital/www3/sass/_local.scss */
+/* line 292, ../sass/_local.scss */
 #services-subnavigation ul,
 #about-subnavigation ul {
   text-align: left;
   list-style: none;
 }
-/* line 298, D:/201Digital/www3/sass/_local.scss */
+/* line 296, ../sass/_local.scss */
 #services-subnavigation li,
 #about-subnavigation li {
   display: block;
   padding-bottom: 4px;
 }
-/* line 303, D:/201Digital/www3/sass/_local.scss */
+/* line 301, ../sass/_local.scss */
 #services-subnavigation li a,
 #services-subnavigation li a:link,
 #services-subnavigation li a:visited,
@@ -408,7 +411,7 @@ h12 {
   -o-transition: 0s;
   transition: 0s;
 }
-/* line 308, D:/201Digital/www3/sass/_local.scss */
+/* line 306, ../sass/_local.scss */
 #services-subnavigation li a:hover,
 #about-subnavigation li a:hover {
   color: yellow;
@@ -417,23 +420,23 @@ h12 {
   -o-transition: 0s;
   transition: 0s;
 }
-/* line 313, D:/201Digital/www3/sass/_local.scss */
+/* line 311, ../sass/_local.scss */
 #services-subnavigation.hidden,
 #about-subnavigation.hidden {
   display: none;
 }
 
-/* line 317, D:/201Digital/www3/sass/_local.scss */
+/* line 315, ../sass/_local.scss */
 #about-subnavigation {
   left: 48px;
 }
 
-/* line 320, D:/201Digital/www3/sass/_local.scss */
+/* line 318, ../sass/_local.scss */
 #services-subnavigation {
   left: 164px;
 }
 
-/* line 324, D:/201Digital/www3/sass/_local.scss */
+/* line 322, ../sass/_local.scss */
 #navigation-container {
   width: 400px;
   height: 41px;
@@ -445,7 +448,7 @@ h12 {
   letter-spacing: 1px;
   right: 0px;
 }
-/* line 334, D:/201Digital/www3/sass/_local.scss */
+/* line 332, ../sass/_local.scss */
 #navigation-container a {
   height: 20px;
   -webkit-transition: color 0.6s;
@@ -454,33 +457,33 @@ h12 {
   transition: color 0.6s;
   text-decoration: none;
 }
-/* line 341, D:/201Digital/www3/sass/_local.scss */
+/* line 339, ../sass/_local.scss */
 #navigation-container a,
 #navigation-container a:link,
 #navigation-container a:visited {
   color: #fff;
 }
-/* line 345, D:/201Digital/www3/sass/_local.scss */
+/* line 343, ../sass/_local.scss */
 #navigation-container a.navon,
 #navigation-container a:hover {
   color: #00aa00;
   text-decoration: none;
 }
-/* line 350, D:/201Digital/www3/sass/_local.scss */
+/* line 348, ../sass/_local.scss */
 #navigation-container .main-navigation {
   position: absolute;
   top: 84px;
   width: 100%;
   list-style: none;
 }
-/* line 357, D:/201Digital/www3/sass/_local.scss */
+/* line 355, ../sass/_local.scss */
 #navigation-container li {
   display: inline-block;
   padding-right: 40px;
 }
 
 /* LOGO */
-/* line 365, D:/201Digital/www3/sass/_local.scss */
+/* line 363, ../sass/_local.scss */
 #logo-container {
   z-index: 10;
   position: absolute;
@@ -490,7 +493,7 @@ h12 {
   height: 150px;
 }
 
-/* line 374, D:/201Digital/www3/sass/_local.scss */
+/* line 372, ../sass/_local.scss */
 .logo {
   position: absolute;
   left: 10px;
@@ -504,7 +507,7 @@ h12 {
   opacity: 1;
 }
 
-/* line 387, D:/201Digital/www3/sass/_local.scss */
+/* line 385, ../sass/_local.scss */
 .logo-201 {
   font-size: 1.9em;
   position: relative;
@@ -512,21 +515,21 @@ h12 {
   left: 2px;
 }
 
-/* line 393, D:/201Digital/www3/sass/_local.scss */
+/* line 391, ../sass/_local.scss */
 .logo-digital {
   font-size: 3.9em;
   position: relative;
   left: -10px;
 }
 
-/* line 398, D:/201Digital/www3/sass/_local.scss */
+/* line 396, ../sass/_local.scss */
 .logo-co-uk {
   font-size: 1.2em;
   position: relative;
   left: -10px;
 }
 
-/* line 403, D:/201Digital/www3/sass/_local.scss */
+/* line 401, ../sass/_local.scss */
 .logo-marketing {
   color: #f0f;
   font-size: 1.1em;
@@ -538,20 +541,20 @@ h12 {
   text-shadow: none;
 }
 
-/* line 416, D:/201Digital/www3/sass/_local.scss */
+/* line 414, ../sass/_local.scss */
 .logo-co-uk,
 .logo-201,
 .logo-digital {
   text-shadow: 0px 0px 20px magenta;
 }
 
-/* line 420, D:/201Digital/www3/sass/_local.scss */
+/* line 418, ../sass/_local.scss */
 .logo-marketing {
   color: #f0f;
 }
 
 /* POWER SLIDES */
-/* line 428, D:/201Digital/www3/sass/_local.scss */
+/* line 426, ../sass/_local.scss */
 #power-content {
   overflow: hidden;
   position: relative;
@@ -561,7 +564,7 @@ h12 {
   font-family: serif;
 }
 
-/* line 438, D:/201Digital/www3/sass/_local.scss */
+/* line 436, ../sass/_local.scss */
 .slide {
   z-index: 2;
   position: absolute;
@@ -571,26 +574,27 @@ h12 {
   min-height: 300px;
   font-style: italic;
 }
-/* line 447, D:/201Digital/www3/sass/_local.scss */
+/* line 445, ../sass/_local.scss */
 .slide .title {
   font-size: 6em;
 }
-/* line 451, D:/201Digital/www3/sass/_local.scss */
+/* line 449, ../sass/_local.scss */
 .slide .subtitle {
   font-size: 3em;
+  color: #229922;
 }
-/* line 455, D:/201Digital/www3/sass/_local.scss */
+/* line 454, ../sass/_local.scss */
 .slide.centerslide {
   text-align: center;
   padding-top: 80px;
 }
-/* line 461, D:/201Digital/www3/sass/_local.scss */
+/* line 460, ../sass/_local.scss */
 .slide.fromright {
   top: 0px;
   left: 100%;
 }
 
-/* line 466, D:/201Digital/www3/sass/_local.scss */
+/* line 465, ../sass/_local.scss */
 #paused-slide-container {
   z-index: 10;
   position: absolute;
@@ -598,7 +602,7 @@ h12 {
   min-height: 300px;
 }
 
-/* line 472, D:/201Digital/www3/sass/_local.scss */
+/* line 471, ../sass/_local.scss */
 .slide-background {
   position: absolute;
   top: -400px;
@@ -609,23 +613,23 @@ h12 {
   z-index: 1;
 }
 
-/* line 481, D:/201Digital/www3/sass/_local.scss */
+/* line 481, ../sass/_local.scss */
 .slide-foreground {
   width: 100%;
   height: 300px;
   position: absolute;
-  padding: 20px;
+  padding: 60px;
   z-index: 2;
   top: -300px;
 }
 
-/* line 489, D:/201Digital/www3/sass/_local.scss */
+/* line 489, ../sass/_local.scss */
 .slide-content {
   padding: 50px;
   position: relative;
   z-index: 2;
 }
-/* line 494, D:/201Digital/www3/sass/_local.scss */
+/* line 494, ../sass/_local.scss */
 .slide-content p {
   font-family: "Trebuchet MS", tahoma, helvetica;
   color: #ccc;
@@ -636,140 +640,168 @@ h12 {
   padding-left: 20px;
 }
 
-/* line 505, D:/201Digital/www3/sass/_local.scss */
+/* line 505, ../sass/_local.scss */
 .slide-img {
   position: absolute;
   z-index: 1;
   width: 200px;
   top: 40px;
-  right: 40px;
+  right: 100px;
 }
 
-/* line 513, D:/201Digital/www3/sass/_local.scss */
+/* line 513, ../sass/_local.scss */
 .subslide {
   position: relative;
   z-index: 2;
 }
-/* line 517, D:/201Digital/www3/sass/_local.scss */
+/* line 518, ../sass/_local.scss */
 .subslide .title {
   font-size: 6em;
-  padding-left: 20px;
   padding-top: 10px;
 }
-/* line 522, D:/201Digital/www3/sass/_local.scss */
+/* line 522, ../sass/_local.scss */
 .subslide .subtitle {
   padding-top: 10px;
-  padding-left: 100px;
   font-size: 2em;
-  color: #555;
 }
-/* line 528, D:/201Digital/www3/sass/_local.scss */
-.subslide .subtitle.line2 {
+/* line 526, ../sass/_local.scss */
+.subslide .line2 {
   padding-top: 0px;
-  padding-left: 120px;
 }
-
-/* line 536, D:/201Digital/www3/sass/_local.scss */
+/* line 531, ../sass/_local.scss */
+.subslide.subslide1 .title {
+  padding-left: 70px;
+}
+/* line 534, ../sass/_local.scss */
+.subslide.subslide1 .subtitle {
+  padding-left: 120px;
+  color: #f5f;
+  size: 1.5em;
+}
+/* line 540, ../sass/_local.scss */
+.subslide.subslide1 .line2 {
+  padding-left: 70px;
+}
+/* line 544, ../sass/_local.scss */
+.subslide.subslide1 .slide-img {
+  margin-top: 10px;
+  margin-right: 10px;
+}
+/* line 552, ../sass/_local.scss */
 .subslide.subslide2 .slide-img {
   z-index: 1;
   position: absolute;
-  right: 0px;
+  right: 50px;
   top: 30px;
   width: 470px;
 }
-/* line 543, D:/201Digital/www3/sass/_local.scss */
+/* line 559, ../sass/_local.scss */
 .subslide.subslide2 .subtitle {
-  padding-left: 70px;
+  padding-left: 50px;
+  color: #ff8811;
 }
-/* line 546, D:/201Digital/www3/sass/_local.scss */
+/* line 563, ../sass/_local.scss */
 .subslide.subslide2 .subtitle.line2 {
-  padding-left: 180px;
+  padding-left: 190px;
 }
-
-/* line 554, D:/201Digital/www3/sass/_local.scss */
+/* line 571, ../sass/_local.scss */
 .subslide.subslide3 .subtitle {
-  padding-left: 110px;
+  padding-left: 70px;
+  color: #eeee22;
 }
-/* line 558, D:/201Digital/www3/sass/_local.scss */
-.subslide.subslide3 .subtitle.line2 {
-  padding-left: 160px;
-}
-/* line 563, D:/201Digital/www3/sass/_local.scss */
+/* line 577, ../sass/_local.scss */
 .subslide.subslide3 .slide-img {
-  width: 230px;
+  margin-top: 10px;
+  width: 260px;
 }
-
-/* line 570, D:/201Digital/www3/sass/_local.scss */
+/* line 584, ../sass/_local.scss */
 .subslide.subslide4 .subtitle {
   padding-left: 90px;
+  color: #00BBDD;
 }
-/* line 572, D:/201Digital/www3/sass/_local.scss */
+/* line 588, ../sass/_local.scss */
 .subslide.subslide4 .subtitle.line2 {
-  padding-left: 120px;
+  padding-left: 150px;
 }
-/* line 577, D:/201Digital/www3/sass/_local.scss */
+/* line 593, ../sass/_local.scss */
 .subslide.subslide4 .slide-img {
   width: 250px;
-  right: 60px;
 }
 
-/* line 584, D:/201Digital/www3/sass/_local.scss */
-.subslide.subslide5 .subtitle.line2 {
-  padding-left: 180px;
+/* line 600, ../sass/_local.scss */
+.subslide.subslide5 .title {
+  padding-top: 15px;
+  font-size: 5em;
 }
-/* line 588, D:/201Digital/www3/sass/_local.scss */
+/* line 604, ../sass/_local.scss */
+.subslide.subslide5 .subtitle {
+  color: #DFBFFF;
+  padding-left: 40px;
+}
+/* line 607, ../sass/_local.scss */
+.subslide.subslide5 .subtitle.line2 {
+  padding-left: 80px;
+}
+/* line 611, ../sass/_local.scss */
 .subslide.subslide5 .slide-img {
   width: 360px;
 }
 
-/* line 593, D:/201Digital/www3/sass/_local.scss */
+/* line 617, ../sass/_local.scss */
+.subslide.subslide6 .title {
+  padding-top: 15px;
+  font-size: 5em;
+}
+/* line 622, ../sass/_local.scss */
 .subslide.subslide6 .subtitle {
   padding-left: 80px;
+  color: #AAFF44;
 }
-/* line 596, D:/201Digital/www3/sass/_local.scss */
+/* line 626, ../sass/_local.scss */
 .subslide.subslide6 .subtitle.line2 {
   padding-left: 160px;
 }
-/* line 601, D:/201Digital/www3/sass/_local.scss */
+/* line 631, ../sass/_local.scss */
 .subslide.subslide6 .slide-img {
   top: 50px;
   width: 301px;
 }
 
-/* line 606, D:/201Digital/www3/sass/_local.scss */
+/* line 636, ../sass/_local.scss */
 .subslide {
   position: absolute;
   top: 0px;
   width: 100%;
   float: right;
 }
-/* line 611, D:/201Digital/www3/sass/_local.scss */
+/* line 641, ../sass/_local.scss */
 .subslide.subslide1 {
   left: 0;
 }
-/* line 614, D:/201Digital/www3/sass/_local.scss */
+/* line 644, ../sass/_local.scss */
 .subslide.subslide2 {
   left: 100%;
 }
-/* line 617, D:/201Digital/www3/sass/_local.scss */
+/* line 647, ../sass/_local.scss */
 .subslide.subslide3 {
   left: 200%;
 }
-/* line 620, D:/201Digital/www3/sass/_local.scss */
+/* line 650, ../sass/_local.scss */
 .subslide.subslide4 {
   left: 300%;
 }
-/* line 623, D:/201Digital/www3/sass/_local.scss */
+/* line 653, ../sass/_local.scss */
 .subslide.subslide5 {
   left: 400%;
 }
-/* line 626, D:/201Digital/www3/sass/_local.scss */
+/* line 656, ../sass/_local.scss */
 .subslide.subslide6 {
   left: 500%;
 }
 
-/* line 631, D:/201Digital/www3/sass/_local.scss */
+/* line 661, ../sass/_local.scss */
 #slide-buttons {
+  visibility: hidden;
   width: 100%;
   text-align: right;
   right: 70px;
@@ -781,7 +813,7 @@ h12 {
   position: relative;
   top: -10px;
 }
-/* line 642, D:/201Digital/www3/sass/_local.scss */
+/* line 673, ../sass/_local.scss */
 #slide-buttons .slide-button {
   cursor: pointer;
   display: inline-block;
@@ -796,30 +828,30 @@ h12 {
   -o-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 654, D:/201Digital/www3/sass/_local.scss */
+/* line 685, ../sass/_local.scss */
 #slide-buttons .slide-button.active, #slide-buttons .slide-button:hover {
   background-color: #fff;
 }
-/* line 659, D:/201Digital/www3/sass/_local.scss */
+/* line 690, ../sass/_local.scss */
 #slide-buttons .pause-button {
   text-align: center;
 }
 
 /* CONTENT */
-/* line 664, D:/201Digital/www3/sass/_local.scss */
+/* line 695, ../sass/_local.scss */
 .services-img-box {
   float: right;
   margin: 30px;
   border: 9px solid #555;
 }
 
-/* line 669, D:/201Digital/www3/sass/_local.scss */
+/* line 700, ../sass/_local.scss */
 .leadership-item {
   display: inline-block;
   text-align: center;
 }
 
-/* line 673, D:/201Digital/www3/sass/_local.scss */
+/* line 704, ../sass/_local.scss */
 .leadership-photo {
   width: 150px;
   height: 150px;
@@ -827,12 +859,13 @@ h12 {
   border: 1px solid #fff;
 }
 
-/* line 679, D:/201Digital/www3/sass/_local.scss */
+/* line 710, ../sass/_local.scss */
 .content-page {
   position: relative;
+  background: rgba(0, 0, 0, 0.3);
 }
 
-/* line 683, D:/201Digital/www3/sass/_local.scss */
+/* line 715, ../sass/_local.scss */
 .content-page-container {
   position: relative;
   margin: 0px auto;
@@ -842,59 +875,46 @@ h12 {
   padding-top: 60px;
 }
 
-/* line 691, D:/201Digital/www3/sass/_local.scss */
-.content-page-background {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: #000;
-  opacity: .3;
-  z-index: 1;
-  overflow: hidden;
-  min-height: 400px;
-}
-
-/* line 701, D:/201Digital/www3/sass/_local.scss */
+/* line 723, ../sass/_local.scss */
 .content-bullets {
   margin: 20px;
   margin-left: 50px;
   font-size: 1em;
   list-style-type: square;
 }
-/* line 706, D:/201Digital/www3/sass/_local.scss */
+/* line 728, ../sass/_local.scss */
 .content-bullets li {
   color: #f5f;
   padding: 6px;
 }
 
-/* line 712, D:/201Digital/www3/sass/_local.scss */
+/* line 734, ../sass/_local.scss */
 .underline {
   text-decoration: underline;
 }
 
-/* line 715, D:/201Digital/www3/sass/_local.scss */
+/* line 737, ../sass/_local.scss */
 .content-page-content {
   min-height: 400px;
   clear: both;
   padding: 20px;
-  position: relative;
   z-index: 2;
   color: #ccc;
   font-weight: normal;
   font-family: "Trebuchet MS", tahoma, helvetica;
 }
-/* line 725, D:/201Digital/www3/sass/_local.scss */
+/* line 746, ../sass/_local.scss */
 .content-page-content img {
   position: relative;
   z-index: 2;
 }
-/* line 729, D:/201Digital/www3/sass/_local.scss */
+/* line 750, ../sass/_local.scss */
 .content-page-content p {
   line-height: 1.2em;
   padding-top: 20px;
   font-size: .9em;
 }
-/* line 734, D:/201Digital/www3/sass/_local.scss */
+/* line 755, ../sass/_local.scss */
 .content-page-content .title {
   position: relative;
   /*	@include background-image(linear-gradient(left,rgba(255,255,255,.1) 70%,rgba(0,0,0,0) 100%)); 
@@ -915,7 +935,7 @@ h12 {
   margin-bottom: 20px;
   color: #fff;
 }
-/* line 755, D:/201Digital/www3/sass/_local.scss */
+/* line 776, ../sass/_local.scss */
 .content-page-content .subtitle {
   padding: 10px;
   padding-top: 20px;
@@ -925,17 +945,17 @@ h12 {
   color: #fff;
   font-style: italic;
 }
-/* line 764, D:/201Digital/www3/sass/_local.scss */
+/* line 785, ../sass/_local.scss */
 .content-page-content .subtitle.grey {
   color: #777;
 }
-/* line 769, D:/201Digital/www3/sass/_local.scss */
+/* line 790, ../sass/_local.scss */
 .content-page-content .emphasise,
 .content-page-content .emphasised {
   color: #fff;
   font-size: 1.2em;
 }
-/* line 773, D:/201Digital/www3/sass/_local.scss */
+/* line 794, ../sass/_local.scss */
 .content-page-content .content-left {
   width: 90%;
   padding-left: 10px;
@@ -945,24 +965,28 @@ h12 {
   font-weight: normal;
   font-family: "Trebuchet MS", tahoma, helvetica;
 }
-/* line 781, D:/201Digital/www3/sass/_local.scss */
+/* line 802, ../sass/_local.scss */
 .content-page-content .content-left p {
   padding: 10px;
 }
-/* line 784, D:/201Digital/www3/sass/_local.scss */
+/* line 805, ../sass/_local.scss */
 .content-page-content .content-left.origins {
   width: 60%;
 }
-/* line 787, D:/201Digital/www3/sass/_local.scss */
+/* line 808, ../sass/_local.scss */
 .content-page-content .content-left.mission {
   width: 60%;
 }
-/* line 790, D:/201Digital/www3/sass/_local.scss */
+/* line 811, ../sass/_local.scss */
 .content-page-content .content-left.approach {
   width: 50%;
 }
+/* line 814, ../sass/_local.scss */
+.content-page-content .content-left.news {
+  width: 100%;
+}
 
-/* line 797, D:/201Digital/www3/sass/_local.scss */
+/* line 821, ../sass/_local.scss */
 .slightbox {
   margin: 20px;
   border: 1px solid #555;
@@ -971,15 +995,15 @@ h12 {
   background: #333;
 }
 
-/* line 805, D:/201Digital/www3/sass/_local.scss */
+/* line 829, ../sass/_local.scss */
 #leadership-photos {
   text-align: center;
 }
-/* line 807, D:/201Digital/www3/sass/_local.scss */
+/* line 831, ../sass/_local.scss */
 #leadership-photos img {
   cursor: pointer;
 }
-/* line 810, D:/201Digital/www3/sass/_local.scss */
+/* line 834, ../sass/_local.scss */
 #leadership-photos img.fade {
   opacity: .3;
   -webkit-transition: 0.6s;
@@ -988,13 +1012,13 @@ h12 {
   transition: 0.6s;
 }
 
-/* line 816, D:/201Digital/www3/sass/_local.scss */
+/* line 840, ../sass/_local.scss */
 .bio-container {
   margin: 20px;
   padding: 20px;
   min-height: 300px;
 }
-/* line 823, D:/201Digital/www3/sass/_local.scss */
+/* line 847, ../sass/_local.scss */
 .bio-container .instructions,
 .bio-container .leader-name {
   padding: 20px;
@@ -1002,41 +1026,41 @@ h12 {
   font-size: 2em;
   color: #fff;
 }
-/* line 830, D:/201Digital/www3/sass/_local.scss */
+/* line 854, ../sass/_local.scss */
 .bio-container .instructions {
   font-size: 1.5em;
   text-align: center;
 }
-/* line 835, D:/201Digital/www3/sass/_local.scss */
+/* line 859, ../sass/_local.scss */
 .bio-container .leader-quote {
   padding: 20px;
   font-size: 1.3em;
   font-style: italic;
   color: #f5f;
 }
-/* line 842, D:/201Digital/www3/sass/_local.scss */
+/* line 866, ../sass/_local.scss */
 .bio-container .leader-text {
   padding: 20px;
 }
 
-/* line 847, D:/201Digital/www3/sass/_local.scss */
+/* line 871, ../sass/_local.scss */
 .hidden {
   display: none;
 }
 
-/* line 850, D:/201Digital/www3/sass/_local.scss */
+/* line 874, ../sass/_local.scss */
 .content-navigation {
   margin: 15px;
   height: 40px;
   position: relative;
   z-index: 2;
   font-size: 1em;
-  color: #00aa00;
+  color: yellow;
   font-family: "Trebuchet MS", tahoma, helvetica;
   vertical-align: baseline;
   border-bottom: 2px dotted #444;
 }
-/* line 862, D:/201Digital/www3/sass/_local.scss */
+/* line 886, ../sass/_local.scss */
 .content-navigation a:link,
 .content-navigation a:visited {
   text-decoration: none;
@@ -1046,7 +1070,7 @@ h12 {
   -o-transition: 0.4s;
   transition: 0.4s;
 }
-/* line 867, D:/201Digital/www3/sass/_local.scss */
+/* line 891, ../sass/_local.scss */
 .content-navigation a:hover {
   color: yellow;
   -webkit-transition: 0.4s;
@@ -1054,25 +1078,25 @@ h12 {
   -o-transition: 0.4s;
   transition: 0.4s;
 }
-/* line 873, D:/201Digital/www3/sass/_local.scss */
+/* line 897, ../sass/_local.scss */
 .content-navigation li {
   display: inline-block;
   padding-right: 10px;
   border-left: 2px solid #666;
   padding-left: 10px;
 }
-/* line 879, D:/201Digital/www3/sass/_local.scss */
+/* line 903, ../sass/_local.scss */
 .content-navigation li.first {
   border-left: 0px;
 }
-/* line 882, D:/201Digital/www3/sass/_local.scss */
+/* line 906, ../sass/_local.scss */
 .content-navigation li.active {
   color: #fff;
   font-size: 2.1em;
   font-family: serif;
 }
 
-/* line 891, D:/201Digital/www3/sass/_local.scss */
+/* line 915, ../sass/_local.scss */
 .about-img {
   border: 1px solid #fff;
   width: 250px;
@@ -1081,23 +1105,23 @@ h12 {
   margin-top: 0px;
 }
 
-/* line 899, D:/201Digital/www3/sass/_local.scss */
+/* line 923, ../sass/_local.scss */
 .yui3-panel-focused:focus {
   outline: none;
 }
 
-/* line 905, D:/201Digital/www3/sass/_local.scss */
+/* line 929, ../sass/_local.scss */
 #signupFormContainer .yui3-widget-hd,
 #signupFormContainer .yui3-widget-ft {
   display: none;
 }
-/* line 909, D:/201Digital/www3/sass/_local.scss */
+/* line 933, ../sass/_local.scss */
 #signupFormContainer.yui3-panel-content {
   border: 0px;
   background: none;
 }
 
-/* line 916, D:/201Digital/www3/sass/_local.scss */
+/* line 940, ../sass/_local.scss */
 #signupForm {
   z-index: 1000;
   background: #bbb;
@@ -1110,39 +1134,48 @@ h12 {
   border-radius: 20px;
   font-family: "Trebuchet MS", tahoma, helvetica;
 }
-/* line 924, D:/201Digital/www3/sass/_local.scss */
+/* line 948, ../sass/_local.scss */
+#signupForm .email-suggestion {
+  font-weight: bold;
+  color: #c0c;
+}
+/* line 953, ../sass/_local.scss */
 #signupForm p {
   padding: 10px;
 }
-/* line 927, D:/201Digital/www3/sass/_local.scss */
+/* line 956, ../sass/_local.scss */
 #signupForm .waiting-message {
   text-align: center;
   color: #444;
 }
-/* line 932, D:/201Digital/www3/sass/_local.scss */
+/* line 961, ../sass/_local.scss */
 #signupForm .waiting-message h1 {
   font-size: 2.5em;
   padding: 20px;
 }
-/* line 936, D:/201Digital/www3/sass/_local.scss */
+/* line 965, ../sass/_local.scss */
 #signupForm .waiting-message p {
   font-size: 1em;
 }
-/* line 940, D:/201Digital/www3/sass/_local.scss */
+/* line 969, ../sass/_local.scss */
 #signupForm .waiting-spinner {
   margin: 30px;
   width: 60px;
 }
-/* line 945, D:/201Digital/www3/sass/_local.scss */
+/* line 973, ../sass/_local.scss */
+#signupForm .click-handler {
+  cursor: pointer;
+}
+/* line 977, ../sass/_local.scss */
 #signupForm .control-group {
   padding: 10px;
 }
-/* line 948, D:/201Digital/www3/sass/_local.scss */
+/* line 980, ../sass/_local.scss */
 #signupForm .control-group-buttons {
   text-align: center;
   padding-top: 40px;
 }
-/* line 952, D:/201Digital/www3/sass/_local.scss */
+/* line 984, ../sass/_local.scss */
 #signupForm .control-group-buttons .cancel-button {
   font-size: 17px;
   padding: 0.5em 1.5em;
@@ -1168,11 +1201,11 @@ h12 {
   color: white;
   text-shadow: #494949 0 -1px 0;
 }
-/* line 15, C:/Program Files (x86)/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/sassy-buttons-0.1.4/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+/* line 15, ../../../../../../Library/Ruby/Gems/1.8/gems/sassy-buttons-0.1.4/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
 #signupForm .control-group-buttons .cancel-button:hover {
   text-decoration: none;
 }
-/* line 30, C:/Program Files (x86)/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/sassy-buttons-0.1.4/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+/* line 30, ../../../../../../Library/Ruby/Gems/1.8/gems/sassy-buttons-0.1.4/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
 #signupForm .control-group-buttons .cancel-button:hover {
   background-color: #434343;
   background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSI1MCUiIHN0b3AtY29sb3I9IiM4YjhiOGIiLz48c3RvcCBvZmZzZXQ9IjUxJSIgc3RvcC1jb2xvcj0iIzQzNDM0MyIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
@@ -1182,13 +1215,13 @@ h12 {
   background: -o-linear-gradient(#8b8b8b 50%, #434343 51%);
   background: linear-gradient(#8b8b8b 50%, #434343 51%);
 }
-/* line 33, C:/Program Files (x86)/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/sassy-buttons-0.1.4/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+/* line 33, ../../../../../../Library/Ruby/Gems/1.8/gems/sassy-buttons-0.1.4/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
 #signupForm .control-group-buttons .cancel-button:active {
   -webkit-box-shadow: #414141 0 1px 2px inset;
   -moz-box-shadow: #414141 0 1px 2px inset;
   box-shadow: #414141 0 1px 2px inset;
 }
-/* line 6, C:/Program Files (x86)/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/sassy-buttons-0.1.4/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+/* line 6, ../../../../../../Library/Ruby/Gems/1.8/gems/sassy-buttons-0.1.4/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
 #signupForm .control-group-buttons .cancel-button.disabled, #signupForm .control-group-buttons .cancel-button[disabled] {
   opacity: 0.6;
   background: #555555;
@@ -1197,12 +1230,12 @@ h12 {
   -moz-box-shadow: none;
   box-shadow: none;
 }
-/* line 73, C:/Program Files (x86)/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/sassy-buttons-0.1.4/stylesheets/_sassy-buttons.sass */
+/* line 73, ../../../../../../Library/Ruby/Gems/1.8/gems/sassy-buttons-0.1.4/stylesheets/_sassy-buttons.sass */
 #signupForm .control-group-buttons .cancel-button::-moz-focus-inner {
   padding: 0 !important;
   margin: -1px !important;
 }
-/* line 955, D:/201Digital/www3/sass/_local.scss */
+/* line 987, ../sass/_local.scss */
 #signupForm .control-group-buttons .submit-button {
   font-size: 17px;
   padding: 0.5em 1.5em;
@@ -1214,62 +1247,62 @@ h12 {
   -o-border-radius: 5px;
   border-radius: 5px;
   *zoom: 1;
-  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFFF00FF', endColorstr='#FF990099');
-  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSI1MCUiIHN0b3AtY29sb3I9IiNmZjI5ZmYiLz48c3RvcCBvZmZzZXQ9IjUxJSIgc3RvcC1jb2xvcj0iI2ZmMDBmZiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
-  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(50%, #ff29ff), color-stop(51%, #ff00ff));
-  background: -webkit-linear-gradient(#ff29ff 50%, #ff00ff 51%);
-  background: -moz-linear-gradient(#ff29ff 50%, #ff00ff 51%);
-  background: -o-linear-gradient(#ff29ff 50%, #ff00ff 51%);
-  background: linear-gradient(#ff29ff 50%, #ff00ff 51%);
-  -webkit-box-shadow: #ff75ff 0 1px 0 inset;
-  -moz-box-shadow: #ff75ff 0 1px 0 inset;
-  box-shadow: #ff75ff 0 1px 0 inset;
-  border: 1px solid #d774d7;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFFF66FF', endColorstr='#FFFF00FF');
+  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSI1MCUiIHN0b3AtY29sb3I9IiNmZjhmZmYiLz48c3RvcCBvZmZzZXQ9IjUxJSIgc3RvcC1jb2xvcj0iI2ZmNjZmZiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(50%, #ff8fff), color-stop(51%, #ff66ff));
+  background: -webkit-linear-gradient(#ff8fff 50%, #ff66ff 51%);
+  background: -moz-linear-gradient(#ff8fff 50%, #ff66ff 51%);
+  background: -o-linear-gradient(#ff8fff 50%, #ff66ff 51%);
+  background: linear-gradient(#ff8fff 50%, #ff66ff 51%);
+  -webkit-box-shadow: #ffdbff 0 1px 0 inset;
+  -moz-box-shadow: #ffdbff 0 1px 0 inset;
+  box-shadow: #ffdbff 0 1px 0 inset;
+  border: 1px solid #e600e5;
   color: white;
-  text-shadow: #ae00ae 0 -1px 0;
+  text-shadow: #e700e7 0 -1px 0;
 }
-/* line 15, C:/Program Files (x86)/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/sassy-buttons-0.1.4/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+/* line 15, ../../../../../../Library/Ruby/Gems/1.8/gems/sassy-buttons-0.1.4/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
 #signupForm .control-group-buttons .submit-button:hover {
   text-decoration: none;
 }
-/* line 30, C:/Program Files (x86)/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/sassy-buttons-0.1.4/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+/* line 30, ../../../../../../Library/Ruby/Gems/1.8/gems/sassy-buttons-0.1.4/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
 #signupForm .control-group-buttons .submit-button:hover {
-  background-color: #d56cd5;
-  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSI1MCUiIHN0b3AtY29sb3I9IiNmZjA1ZmYiLz48c3RvcCBvZmZzZXQ9IjUxJSIgc3RvcC1jb2xvcj0iI2Q1NmNkNSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
-  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(50%, #ff05ff), color-stop(51%, #d56cd5));
-  background: -webkit-linear-gradient(#ff05ff 50%, #d56cd5 51%);
-  background: -moz-linear-gradient(#ff05ff 50%, #d56cd5 51%);
-  background: -o-linear-gradient(#ff05ff 50%, #d56cd5 51%);
-  background: linear-gradient(#ff05ff 50%, #d56cd5 51%);
+  background-color: #db00db;
+  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSI1MCUiIHN0b3AtY29sb3I9IiNmZjZiZmYiLz48c3RvcCBvZmZzZXQ9IjUxJSIgc3RvcC1jb2xvcj0iI2RiMDBkYiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(50%, #ff6bff), color-stop(51%, #db00db));
+  background: -webkit-linear-gradient(#ff6bff 50%, #db00db 51%);
+  background: -moz-linear-gradient(#ff6bff 50%, #db00db 51%);
+  background: -o-linear-gradient(#ff6bff 50%, #db00db 51%);
+  background: linear-gradient(#ff6bff 50%, #db00db 51%);
 }
-/* line 33, C:/Program Files (x86)/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/sassy-buttons-0.1.4/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+/* line 33, ../../../../../../Library/Ruby/Gems/1.8/gems/sassy-buttons-0.1.4/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
 #signupForm .control-group-buttons .submit-button:active {
-  -webkit-box-shadow: #d468d4 0 1px 2px inset;
-  -moz-box-shadow: #d468d4 0 1px 2px inset;
-  box-shadow: #d468d4 0 1px 2px inset;
+  -webkit-box-shadow: #d600d6 0 1px 2px inset;
+  -moz-box-shadow: #d600d6 0 1px 2px inset;
+  box-shadow: #d600d6 0 1px 2px inset;
 }
-/* line 6, C:/Program Files (x86)/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/sassy-buttons-0.1.4/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+/* line 6, ../../../../../../Library/Ruby/Gems/1.8/gems/sassy-buttons-0.1.4/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
 #signupForm .control-group-buttons .submit-button.disabled, #signupForm .control-group-buttons .submit-button[disabled] {
   opacity: 0.6;
-  background: #dd88dd;
+  background: magenta;
   cursor: default;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
 }
-/* line 73, C:/Program Files (x86)/ruby-1.9.2/lib/ruby/gems/1.9.1/gems/sassy-buttons-0.1.4/stylesheets/_sassy-buttons.sass */
+/* line 73, ../../../../../../Library/Ruby/Gems/1.8/gems/sassy-buttons-0.1.4/stylesheets/_sassy-buttons.sass */
 #signupForm .control-group-buttons .submit-button::-moz-focus-inner {
   padding: 0 !important;
   margin: -1px !important;
 }
-/* line 960, D:/201Digital/www3/sass/_local.scss */
+/* line 992, ../sass/_local.scss */
 #signupForm label {
   width: 140px;
   font-size: 1.3em;
   display: inline-block;
-  color: #f5f;
+  color: #c0c;
 }
-/* line 966, D:/201Digital/www3/sass/_local.scss */
+/* line 998, ../sass/_local.scss */
 #signupForm input {
   padding: 10px;
   border: 0px;
@@ -1283,7 +1316,7 @@ h12 {
   color: #666;
   font-size: 1.2em;
 }
-/* line 976, D:/201Digital/www3/sass/_local.scss */
+/* line 1008, ../sass/_local.scss */
 #signupForm legend {
   text-align: center;
   padding-bottom: 40px;
@@ -1292,7 +1325,129 @@ h12 {
   font-style: italic;
   font-family: serif;
 }
-/* line 986, D:/201Digital/www3/sass/_local.scss */
+/* line 1018, ../sass/_local.scss */
 #signupForm input {
   font-family: serif;
+}
+
+/* line 1022, ../sass/_local.scss */
+.media-content-box {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  background: #333;
+  padding: 10px;
+  border: 1px solid #444;
+  margin-bottom: 40px;
+}
+/* line 1029, ../sass/_local.scss */
+.media-content-box p {
+  padding-bottom: 10px;
+  min-height: 0px;
+}
+/* line 1033, ../sass/_local.scss */
+.media-content-box .news-date {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0);
+}
+/* line 1038, ../sass/_local.scss */
+.media-content-box .title {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+/* line 1043, ../sass/_local.scss */
+.news .media-content-box {
+  margin: 30px;
+  width: 40%;
+  display: inline-block;
+  vertical-align: top;
+  min-height: 160px;
+}
+
+/* line 1050, ../sass/_local.scss */
+a.customisable-highlight {
+  visibility: hidden;
+}
+
+/* line 1053, ../sass/_local.scss */
+#contact-icons {
+  position: absolute;
+  top: 180px;
+  right: 0px;
+  overflow: hidden;
+  width: 396px;
+}
+/* line 1059, ../sass/_local.scss */
+#contact-icons ul {
+  text-align: right;
+}
+/* line 1062, ../sass/_local.scss */
+#contact-icons li {
+  margin-bottom: 10px;
+}
+/* line 1065, ../sass/_local.scss */
+#contact-icons img {
+  position: relative;
+  z-index: 2;
+  width: 50px;
+  height: 45px;
+  overflow: hidden;
+  padding: 6px;
+  background-color: #008c00;
+  border-top-left-radius: 7px;
+  border-bottom-left-radius: 7px;
+  cursor: pointer;
+}
+/* line 1078, ../sass/_local.scss */
+#contact-icons .contact-details {
+  color: #79FE20;
+  height: 45px;
+  background-color: #008c00;
+  border-top-left-radius: 7px;
+  border-bottom-left-radius: 7px;
+  padding: 6px;
+  position: absolute;
+  z-index: 1;
+  float: left;
+  left: 0px;
+  width: 396px;
+  font-family: "Trebuchet MS", tahoma, helvetica;
+  font-size: 1.2em;
+  padding: 6px;
+  padding-right: 0px;
+  text-align: left;
+  -webkit-transition: left 1s;
+  -moz-transition: left 1s;
+  -o-transition: left 1s;
+  transition: left 1s;
+}
+/* line 1080, ../sass/_local.scss */
+#contact-icons .contact-details a {
+  color: #79FE20;
+}
+/* line 1099, ../sass/_local.scss */
+#contact-icons .contact-details.collapsed {
+  left: 340px;
+  -webkit-transition: left 1s;
+  -moz-transition: left 1s;
+  -o-transition: left 1s;
+  transition: left 1s;
+}
+/* line 1104, ../sass/_local.scss */
+#contact-icons .contact-details p {
+  left: 20px;
+  position: relative;
+  top: 14px;
+}
+
+/* line 1112, ../sass/_local.scss */
+.contact-phone-email,
+.contact-inperson {
+  display: inline-block;
+  width: 300px;
+  height: 400px;
+  vertical-align: top;
 }

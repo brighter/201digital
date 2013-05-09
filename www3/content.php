@@ -7,7 +7,6 @@ html_header('','services');
     <div class='content-page-container'>
       <?php services_navigation('content'); ?>
       <div class='content-page'>
-        <div class='content-page-background'></div>
         <div class='content-page-content'>
             <img src='img/services-content.jpg' class='services-img-box' />
           <h1 class='title'>engage and provoke...</h1>

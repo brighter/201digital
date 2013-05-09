@@ -7,7 +7,6 @@ html_header('','services');
     <div class='content-page-container'>
       <?php services_navigation('email'); ?>
       <div class='content-page'>
-        <div class='content-page-background'></div>
         <div class='content-page-content'>
             <img src='img/services-email.jpg' class='services-img-box' />
           <h1 class='title'>on a personal level</h1>

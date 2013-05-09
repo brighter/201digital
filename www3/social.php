@@ -7,7 +7,6 @@ html_header('','services');
     <div class='content-page-container'>
       <?php services_navigation('social'); ?>
       <div class='content-page'>
-        <div class='content-page-background'></div>
         <div class='content-page-content'>
             <img src='img/services-social.jpg' class='services-img-box' />
           <h1 class='title'>friends <span class='underline'>like</span> to share</h1>

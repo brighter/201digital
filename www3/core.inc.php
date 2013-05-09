@@ -2,7 +2,7 @@
 
 date_default_timezone_set("GMT");
 
-function html_header($title='', $currentPage='about') {
+function html_header($title='', $currentPage='about',$currentSubPage='') {
   
   if(trim($title)=='') {
     $title = 'We are 201 Digital - Specialist Internet Marketing Services & Tools';
@@ -38,6 +38,58 @@ function html_header($title='', $currentPage='about') {
    </head>
    
    <body class='yui3-skin-sam'>
+<div class='secondry-background-container'>
+<div id='<?php echo $currentSubPage?>' class='secondry-background'></div>
+</div>
+<div id='signupFormContainer' style='display:none'>
+<div id='signupForm'>
+
+
+<div id='newsletter-pending' class='interactive-panel waiting-message' style='display:none'><img src='img/spinner.gif' alt='waiting-image' class='waiting-spinner'/><h1>One Moment Please.</h1><p>We are just processing your request.</p></div>
+
+<div id='newsletter-accepted' class='interactive-panel waiting-message click-handler close-panel' style='display:none'><img src='img/success.gif' alt='waiting-image' class='waiting-spinner'/><h1>Thank you.</h1><p>We hope you enjoy our newsleter.</p></div>
+
+  <div id='newsletter-suggestion-valid' class='interactive-panel waiting-message' style='display:none'><h1>Oops!</h1><p>We think you may have misspelt your email.</p><p>You typed: <span class='email-suggestion original'></span></p><p>We think it should be: <span class='email-suggestion suggestion'></span>
+<p>Please confirm if you would like us to correct it?</p>
+<img src='img/failure.gif' alt='waiting-image' class='waiting-spinner click-handler dont-correct-email'/> <img src='img/success.gif' alt='waiting-image' class='waiting-spinner click-handler correct-email' />
+</div>
+
+  <div id='newsletter-suggestion-invalid' class='interactive-panel waiting-message' style='display:none'><h1>Oops!</h1><p>You have not entered a valid email address.</p><p>You typed: <span class='email-suggestion original'></span></p><p>We think it should be: <span class='email-suggestion suggestion'></span>
+<p>Please confirm if you would like us to correct it?</p>
+<img src='img/failure.gif' alt='waiting-image' class='waiting-spinner click-handler dont-correct-email'/> <img src='img/success.gif' alt='waiting-image' class='waiting-spinner click-handler correct-email'/>			    
+</div>
+
+  <div id='newsletter-email-invalid' class='interactive-panel waiting-message' style='display:none'><h1>Oops!</h1><p>You have not entered a valid email address.</p><img src='img/failure.gif' alt='waiting-image' class='waiting-spinner click-handler close-panel'/>
+</div>
+
+  <div id='newsletter-error' class='interactive-panel waiting-message click-handler close-panel' style='display:none'><img src='img/failure.gif' alt='waiting-image' class='waiting-spinner'/><h1>Oops!</h1><p>We seem to have encountered an error:</p>
+<p class='error-message'></p>
+</div>
+
+  <form action="" id='newsletter-form' class='interactive-panel'>
+    <fieldset>
+      <legend>personalise your newsletter</legend>
+      <div class='control-group'>
+      <label>First name</label>
+      <input type='text' name='firstname' />
+      </div>
+      <div class='control-group'>
+      <label>Last name</label>
+      <input type='text' name='lastname' />
+      </div>
+      <div class='control-group'>
+      <label>Company</label>
+      <input type='text' name='company' />
+      </div>
+      <div class='control-group-buttons'>
+      <button type='reset' name='cancel' class='cancel-button click-handler close-panel'>Cancel</button>
+      <button type='submit' name='Submit' class='submit-button click-handler complete-registration'>Submit</button>
+      </div>
+    </fieldset>
+    </form>
+</div>
+</div>
+
    <header>   
 
    <div id='header-stripe'></div>
@@ -87,6 +139,16 @@ function html_header($title='', $currentPage='about') {
    </div>
    </nav>
 
+   <div id='contact-icons'>
+     <ul>
+       <li><div class='contact-details collapsed'><p>Call us on: 01582 422 444</p></div><a href='contact.php'><img src='img/icons/telephone_off.gif'/></a></li>
+       <li><div class='contact-details collapsed'><p>Email us: <a href='mailto:moreinfo@201d.co.uk?subject=I was looking through your web site...'>moreinfo@201d.co.uk</a></p></div><a href='mailto:moreinfo@201d.co.uk?subject=I was looking through your web site...'><img src='img/icons/email_off.gif' /></a></li>
+       <li><div class='contact-details collapsed'><p><a href='http://www.twitter.com/201Digital'>www.twitter.com/201Digital</a></p></div><a href='http://www.twitter.com/201Digital'><img src='img/icons/twitter_off.gif' /></a></li>
+       <li><div class='contact-details collapsed'><p><a href='http://www.facebook.com/201digital'>www.facebook.com/201Digital</a></p></div><a href='http://www.facebook.com/201Digital'><img src='img/icons/facebook_off.gif' /></a></li>
+     </ul>
+   </div>
+
+
    </div>   <!-- end header-container -->
 
    </header>
@@ -99,6 +161,7 @@ function about_navigation($section) {
   $links['approach']='approach';
   $links['clients']='clients';
   $links['news']='news';
+  $links['contact']='contact';
 
    $total = sizeof($links);
    $i=0;
@@ -164,6 +227,8 @@ function services_navigation($section) {
 
 function html_footer() { 
 ?>
+  <script language='javascript' src='js/verimail.min.js'></script>
+  <script language='javascript' src='js/slideshow.js'></script>
   <footer>
     <div id='footer-container'>
     <div class='rule'></div>

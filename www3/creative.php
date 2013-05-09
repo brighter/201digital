@@ -7,7 +7,6 @@ html_header('','services');
     <div class='content-page-container'>
       <?php services_navigation('creative'); ?>
       <div class='content-page'>
-        <div class='content-page-background'></div>
         <div class='content-page-content'>
             <img src='img/services-creative.jpg' class='services-img-box' />
           <h1 class='title'>its in the thinking</h1>

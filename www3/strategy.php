@@ -7,7 +7,6 @@ html_header('','services');
     <div class='content-page-container'>
       <?php services_navigation('strategy'); ?>
       <div class='content-page'>
-        <div class='content-page-background'></div>
         <div class='content-page-content'>
             <img src='img/services-strategy.jpg' class='services-img-box' />
             <h1 class='title'>plan with confidence</h1>

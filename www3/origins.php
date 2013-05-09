@@ -1,13 +1,12 @@
 <?php 
 include "core.inc.php";
-html_header('','about');
+html_header('','about','origins');
 ?>
 <div class='foreground-container'>
   <div class='foreground origins'>
     <div class='content-page-container origins'>
       <?php about_navigation('origins'); ?>
       <div class='content-page'>
-        <div class='content-page-background'></div>
         <div class='content-page-content origins'>
           <h1 class='title'>the seeds of inspiration</h1> 
           <div class='content-left origins'>

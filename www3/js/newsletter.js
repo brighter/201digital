@@ -273,8 +273,8 @@ YUI.add(
 			if(this.suggestion) {
 			    
 			    // valid email but may be misspelt...
-			    this.dom.suggestionValid.one(".original").setContent(this.dom.emailField.get("value"));
-			    this.dom.suggestionValid.one(".suggestion").setContent(this.suggestion);
+			    this.dom.suggestionValid.one(".original").set("innerHTML",this.dom.emailField.get("value"));
+			    this.dom.suggestionValid.one(".suggestion").set("innerHTML",this.suggestion);
 
 			    this.dom.suggestionValid.setStyle("display","");
 			    
@@ -288,6 +288,8 @@ YUI.add(
 			if(this.suggestion) {
 			    
 			    // invalid email but may have a suggestion
+			    this.dom.suggestionInvalid.one(".original").set("innerHTML",this.dom.emailField.get("value"));
+			    this.dom.suggestionInvalid.one(".suggestion").set("innerHTML",this.suggestion);
 			    this.dom.suggestionInvalid.setStyle("display","");
 
 			} else {
@@ -314,6 +316,7 @@ YUI.add(
 		    } else if (e.currentTarget.hasClass("correct-email")) {
 			
 			this.email=this.suggestion;
+			this.validEmail = true;
 			this.dom.emailField.set("value",this.email);
 			this.suggestion='';
 			this.setPanel();

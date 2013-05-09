@@ -7,7 +7,6 @@ html_header('','about');
     <div class='content-page-container'>
       <?php about_navigation('leadership'); ?>
       <div class='content-page'>
-        <div class='content-page-background'></div>
         <div class='content-page-content'>
           <h1 class='title'>meet the team</h1>
           <div id='leadership-photos'>

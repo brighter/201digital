@@ -1,13 +1,12 @@
 <?php 
 include "core.inc.php";
-html_header('','about');
+html_header('','about','approach');
 ?>
 <div class='foreground-container'>
   <div class='foreground approach'>
     <div class='content-page-container'>
       <?php about_navigation('approach'); ?>
       <div class='content-page'>
-        <div class='content-page-background'></div>
         <div class='content-page-content'>
           <h1 class='title'>no-nonsense strategies built on years of expertise backed by individuals committed to your success</h1>
           <div class='content-left approach'>
